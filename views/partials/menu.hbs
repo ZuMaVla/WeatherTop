@@ -1,7 +1,11 @@
+<table>
+  <tr>
+    <div class="navbar-brand" style="min-width:50px">
+      {{> brand}}
+    </div>
+  </tr>
+  <tr>
 <nav class="navbar mb-6 is-justify-content-left" style="min-width:50px">
-  <div class="navbar-brand" style="min-width:50px">
-    {{> brand}}
-  </div>
   <div class="navbar-menu is-flex is-justify-content-right" id="navMenu" style="min-width:50px">
     <div class="navbar-end" style="min-width:50px">
       <div class="navbar-item" style="min-width:50px">
@@ -13,7 +17,8 @@
     </div>
   </div>
 </nav>
-
+  
+</table>
 <script>
   document.getElementById("{{active}}").classList.add("is-primary");
 </script>
