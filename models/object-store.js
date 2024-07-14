@@ -3,7 +3,7 @@ import { initStore } from "../utils/store-utils.js";
 
 const db = initStore("objects");
 
-export const playlistStore = {
+export const stationStore = {
   async getAllObjects() {
     await db.read();
     return db.data.objects;
@@ -11,7 +11,7 @@ export const playlistStore = {
 
   async addObject(object) {
     await db.read();
-    playlist._id = v4();
+    station._id = v4();
     db.data.objects.push(object);
     await db.write();
     return object;

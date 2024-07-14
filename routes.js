@@ -8,4 +8,4 @@ export const router = express.Router();
 router.get("/", mainController.index);
 router.get("/dashboard", dashboardController.index);
 router.get("/about", aboutController.index);
-router.post("/dashboard/addplaylist", dashboardController.addPlaylist);
+router.post("/dashboard/addstation", dashboardController.addStation);
