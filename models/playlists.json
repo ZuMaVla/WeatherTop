@@ -1,0 +1,25 @@
+{
+  "file": "./models/playlists.json",
+  "playlists": [
+    {
+      "title": "hello",
+      "_id": "74aa9835-5518-4c4c-a1cc-dfa0cbd7dfbb"
+    },
+    {
+      "title": "buy",
+      "_id": "ae155ff6-4f31-42cb-8cd8-4f2b209fa068"
+    },
+    {
+      "title": "World",
+      "_id": "911741f0-08d3-414c-b42f-bbf88470f707"
+    },
+    {
+      "title": "hello world",
+      "_id": "1d805a47-afbc-476f-82b5-9b1a40afdb87"
+    },
+    {
+      "title": "hi",
+      "_id": "be807551-fa5c-45e8-87b4-7ea2b47b3163"
+    }
+  ]
+}
