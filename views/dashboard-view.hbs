@@ -1,0 +1,18 @@
+{{> menu active="dashboard"}}
+
+<section class="box has-text-centered">
+  <h3 class="is-3 title">
+    Main Dashboard
+  </h3>
+  <div class="section">
+    <p>
+      This is the main dashboard view.
+      Enter new station name and press Enter or click button below to add it to your list of stations.
+    </p>
+  </div>
+</section>
+<section class="section">
+  {{> list-stations}}
+  {{> add-station}}
+</section>
+
