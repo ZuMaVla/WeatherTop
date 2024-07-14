@@ -1,26 +1,18 @@
-
-<div class="container">
-  <div class="columns">
-  <div class="column is-half">is-half</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
-</div>  
-<div class="navbar-brand">
+<nav class="navbar mb-6 is-justify-content-left" style="min-width:50px">
+  <div class="navbar-brand" style="min-width:50px">
     {{> brand}}
   </div>
-
-  <nav class="navbar-menu is-flex is-justify-content-right" id="navMenu">
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
+  <div class="navbar-menu is-flex is-justify-content-right" id="navMenu" style="min-width:50px">
+    <div class="navbar-end" style="min-width:50px">
+      <div class="navbar-item" style="min-width:50px">
+        <div class="buttons" style="min-width:50px">
           <a id="dashboard" class="button" href="/dashboard"> Dashboard </a>
           <a id="about" class="button" href="/about"> About </a>
         </div>
       </div>
     </div>
-  </nav>
-
+  </div>
+</nav>
 
 <script>
   document.getElementById("{{active}}").classList.add("is-primary");
