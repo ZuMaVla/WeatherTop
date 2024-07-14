@@ -1,22 +1,25 @@
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
-    <div class="navbar-brand">
-      {{> brand}}
-    </div>
-  </tr>
-  <tr>
-    <nav class="navbar-menu" id="navMenu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a id="dashboard" class="button" href="/dashboard"> Dashboard </a>
-            <a id="about" class="button" href="/about"> About </a>
+    <td style="width: auto; border: 1px solid #ddd; ">
+      <div>
+        {{> brand}}
+      </div>
+    </td>
+    <td style="border: 1px solid #ddd; ">
+      <nav id="navMenu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a id="dashboard" class="button" href="/dashboard"> Dashboard </a>
+              <a id="about" class="button" href="/about"> About </a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </tr>  
+      </nav>
+    </td>
+  </tr>
 </table>
+
 <script>
   document.getElementById("{{active}}").classList.add("is-primary");
 </script>
