@@ -14,14 +14,14 @@ export const stationController = {
   },
   
   async addReport(request, response) {
-    const stationToView = await stationStore.getStationById(request.params.stationId);
+    const stationToAddReportTo = await stationStore.getStationById(request.params.stationId);
     const newReport = {
       title: request.body.title,
       artist: request.body.artist,
       duration: Number(request.body.duration),
     };
     console.log(`adding report ${newReport.title}`);
-    await reportStore.addReport(report._id, newReport);
-    response.redirect("/station/" + station._id);
+    await reportStore.addReport(stationToAddReportTo._id, newReport);
+    response.redirect("/station/" + stationToAddReportTo._id);
   },
 };
