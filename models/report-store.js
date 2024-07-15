@@ -26,12 +26,13 @@ export const reportStore = {
   async deleteReportById(id) {
     await db.read();
     const index = db.data.reports.findIndex((report) => report._id === id);
+    console.log(index, id)
     db.data.reports.splice(index, 1);
     await db.write();
   },
 
-  async deleteAllObjects() {
-    db.data.objectss = [];
+  async deleteAllReports() {
+    db.data.reports = [];
     await db.write();
   },
 };

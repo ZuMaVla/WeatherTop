@@ -22,6 +22,6 @@ export const stationController = {
     };
     console.log(`adding report ${newReport.title}`);
     await reportStore.addReport(report._id, newReport);
-    response.redirect("/playlist/" + playlist._id);
+    response.redirect("/station/" + station._id);
   },
 };
