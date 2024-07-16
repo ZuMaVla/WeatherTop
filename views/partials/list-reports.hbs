@@ -1,0 +1,30 @@
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Track</th>
+      <th>Artist</th>
+      <th>Duration</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each station.reports}}
+    <tr>
+      <td>
+        {{title}}
+      </td>
+      <td>
+        {{artist}}
+      </td> 
+      <td>
+        {{duration}}
+      </td>
+      <td>
+        <a href="/station/{{../station._id}}/deletetrack/{{_id}}" class="button">
+          {{>icons/delete}}
+        </a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

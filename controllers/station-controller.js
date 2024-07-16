@@ -24,4 +24,12 @@ export const stationController = {
     await reportStore.addReport(stationToAddReportTo._id, newReport);
     response.redirect("/station/" + stationToAddReportTo._id);
   },
+  
+  async deleteReport(request, response) {
+    const stationToDeleteId = request.params.stationId;
+    const reportToDeleteId = request.params.reportId;
+    console.log(`Deleting Track ${reportId} from Playlist ${stationId}`);
+    await reportStore.deleteReport(request.params.reportId);
+    response.redirect("/playlist/" + playlistId);
+  },
 };
