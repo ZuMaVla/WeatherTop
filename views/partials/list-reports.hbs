@@ -13,13 +13,19 @@
     {{#each station.reports}}
     <tr>
       <td>
-        {{title}}
+        {{code}}
       </td>
       <td>
-        {{artist}}
+        {{temperature}}
       </td> 
       <td>
-        {{duration}}
+        {{windSpeed}}
+      </td>
+      <td>
+        {{windDirection}}
+      </td>
+      <td>
+        {{pressure}}
       </td>
       <td>
         <a href="/station/{{../station._id}}/deleteReport/{{_id}}" class="button">

@@ -2,13 +2,21 @@
   "file": "./models/reports.json",
   "reports": [
     {
-      "duration": null,
-      "_id": "5a8d6b86-ab0f-47f2-8625-0f98e5e8e5a3",
+      "code": 500,
+      "temperature": 6,
+      "windSpeed": 12,
+      "windDirection": 120,
+      "pressure": 1000,
+      "_id": "b5e614aa-5475-44bd-bf31-d6b843c75415",
       "stationId": "74aa9835-5518-4c4c-a1cc-dfa0cbd7dfbb"
     },
     {
-      "duration": null,
-      "_id": "d935c9fd-a4b6-4ebd-a75c-1faacc4b999c",
+      "code": 600,
+      "temperature": 20,
+      "windSpeed": 2,
+      "windDirection": 67,
+      "pressure": 1009,
+      "_id": "d3ec6aac-ca90-4be9-a819-63d0e243617c",
       "stationId": "74aa9835-5518-4c4c-a1cc-dfa0cbd7dfbb"
     }
   ]
