@@ -1,1 +1,26 @@
-{"file":"./models/reports.json","reports":[]}
+{
+  "file": "./models/reports.json",
+  "reports": [
+    {
+      "title": "hj",
+      "artist": "",
+      "duration": 0,
+      "_id": "79deab3f-39aa-440e-80aa-7719d1af695a",
+      "stationid": "74aa9835-5518-4c4c-a1cc-dfa0cbd7dfbb"
+    },
+    {
+      "title": "ghj",
+      "artist": "fg",
+      "duration": 3,
+      "_id": "604b8c0b-94c2-4ced-b06c-593cb673e99a",
+      "stationid": "74aa9835-5518-4c4c-a1cc-dfa0cbd7dfbb"
+    },
+    {
+      "title": "fgh",
+      "artist": "dfg",
+      "duration": 5,
+      "_id": "ee92cbb8-e93f-49d1-8d0e-867d708d42bd",
+      "stationId": "ae155ff6-4f31-42cb-8cd8-4f2b209fa068"
+    }
+  ]
+}
