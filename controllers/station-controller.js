@@ -5,7 +5,8 @@ import { reportStore } from "../models/report-store.js";
 export const stationController = {
   async index(request, response) {
     const stationToView = await stationStore.getStationById(request.params.stationId);
-    const reports = await reportStore.
+    const stationReports = await reportStore.getReportsByStationId(request.params.stationId);
+    stationToView.reports = stationReports;
     const viewData = {
       station: stationToView,
       title: "Station View: " + stationToView.name,
