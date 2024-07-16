@@ -30,7 +30,7 @@ export const stationController = {
     const reportToDeleteId = request.params.reportId;
     console.log(`Deleting Track ${reportToDeleteId} from Playlist ${stationToDeleteId}`);
     await reportStore.deleteReport(request.params.reportId);
-    response.redirect("/playlist/" + stationToDeleteId);
+    response.redirect("/station/" + stationToDeleteId);
   },
   
 };
