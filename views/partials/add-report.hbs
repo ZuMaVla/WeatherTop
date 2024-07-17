@@ -37,9 +37,9 @@
             <option value="225">SW</option>
             <option value="247.5">W/SW</option>
             <option value="270">W</option>
-            <option value="22.5">W/NW</option>
+            <option value="292.5">W/NW</option>
             <option value="315">NW</option>
-            <option value="22.5">N/NW</option>
+            <option value="337.5">N/NW</option>
           </select>
         </div>
       </div>
@@ -53,16 +53,4 @@
   </div>
   <button class="button is-primary">Submit Report</button>
 </form>
-
-<script>
-  function getSelectedWindDirection() {
-    var selectElement = document.querySelector('select[name="windDirection"]');
-    var selectedValue = selectElement.value;
-    console.log('Selected Wind Direction:', selectedValue);
-  }
-
-  document.querySelector('form').addEventListener('submit', function(event) {
-    getSelectedWindDirection();
-  });
-</script>
 
