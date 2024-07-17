@@ -23,7 +23,7 @@
       <div class="field">
         <label class="label">Wind Direction</label>
         <div class="control select">        
-          <select>
+          <select name="windDirection">
             <option>N</option>
             <option>N/NE</option>
             <option>NE</option>
@@ -53,4 +53,16 @@
   </div>
   <button class="button is-primary">Submit Report</button>
 </form>
+
+<script>
+  function getSelectedWindDirection() {
+    var selectElement = document.querySelector('select[name="windDirection"]');
+    var selectedValue = selectElement.value;
+    console.log('Selected Wind Direction:', selectedValue);
+  }
+
+  document.querySelector('form').addEventListener('submit', function(event) {
+    getSelectedWindDirection();
+  });
+</script>
 
