@@ -21,6 +21,27 @@
       "longitude": "-7.1463889",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "f14a35f1-5c8c-4a6e-a082-a7a0b24e300c"
+    },
+    {
+      "name": "Galway",
+      "latitude": "53.270962",
+      "longitude": "-9.062691",
+      "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
+      "_id": "12b4e285-fbed-4214-bbb3-c218521dd5cd"
+    },
+    {
+      "name": "Limerick",
+      "latitude": "52.668018",
+      "longitude": "-8.630498",
+      "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
+      "_id": "49b4f020-7f37-4473-afe1-d192db32d66a"
+    },
+    {
+      "name": "Ennis",
+      "latitude": "52.84434980",
+      "longitude": "-8.98299450",
+      "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
+      "_id": "fa568d05-f68a-4576-9fa3-78026d816baf"
     }
   ]
 }

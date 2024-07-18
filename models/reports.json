@@ -18,6 +18,15 @@
       "pressure": 1009,
       "_id": "5ab82bac-142e-4399-9bc1-4fe6996622dc",
       "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
+    },
+    {
+      "code": 450,
+      "temperature": 15,
+      "windSpeed": 12,
+      "windDirection": 90,
+      "pressure": 1018,
+      "_id": "bb6ae265-604b-447a-8760-ad02e2f38ae1",
+      "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     }
   ]
 }
