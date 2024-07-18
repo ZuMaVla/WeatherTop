@@ -1,11 +1,7 @@
 <div class="box" style="display: inline-block; text-align: center; background-color: black;">
-  <p class="title is-4 has-text-centered">{{station.name}} <hr></p>
+  <p class="title is-4 has-text-centered">{{station.name}}  {{> icons/location}}<hr></p>
   <p>Lat:{{station.latitude}}</p>
   <p>Lng:{{station.longitude}}</p>
-  <figure class="image is-128x128 is-centered">
-    <img src="${weatherCodeToImageLink(weatherCodeToday, "day")}" alt="Weather Icon"/>
-  </figure>
-  <p></p>
 </div>
 <span style="margin-right: 4px;"></span>
 <div class="box" style="display: inline-block; text-align: center;">
