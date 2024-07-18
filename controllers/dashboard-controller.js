@@ -6,7 +6,7 @@ export const dashboardController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const viewData = {
       title: "Station Dashboard",
-      stations: await stationStore.getPlaylistsByUserId(loggedInUser._id),
+      stations: await stationStore.getStationByUserId(loggedInUser._id),
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
