@@ -25,7 +25,7 @@ export const stationStore = {
   
   async getStationByUserId(userid) {
     await db.read();
-    return db.data.playlists.filter((playlist) => playlist.userid === userid);
+    return db.data.stations.filter((station) => station.userid === userid);
   },
 
 

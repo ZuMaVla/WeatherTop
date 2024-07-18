@@ -1,4 +1,26 @@
 {
   "file": "./models/stations.json",
-  "stations": []
+  "stations": [
+    {
+      "name": "Cobh",
+      "latitude": "51.850334",
+      "longitude": "-8.294286",
+      "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
+      "_id": "50781714-ecdc-426c-9697-182f8d7386d1"
+    },
+    {
+      "name": "Cork",
+      "latitude": "51.903614",
+      "longitude": "-8.468399",
+      "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
+      "_id": "58ee041b-eefb-4b99-a8a7-8bfc37a8039b"
+    },
+    {
+      "name": "Tramore",
+      "latitude": "52.1588889",
+      "longitude": "-7.1463889",
+      "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
+      "_id": "f14a35f1-5c8c-4a6e-a082-a7a0b24e300c"
+    }
+  ]
 }
