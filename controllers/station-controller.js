@@ -8,7 +8,7 @@ export const stationController = {
     const stationToView = await stationStore.getStationById(request.params.stationId);
     const stationReports = await reportStore.getReportsByStationId(request.params.stationId);
     stationToView.reports = stationReports;
-    const minTemp = stationStore.getMinTemp(stationToView);
+    const minTemp = stationStore.getParam(stationToView, "temperature", "min");
     console.log(minTemp);
     const viewData = {
       userName: loggedInUser.firstName,
