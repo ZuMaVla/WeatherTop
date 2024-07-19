@@ -45,10 +45,10 @@ export const reportStore = {
   getMinTemp(station) {
     let minTemp = 0;
     if (station.reports.length > 0) {
-      minTemp = station.reports[0];
+      minTemp = station.reports[0].temperature;
       for (let i = 1; i < station.reports.length; i++) {
-        if (station.reports[i].duration < minTemp.duration) {
-          minTemp = station.reports[i];
+        if (station.reports[i].temperature < minTemp) {
+          minTemp = station.reports[i].temperature;
         }
       }
     }
