@@ -11,8 +11,10 @@ export const stationController = {
     const minTemp = reportStore.getMinTemp(stationReports);
     console.log(minTemp);
     const viewData = {
+      userName: loggedInUser.firstName,
       station: stationToView,
       title: "Station View: " + stationToView.name,
+      minTemp: minTemp,
       
     };
     console.log("station-view rendering: " + stationToView.name);
