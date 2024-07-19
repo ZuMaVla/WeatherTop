@@ -31,7 +31,7 @@
     {{> icons/temperature}}
   </div>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
-  <p>Max: {{station.latitude}}C</p>
+  <p>Max: {{maxTemp}}°C</p>
   <p>Min: {{minTemp}}°C</p>
 </div>
 <span style="margin-right: 4px;"></span>
@@ -43,8 +43,8 @@
     {{> icons/wind}}
   </div>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
-  <p>Max:{{station.latitude}}C</p>
-  <p>Min:{{station.longitude}}C</p>
+  <p>Max:{{maxWind}}km/h</p>
+  <p>Min:{{minWind}}km/h</p>
 </div>
 
 <span style="margin-right: 4px;"></span>
@@ -56,8 +56,8 @@
     {{> icons/pressure}}
   </div>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
-  <p>Max:{{station.latitude}}C</p>
-  <p>Min:{{station.longitude}}C</p>
+  <p>Max:{{maxPress}}kPa</p>
+  <p>Min:{{minPress}}kPa</p>
 </div>
 <span style="margin-right: 4px;"></span><div>
   

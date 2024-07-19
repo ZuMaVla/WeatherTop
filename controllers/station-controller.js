@@ -14,7 +14,7 @@ export const stationController = {
     const maxW = stationStore.getParam(stationToView, "windSpeed", "max");
     const minP = stationStore.getParam(stationToView, "pressure", "min");
     const maxP = stationStore.getParam(stationToView, "pressure", "max");
-    console.log(minTemp);
+    console.log(minT);
     const viewData = {
       userName: loggedInUser.firstName,
       station: stationToView,
