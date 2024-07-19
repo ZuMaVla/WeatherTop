@@ -41,9 +41,20 @@ export const stationStore = {
     await db.write();
   },
   
-    getMinTemp(station) {
+  getMinTemp(station, param, comparison) {
+    switch(comparison) {
+      case "min":
+        // Code to run if expression === value1
+        break;
+      case "max":
+        // Code to run if expression === value2
+        break;
+      // More cases as needed
+      default:
+        // Code to run if no case matches
+    }      
     if (station.reports.length > 0) {
-      let minTemp = station.reports[0].temperature;
+      let minTemp = station.reports[0].$(param);
       for (let i = 1; i < station.reports.length; i++) {
         if (station.reports[i].temperature < minTemp) {
           minTemp = station.reports[i].temperature;
