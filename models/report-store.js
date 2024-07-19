@@ -41,4 +41,17 @@ export const reportStore = {
     db.data.reports = [];
     await db.write();
   },
+  
+  getMinTemp(station) {
+    let minTemp = null;
+    if (station.reports.length > 0) {
+      minTemp = station.reports[0];
+      for (let i = 1; i < station.reports.length; i++) {
+        if (station.reports[i].duration < minTemp.duration) {
+          minTemp = station.reports[i];
+        }
+      }
+    }
+    return minTemp;
+  },
 };
