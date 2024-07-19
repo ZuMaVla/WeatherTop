@@ -1,7 +1,7 @@
 import { accountsController } from "./accounts-controller.js";
 
 export const aboutController = {
-  asyindex(request, response) {
+  async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const viewData = {
       title: "About Station 1",
