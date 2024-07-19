@@ -8,14 +8,23 @@ export const stationController = {
     const stationToView = await stationStore.getStationById(request.params.stationId);
     const stationReports = await reportStore.getReportsByStationId(request.params.stationId);
     stationToView.reports = stationReports;
-    const minTemp = stationStore.getParam(stationToView, "temperature", "min");
+    const minT = stationStore.getParam(stationToView, "temperature", "min");
+    const maxT = stationStore.getParam(stationToView, "temperature", "max");
+    const minW = stationStore.getParam(stationToView, "windSpeed", "min");
+    const maxW = stationStore.getParam(stationToView, "windSpeed", "max");
+    const minP = stationStore.getParam(stationToView, "pressure", "min");
+    const maxP = stationStore.getParam(stationToView, "pressure", "max");
     console.log(minTemp);
     const viewData = {
       userName: loggedInUser.firstName,
       station: stationToView,
       title: "Station View: " + stationToView.name,
-      minTemp: minTemp,
-      
+      minTemp: minT,
+      maxTemp: maxT,
+      minWind: minW,
+      maxWind: maxW,
+      minPress: minP,
+      maxPress: maxP,
     };
     console.log("station-view rendering: " + stationToView.name);
     response.render("station-view", viewData);
