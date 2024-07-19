@@ -40,4 +40,19 @@ export const stationStore = {
     db.data.stations = [];
     await db.write();
   },
+  
+    getMinTemp(station) {
+    if (station.reports.length > 0) {
+      let minTemp = station.reports[0].temperature;
+      for (let i = 1; i < station.reports.length; i++) {
+        if (station.reports[i].temperature < minTemp) {
+          minTemp = station.reports[i].temperature;
+        }
+      }
+    return minTemp.toString();
+    }
+    else {
+      return "n/a";
+    }
+  },
 };
