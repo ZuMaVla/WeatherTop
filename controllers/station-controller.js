@@ -1,14 +1,19 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
+import { accountsController } from "./accounts-controller.js";
 
 export const stationController = {
   async index(request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request);
     const stationToView = await stationStore.getStationById(request.params.stationId);
     const stationReports = await reportStore.getReportsByStationId(request.params.stationId);
     stationToView.reports = stationReports;
+    const minTemp = reportStore.getMinTemp(stationReports);
+    console.log(minTemp);
     const viewData = {
       station: stationToView,
       title: "Station View: " + stationToView.name,
+      
     };
     console.log("station-view rendering: " + stationToView.name);
     response.render("station-view", viewData);
