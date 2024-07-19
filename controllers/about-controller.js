@@ -1,7 +1,11 @@
+import { accountsController } from "./accounts-controller.js";
+
 export const aboutController = {
-  index(request, response) {
+  asyindex(request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request);
     const viewData = {
       title: "About Station 1",
+      userName: loggedInUser.firstName,
     };
     console.log("about rendering");
     response.render("about-view", viewData);
