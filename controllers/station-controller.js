@@ -29,7 +29,7 @@ export const stationController = {
       maxPress: maxP,
       weatherCode: currentWeatherCode,
     };
-    console.log("station-view rendering: " + stationToView.name);
+    console.log("station-view rendering: " + stationToView.name + currentWeatherCode.description);
     response.render("station-view", viewData);
   },
   

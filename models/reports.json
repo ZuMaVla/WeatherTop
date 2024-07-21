@@ -2,7 +2,7 @@
   "file": "./models/reports.json",
   "reports": [
     {
-      "code": 500,
+      "code": 521,
       "temperature": 20,
       "windSpeed": 23,
       "windDirection": 360,
@@ -11,7 +11,7 @@
       "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     },
     {
-      "code": 300,
+      "code": 521,
       "temperature": 16,
       "windSpeed": 43,
       "windDirection": 67.5,
@@ -20,7 +20,7 @@
       "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     },
     {
-      "code": 450,
+      "code": 521,
       "temperature": 15,
       "windSpeed": 12,
       "windDirection": 90,
@@ -29,7 +29,7 @@
       "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     },
     {
-      "code": 500,
+      "code": 521,
       "temperature": 6,
       "windSpeed": 23,
       "windDirection": 360,
