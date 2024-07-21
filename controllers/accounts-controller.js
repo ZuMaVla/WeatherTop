@@ -38,6 +38,7 @@ export const accountsController = {
     const user = await userStore.getUserByEmail(request.body.email);
     const viewData = {
       message: "",
+      messageType: "notification is-info",
     };
     if (user) {
       if (user.password === request.body.password) {
@@ -47,11 +48,13 @@ export const accountsController = {
       }
       else {
         viewData.message = "Wrong password!";
+        viewData.messageType = "notification is-danger";
         response.render("login-view", viewData);
       }
     }
     else {
       viewData.message = "User not found!";
+      viewData.messageType = "notification is-danger";
       response.render("login-view", viewData);
     }
   },
