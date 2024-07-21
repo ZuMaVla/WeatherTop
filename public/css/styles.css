@@ -1,7 +1,7 @@
 .weatherBox {
   display: inline-block;
   position: relative;
-  text-align: center;
+  text-align: left;
   background-color: black;
   width: 15%;
   aspect-ratio: 1 / 1;
