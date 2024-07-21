@@ -6,3 +6,11 @@
   width: 15%;
   aspect-ratio: 1 / 1;
 }
+
+.weatherIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%; /* Ensures the image is responsive */
+}

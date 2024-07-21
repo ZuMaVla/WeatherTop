@@ -1,5 +1,5 @@
-<div class="box has-text-light" style="display: inline-block; position: relative; text-align: center; background-color: black; width: 15%; aspect-ratio: 1 / 1;">
-  <div style="position: absolute; top: 10px; right: 10px; margin: 0;">{{> icons/location}}</div>
+<div class="box has-text-light weatherBox">
+  <div class="weatherIcon">{{> icons/location}}</div>
   <div class="level-item has-text-centered is-flex is-align-items-center">
     <p class="title is-4 has-text-light">
       {{station.name}}
@@ -12,7 +12,7 @@
 </div>
 <span style="margin-right: 4px;"></span>
 
-<div class="box has-text-light" style="display: inline-block; position: relative; text-align: center; background-color: black; width: 15%; aspect-ratio: 1 / 1;">
+<div class="box has-text-light weatherBox">  
   <img src="{{weatherCode.icon}}" alt="{{weatherCode.description}}" style="position: absolute; top: 10px; right: 10px; margin: 0;">
   <div class="level-item has-text-centered is-flex is-align-items-center">
     <p class="title is-4 has-text-light">
@@ -27,14 +27,13 @@
 </div>
 <span style="margin-right: 4px;"></span>
 
-<div class="box has-text-light" style="display: inline-block; text-align: center; background-color: black; width: 15%; aspect-ratio: 1 / 1;
-                                       ">
+<div class="box has-text-light weatherBox">
+  <div style="position: absolute; top: 10px; right: 10px; margin: 0;">{{> icons/temperature}}</div>
   <div class="level-item has-text-centered is-flex is-align-items-center">
     <p class="title is-4 has-text-light">
       Temp 
     </p>
     <span>&nbsp;</span>
-    {{> icons/temperature}}
   </div>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>Max: {{maxTemp}}°C</p>
@@ -42,7 +41,7 @@
 </div>
 <span style="margin-right: 4px;"></span>
 
-<div class="box has-text-light" style="display: inline-block; text-align: center; background-color: black; width: 15%; aspect-ratio: 1 / 1;">
+<div class="box has-text-light weatherBox">
   <div class="level-item has-text-centered is-flex is-align-items-center">
     <p class="title is-4 has-text-light">
       Wind
@@ -54,9 +53,9 @@
   <p>Max:{{maxWind}}km/h</p>
   <p>Min:{{minWind}}km/h</p>
 </div>
-
 <span style="margin-right: 4px;"></span>
-<div class="box has-text-light" style="display: inline-block; text-align: center; background-color: black; width: 15%; aspect-ratio: 1 / 1;">
+
+<div class="box has-text-light weatherBox">
   <div class="level-item has-text-centered is-flex is-align-items-center">
     <p class="title is-4 has-text-light">
       Pressure
