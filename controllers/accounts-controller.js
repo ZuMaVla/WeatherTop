@@ -16,7 +16,7 @@ export const accountsController = {
   },
 
   logout(request, response) {
-    response.cookie("station", "");
+    response.cookie("weathertop_user_token", "");
     response.redirect("/");
   },
 
@@ -42,7 +42,7 @@ export const accountsController = {
     };
     if (user) {
       if (user.password === request.body.password) {
-        response.cookie("station", user.email);
+        response.cookie("weathertop_user_token", user.email);
         console.log(`logging in ${user.email}`);
         response.redirect("/dashboard");
       }
@@ -60,7 +60,7 @@ export const accountsController = {
   },
 
   async getLoggedInUser(request) {
-    const userEmail = request.cookies.station;
+    const userEmail = request.cookies.weathertop_user_token;
     return await userStore.getUserByEmail(userEmail);
   },
 };

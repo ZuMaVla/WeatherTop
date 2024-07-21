@@ -36,6 +36,15 @@
       "pressure": 1000,
       "_id": "7bddb089-d6ac-4e83-8755-df70e515949c",
       "stationId": "12b4e285-fbed-4214-bbb3-c218521dd5cd"
+    },
+    {
+      "code": 501,
+      "temperature": 15,
+      "windSpeed": 19,
+      "windDirection": 180,
+      "pressure": 990,
+      "_id": "553d5f2b-7acb-4000-98ce-52adc9f7e95b",
+      "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     }
   ]
 }
