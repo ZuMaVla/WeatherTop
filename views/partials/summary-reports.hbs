@@ -2,10 +2,10 @@
   <div class="weatherIcon">
     {{> icons/location}}
   </div>
-  <h2 class="is-4 has-text-light">
+  <h1 class="title mb-1 is-4 has-text-light">
     {{station.name}}
-  </h>
-  <hr style="margin-top: 0px; margin-bottom: 10px;">
+  </h1>
+  <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>Lat:{{station.latitude}}</p>
   <p>Lng:{{station.longitude}}</p>
 </div>
@@ -15,9 +15,9 @@
   <div class="weatherIcon">
     <img src="{{weatherCode.icon}}" alt="{{weatherCode.description}}">
   </div>
-  <p class="title is-4 has-text-light">
+  <h1 class="title mb-1 is-4 has-text-light">
     Weather
-  </p>
+  </h1>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>{{weatherCode.description}}</p>
   <p>&nbsp;</p>
@@ -26,9 +26,9 @@
 
 <div class="box has-text-light weatherBox">
   <div class="weatherIcon">{{> icons/temperature}}</div>
-  <p class="title is-4 has-text-light">
+  <h1 class="title mb-1 is-4 has-text-light">
     Temp. 
-  </p>
+  </h1>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>Max: {{maxTemp}}°C</p>
   <p>Min: {{minTemp}}°C</p>
@@ -37,9 +37,9 @@
 
 <div class="box has-text-light weatherBox">
   <div class="weatherIcon">{{> icons/wind}}</div>
-  <p class="title is-4 has-text-light">
+  <h1 class="title mb-1 is-4 has-text-light">
     Wind
-  </p>
+  </h1>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>Max:{{maxWind}}km/h</p>
   <p>Min:{{minWind}}km/h</p>
@@ -48,9 +48,9 @@
 
 <div class="box has-text-light weatherBox">
   <div class="weatherIcon">{{> icons/pressure}}</div>
-  <p class="title is-4 has-text-light">
+  <h1 class="title mb-1 is-4 has-text-light">
     Pressure
-  </p>
+  </h1>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>Max:{{maxPress}}kPa</p>
   <p>Min:{{minPress}}kPa</p>
