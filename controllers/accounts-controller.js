@@ -36,6 +36,9 @@ export const accountsController = {
 
   async authenticate(request, response) {
     const user = await userStore.getUserByEmail(request.body.email);
+    const viewData = {
+      message: "",
+    };
     if (user) {
       if (user.password === request.body.password) {
         response.cookie("station", user.email);
@@ -43,15 +46,13 @@ export const accountsController = {
         response.redirect("/dashboard");
       }
       else {
-        const viewData = {
-          message: "Station Dashboard"}
-        alert("Wrong password!");
-        response.redirect("/login");
+        viewData.message = "Wrong password!";
+        response.render("login-view", viewData);
       }
     }
     else {
-      alert("User not found!");
-      response.redirect("/login");
+      viewData.message = "User not found!";
+      response.render("login-view", viewData);
     }
   },
 
