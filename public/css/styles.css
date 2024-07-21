@@ -1,0 +1,8 @@
+.weatherBox {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  background-color: black;
+  width: 15%;
+  aspect-ratio: 1 / 1;
+}
