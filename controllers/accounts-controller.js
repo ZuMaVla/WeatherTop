@@ -43,6 +43,8 @@ export const accountsController = {
         response.redirect("/dashboard");
       }
       else {
+        const viewData = {
+          message: "Station Dashboard"}
         alert("Wrong password!");
         response.redirect("/login");
       }
