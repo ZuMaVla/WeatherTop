@@ -8,6 +8,7 @@ export const stationController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const stationToView = await stationStore.getStationById(request.params.stationId);
     const stationReports = await reportStore.getReportsByStationId(request.params.stationId);
+    const currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
     stationToView.reports = stationReports;
     const minT = stationStore.getParam(stationToView, "temperature", "min");
     const maxT = stationStore.getParam(stationToView, "temperature", "max");
@@ -26,6 +27,7 @@ export const stationController = {
       maxWind: maxW,
       minPress: minP,
       maxPress: maxP,
+      weatherCode: currentWeatherCode,
     };
     console.log("station-view rendering: " + stationToView.name);
     response.render("station-view", viewData);
