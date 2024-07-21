@@ -2,10 +2,10 @@
   <div class="weatherIcon">
     {{> icons/location}}
   </div>
-  <p class="title is-4 has-text-light">
+  <p >
     {{station.name}}
   </p>
-  <hr style="margin-top: 10px; margin-bottom: 10px;">
+  <hr style="margin-top: 0px; margin-bottom: 10px;">
   <p>Lat:{{station.latitude}}</p>
   <p>Lng:{{station.longitude}}</p>
 </div>
@@ -15,13 +15,9 @@
   <div class="weatherIcon">
     <img src="{{weatherCode.icon}}" alt="{{weatherCode.description}}">
   </div>
-  <div class="level-item">
-    <p class="title is-4 has-text-light">
-      Weather
-    </p>
-    <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
-    <span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
-  </div>
+  <p class="title is-4 has-text-light">
+    Weather
+  </p>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>{{weatherCode.description}}</p>
   <p>&nbsp;</p>
@@ -30,12 +26,9 @@
 
 <div class="box has-text-light weatherBox">
   <div class="weatherIcon">{{> icons/temperature}}</div>
-  <div class="level-item">
-    <p class="title is-4 has-text-light">
-      Temp 
-    </p>
-    <span>&nbsp;</span>
-  </div>
+  <p class="title is-4 has-text-light">
+    Temp. 
+  </p>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>Max: {{maxTemp}}°C</p>
   <p>Min: {{minTemp}}°C</p>
@@ -44,12 +37,9 @@
 
 <div class="box has-text-light weatherBox">
   <div class="weatherIcon">{{> icons/wind}}</div>
-  <div class="level-item has-text-centered is-flex is-align-items-center">
-    <p class="title is-4 has-text-light">
-      Wind
-    </p>
-    <span>&nbsp;</span>
-  </div>
+  <p class="title is-4 has-text-light">
+    Wind
+  </p>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>Max:{{maxWind}}km/h</p>
   <p>Min:{{minWind}}km/h</p>
@@ -58,12 +48,9 @@
 
 <div class="box has-text-light weatherBox">
   <div class="weatherIcon">{{> icons/pressure}}</div>
-  <div class="level-item has-text-centered is-flex is-align-items-center">
-    <p class="title is-4 has-text-light">
-      Pressure
-    </p>
-    <span>&nbsp;</span>
-  </div>
+  <p class="title is-4 has-text-light">
+    Pressure
+  </p>
   <hr style="margin-top: 10px; margin-bottom: 10px;">
   <p>Max:{{maxPress}}kPa</p>
   <p>Min:{{minPress}}kPa</p>
