@@ -26,13 +26,14 @@ export const stationController = {
       maxPress: maxP,
       weatherCode: currentWeatherCode,
     };
-    return summaryData;
+  return summaryData;
+  },
     
   async index(request, response) {
-    const viewData = prepareSummary(stationId, )   
+    const viewData = await this.prepareSummary(request.params.stationId);   
     const loggedInUser = await accountsController.getLoggedInUser(request);
-      userName: loggedInUser.firstName,
-    console.log("station-view rendering: " + stationToView.name + currentWeatherCode.description);
+    viewData.userName = loggedInUser.firstName,
+    console.log("station-view rendering: " + viewData.stationToView.name + viewData.currentWeatherCode.description);
     response.render("station-view", viewData);
   },
   
