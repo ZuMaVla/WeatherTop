@@ -4,11 +4,9 @@ import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 
 export const stationController = {
-  async prepareSummary(request, response) {
-  
-    const loggedInUser = await accountsController.getLoggedInUser(request);
-    const stationToView = await stationStore.getStationById(request.params.stationId);
-    const stationReports = await reportStore.getReportsByStationId(request.params.stationId);
+  async prepareSummary(stationId) {
+    const stationToView = await stationStore.getStationById(stationId);
+    const stationReports = await reportStore.getReportsByStationId(stationId);
     const currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
     stationToView.reports = stationReports;
     const minT = stationStore.getParam(stationToView, "temperature", "min");
@@ -17,8 +15,7 @@ export const stationController = {
     const maxW = stationStore.getParam(stationToView, "windSpeed", "max");
     const minP = stationStore.getParam(stationToView, "pressure", "min");
     const maxP = stationStore.getParam(stationToView, "pressure", "max");
-    const viewData = {
-      userName: loggedInUser.firstName,
+    const summaryData = {
       station: stationToView,
       title: "Station View: " + stationToView.name,
       minTemp: minT,
@@ -29,7 +26,12 @@ export const stationController = {
       maxPress: maxP,
       weatherCode: currentWeatherCode,
     };
+    return summaryData;
+    
   async index(request, response) {
+    const viewData = prepareSummary(stationId, )   
+    const loggedInUser = await accountsController.getLoggedInUser(request);
+      userName: loggedInUser.firstName,
     console.log("station-view rendering: " + stationToView.name + currentWeatherCode.description);
     response.render("station-view", viewData);
   },
