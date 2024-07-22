@@ -11,29 +11,31 @@
       </tr>
     </thead>
     <tbody>
-      {{#each station.reports}}
-      <tr>
-        <td>
-          {{code}}
-        </td>
-        <td>
-          {{temperature}}
-        </td> 
-        <td>
-          {{windSpeed}}
-        </td>
-        <td>
-          {{windDirection}}
-        </td>
-        <td>
-          {{pressure}}
-        </td>
-        <td>
-          <a href="/station/{{../station._id}}/deleteReport/{{_id}}" class="button">
-            {{> icons/delete}}
-          </a>
-        </td>
-      </tr>
+      {{#each stations}}
+        {{#each reports}}
+        <tr>
+          <td>
+            {{code}}
+          </td>
+          <td>
+            {{temperature}}
+          </td> 
+          <td>
+            {{windSpeed}}
+          </td>
+          <td>
+            {{windDirection}}
+          </td>
+          <td>
+            {{pressure}}
+          </td>
+          <td>
+            <a href="/station/{{../_id}}/deleteReport/{{_id}}" class="button">
+              {{> icons/delete}}
+            </a>
+          </td>
+        </tr>
+        {{/each}}
       {{/each}}
     </tbody>
   </table>

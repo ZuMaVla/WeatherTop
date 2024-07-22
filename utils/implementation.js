@@ -7,25 +7,24 @@ export async function prepareSummary(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
   if  (stationReports.length > 0) {
-    
-  }
-  const currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
-  console.log(currentWeatherCode);
-  stationToView.reports = stationReports;
-  const minT = stationStore.getParam(stationToView, "temperature", "min");
-  const maxT = stationStore.getParam(stationToView, "temperature", "max");
-  const minW = stationStore.getParam(stationToView, "windSpeed", "min");
-  const maxW = stationStore.getParam(stationToView, "windSpeed", "max");
-  const minP = stationStore.getParam(stationToView, "pressure", "min");
-  const maxP = stationStore.getParam(stationToView, "pressure", "max");
-  stationToView.attributes = {
-    minTemp: minT,
-    maxTemp: maxT,
-    minWind: minW,
-    maxWind: maxW,
-    minPress: minP,
-    maxPress: maxP,
-    weatherCode: currentWeatherCode,
+    const currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
+    console.log(currentWeatherCode);
+    stationToView.reports = stationReports;
+    const minT = stationStore.getParam(stationToView, "temperature", "min");
+    const maxT = stationStore.getParam(stationToView, "temperature", "max");
+    const minW = stationStore.getParam(stationToView, "windSpeed", "min");
+    const maxW = stationStore.getParam(stationToView, "windSpeed", "max");
+    const minP = stationStore.getParam(stationToView, "pressure", "min");
+    const maxP = stationStore.getParam(stationToView, "pressure", "max");
+    stationToView.attributes = {
+      minTemp: minT,
+      maxTemp: maxT,
+      minWind: minW,
+      maxWind: maxW,
+      minPress: minP,
+      maxPress: maxP,
+      weatherCode: currentWeatherCode,
+    };
   };
 
     return stationToView;
