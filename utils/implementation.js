@@ -14,6 +14,7 @@ export async function prepareSummary(stationId) {
     const maxW = stationStore.getParam(stationToView, "windSpeed", "max");
     const minP = stationStore.getParam(stationToView, "pressure", "min");
     const maxP = stationStore.getParam(stationToView, "pressure", "max");
+    stationToView.attributes =
     const summaryData = {
       station: stationToView,
       title: "Station View: " + stationToView.name,
