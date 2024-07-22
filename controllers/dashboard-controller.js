@@ -1,6 +1,7 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
+import { stationController } from "./station-controller.js";
 
 export const dashboardController = {
   async index(request, response) {

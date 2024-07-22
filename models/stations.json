@@ -49,6 +49,13 @@
       "longitude": "-7.11194",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "ad01368f-01d1-47fc-bb0f-bad5ff2392f1"
+    },
+    {
+      "name": "Dungarvan",
+      "latitude": "52.0896568",
+      "longitude": " -7.6224724",
+      "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
+      "_id": "cc5c06fc-7d79-4dd0-a970-2e9f8a514968"
     }
   ]
 }
