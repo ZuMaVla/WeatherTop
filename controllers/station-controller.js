@@ -14,12 +14,13 @@ export const stationController = {
     const stationsToView = [];
     stationsToView[0] = currentStation;
     
-    const viewData = {};
-    viewData.stations = stationsToView;
-    viewData.userName = loggedInUser.firstName;
-    viewData.title = viewData.station.name; 
+    const viewData = {
+      stations: stationsToView,
+      userName: loggedInUser.firstName,
+      title: currentStation.name, 
+    };
     
-    console.log("station-view rendering: " + viewData.stations[0].name + viewData.stations[0].attributes.weatherCode.description);
+    console.log("station-view rendering: " + currentStation.name + currentStation.attributes.weatherCode.description);
     
     response.render("station-view", viewData);
   },
