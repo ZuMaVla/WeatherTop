@@ -8,11 +8,10 @@ export const stationController = {
     
   async index(request, response) {
     const currentStation = await prepareSummary(request.params.stationId); 
-    
+    console.log('Current Station:', JSON.stringify(currentStation, null, 2));
     const loggedInUser = await accountsController.getLoggedInUser(request);
     
-    const stationsToView = [];
-    stationsToView[0] = currentStation;
+    const stationsToView = [currentStation];
     
     const viewData = {
       stations: stationsToView,
@@ -20,7 +19,7 @@ export const stationController = {
       title: currentStation.name, 
     };
     
-    console.log("station-view rendering: " + currentStation.name + currentStation.attributes.weatherCode.description);
+    console.log(`station-view rendering: ${currentStation.name}, ${currentStation.attributes.weatherCode.description}`);
     
     response.render("station-view", viewData);
   },
