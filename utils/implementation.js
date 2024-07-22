@@ -7,6 +7,7 @@ export async function prepareSummary(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
   const currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
+  console.log(currentWeatherCode);
   stationToView.reports = stationReports;
   const minT = stationStore.getParam(stationToView, "temperature", "min");
   const maxT = stationStore.getParam(stationToView, "temperature", "max");
