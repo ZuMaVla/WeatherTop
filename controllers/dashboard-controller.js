@@ -1,4 +1,5 @@
 import { stationStore } from "../models/station-store.js";
+import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 
 export const dashboardController = {
