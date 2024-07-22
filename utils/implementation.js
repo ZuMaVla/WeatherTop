@@ -25,9 +25,5 @@ export async function prepareSummary(stationId) {
     weatherCode: currentWeatherCode,
   };
 
-  const summaryData = {
-    station: stationToView,
-  };
-
-  return summaryData;
+    return stationToView;
   }

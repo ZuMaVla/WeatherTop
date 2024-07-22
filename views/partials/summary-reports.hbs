@@ -4,23 +4,23 @@
       {{> icons/location}}
     </div>
     <h1 class="title mb-1 is-4 has-text-light">
-      {{station.name}}
+      {{name}}
     </h1>
     <hr style="margin-top: 10px; margin-bottom: 10px;">
-    <p>Lat: {{station.latitude}}</p>
-    <p>Lng: {{station.longitude}}</p>
+    <p>Lat: {{latitude}}</p>
+    <p>Lng: {{longitude}}</p>
   </div>
   <span style="margin-right: 4px;"></span>
 
   <div class="box has-text-light weatherBox">  
     <div class="weatherIcon">
-      <img src="{{station.attributes.weatherCode.icon}}" alt="{{station.attributes.weatherCode.description}}">
+      <img src="{{attributes.weatherCode.icon}}" alt="{{attributes.weatherCode.description}}">
     </div>
     <h1 class="title mb-1 is-4 has-text-light">
       Weather
     </h1>
     <hr style="margin-top: 10px; margin-bottom: 10px;">
-    <p>{{station.attributes.weatherCode.description}}</p>
+    <p>{{attributes.weatherCode.description}}</p>
     <p>&nbsp;</p>
   </div>
   <span style="margin-right: 4px;"></span>
@@ -31,7 +31,7 @@
       Temp. 
     </h1>
     <hr style="margin-top: 10px; margin-bottom: 10px;">
-    <p>Max: {{station.attributes.maxTemp}}°C</p>
+    <p>Max: {{attributes.maxTemp}}°C</p>
     <p>Min: {{station.attributes.minTemp}}°C</p>
   </div>
   <span style="margin-right: 4px;"></span>
