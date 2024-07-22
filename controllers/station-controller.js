@@ -1,39 +1,16 @@
-import { WCCs } from "../models/WCC-db.js";
+//import { WCCs } from "../models/WCC-db.js";
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
+import { prepareSummary } from "../utils/implementation.js";
 
 export const stationController = {
-  async prepareSummary(stationId) {
-    const stationToView = await stationStore.getStationById(stationId);
-    const stationReports = await reportStore.getReportsByStationId(stationId);
-    const currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
-    stationToView.reports = stationReports;
-    const minT = stationStore.getParam(stationToView, "temperature", "min");
-    const maxT = stationStore.getParam(stationToView, "temperature", "max");
-    const minW = stationStore.getParam(stationToView, "windSpeed", "min");
-    const maxW = stationStore.getParam(stationToView, "windSpeed", "max");
-    const minP = stationStore.getParam(stationToView, "pressure", "min");
-    const maxP = stationStore.getParam(stationToView, "pressure", "max");
-    const summaryData = {
-      station: stationToView,
-      title: "Station View: " + stationToView.name,
-      minTemp: minT,
-      maxTemp: maxT,
-      minWind: minW,
-      maxWind: maxW,
-      minPress: minP,
-      maxPress: maxP,
-      weatherCode: currentWeatherCode,
-    };
-  return summaryData;
-  },
     
   async index(request, response) {
-    const viewData = await this.prepareSummary(request.params.stationId);   
+    const viewData = await prepareSummary(request.params.stationId);   
     const loggedInUser = await accountsController.getLoggedInUser(request);
     viewData.userName = loggedInUser.firstName,
-    console.log("station-view rendering: " + viewData.stationToView.name + viewData.currentWeatherCode.description);
+    console.log("station-view rendering: " + viewData.station.name + viewData.weatherCode.description);
     response.render("station-view", viewData);
   },
   
