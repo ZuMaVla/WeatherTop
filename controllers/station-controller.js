@@ -7,10 +7,11 @@ import { prepareSummary } from "../utils/implementation.js";
 export const stationController = {
     
   async index(request, response) {
-    const viewData = await prepareSummary(request.params.stationId);   
+    const stationToView = await prepareSummary(request.params.stationId);   
     const loggedInUser = await accountsController.getLoggedInUser(request);
     viewData.userName = loggedInUser.firstName,
-    console.log("station-view rendering: " + viewData.station.name + viewData.weatherCode.description);
+    viewData.title = viewData.station.name,  
+    console.log("station-view rendering: " + viewData.station.name + viewData.station.attributes.weatherCode.description);
     response.render("station-view", viewData);
   },
   
