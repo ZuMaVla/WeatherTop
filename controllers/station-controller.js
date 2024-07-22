@@ -19,7 +19,7 @@ export const stationController = {
       title: currentStation.name, 
     };
     
-    console.log(`station-view rendering: ${currentStation.name}, ${currentStation.attributes.weatherCode.description}`);
+//    console.log(`station-view rendering: ${currentStation.name}, ${currentStation.attributes.weatherCode.description}`);
     
     response.render("station-view", viewData);
   },
