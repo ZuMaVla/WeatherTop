@@ -4,7 +4,8 @@ import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 
 export const stationController = {
-  async index(request, response) {
+  async prepareSummary(request, response) {
+  
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const stationToView = await stationStore.getStationById(request.params.stationId);
     const stationReports = await reportStore.getReportsByStationId(request.params.stationId);
@@ -16,7 +17,6 @@ export const stationController = {
     const maxW = stationStore.getParam(stationToView, "windSpeed", "max");
     const minP = stationStore.getParam(stationToView, "pressure", "min");
     const maxP = stationStore.getParam(stationToView, "pressure", "max");
-    console.log(minT);
     const viewData = {
       userName: loggedInUser.firstName,
       station: stationToView,
@@ -29,6 +29,7 @@ export const stationController = {
       maxPress: maxP,
       weatherCode: currentWeatherCode,
     };
+  async index(request, response) {
     console.log("station-view rendering: " + stationToView.name + currentWeatherCode.description);
     response.render("station-view", viewData);
   },
