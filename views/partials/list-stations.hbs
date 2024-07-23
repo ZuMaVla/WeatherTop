@@ -1,12 +1,9 @@
 <script>
   console.log('1');
 </script>
-{{#each stations}}
-
   <div class="box box-link-hover-shadow">
-    {{>summary-reports}}
+    {{> summary-reports}}
     <a href="/station/{{_id}}" class="button">
       {{>icons/open-station}}
     </a>
   </div>
-{{/each}}
