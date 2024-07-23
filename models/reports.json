@@ -54,6 +54,15 @@
       "pressure": 1002,
       "_id": "cc90f529-a045-4cf8-9d5f-6bf3c9154d7e",
       "stationId": "58ee041b-eefb-4b99-a8a7-8bfc37a8039b"
+    },
+    {
+      "code": 300,
+      "temperature": 12,
+      "windSpeed": 0,
+      "windDirection": 360,
+      "pressure": 0,
+      "_id": "ef5ef24e-0036-46f8-8d11-b1e540c22d60",
+      "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     }
   ]
 }

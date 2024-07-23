@@ -5,7 +5,9 @@
     {{title}}
   </h3>
   <!--div class="box"-->
+  {{#each stations}}
     {{> summary-reports}}
+  {{/each}} 
   <!--/div-->
   <div class="section">
     {{> list-reports}}
