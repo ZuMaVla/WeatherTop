@@ -10,6 +10,7 @@ export const dashboardController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const userStations = await stationStore.getStationByUserId(loggedInUser._id);
+    const stationsAlphabeticallySorted = userStations.sort("name");
     
     let temp;
     for (let i = 0; i < userStations.length - 1; i++) {
