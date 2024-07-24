@@ -15,7 +15,7 @@ export const stationStore = {
     station._id = v4();
     temp.push(station);
     
-    temp.sort(function (a, b) {
+    temp.sort(function (a, b) { //https://www.freecodecamp.org/news/how-to-sort-alphabetically-in-javascript/
       if (a.name < b.name) {
         return -1;
       }
