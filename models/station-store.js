@@ -10,19 +10,22 @@ export const stationStore = {
   },
 
   async addStation(station) {
-    let temp = await db.read().stations;
+    await db.read();
+    let temp = db.data.stations;
     station._id = v4();
     temp.push(station);
     
-    users.sort(function (a, b) {
-  if (a.name < b.name) {
-    return -1;
-  }
-  if (a.name > b.name) {
-    return 1;
-  }
-  return 0;
-});
+    temp.sort(function (a, b) {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+    
+    db.data.stations = temp;
     await db.write();
     return station;
   },
