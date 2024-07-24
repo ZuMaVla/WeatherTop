@@ -6,7 +6,7 @@ import { reportStore } from "../models/report-store.js";
 export async function prepareSummary(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
-  if  (stationReports.length > 0) {
+  if  (stationReports.length > -1) {
     const currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
     console.log(currentWeatherCode);
     stationToView.reports = stationReports;
