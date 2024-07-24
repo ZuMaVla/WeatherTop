@@ -6,11 +6,11 @@ import { reportStore } from "../models/report-store.js";
 export async function prepareSummary(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
-  let currentWeatherCode = 0;
-  if  (stationReports.length > 0) {
+  let currentWeatherCode = 100;
+  if (stationReports.length > 0) {
     currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
     console.log(currentWeatherCode);
-  }
+  };
      
   stationToView.reports = stationReports;
   const minT = stationStore.getParam(stationToView, "temperature", "min");
@@ -30,5 +30,5 @@ export async function prepareSummary(stationId) {
   };
 
   return stationToView;
-  };
-
+};
+ 

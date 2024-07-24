@@ -2,7 +2,7 @@
   "file": "./models/WCCs.json",
   "weatherCodes": [
     {
-      "code": 0,
+      "code": 100,
       "description": "not defined",
       "icon": "https://img.icons8.com/clouds/50/question-mark.png"
     },
