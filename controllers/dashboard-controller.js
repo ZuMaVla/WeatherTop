@@ -13,7 +13,7 @@ export const dashboardController = {
     //const stationsAlphabeticallySorted = userStations.sort("name");
     
     let temp;
-    for (let i = 0; i < userStations.length - 1; i++) {
+    for (let i = 0; i < userStations.length; i++) {
       temp = await prepareSummary(userStations[i]._id);
       console.log('Current Station:', JSON.stringify(temp, null, 2));
 
