@@ -2,6 +2,11 @@
   "file": "./models/WCCs.json",
   "weatherCodes": [
     {
+      "code": 0,
+      "description": "not defined",
+      "icon": "https://img.icons8.com/clouds/50/question-mark.png"
+    },
+    {
       "code": 200,
       "description": "thunderstorm with light rain",
       "icon": "https://openweathermap.org/img/wn/11d.png"
