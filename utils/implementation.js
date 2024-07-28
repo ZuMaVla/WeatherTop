@@ -1,6 +1,7 @@
 import { WCCs } from "../models/WCC-db.js";
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
+import dayjs from 'dayjs';
 
 
 export async function prepareSummary(stationId) {
@@ -17,6 +18,7 @@ export async function prepareSummary(stationId) {
           currentWeatherCode = temp.code;
         }
       }
+    }
     console.log(currentWeatherCode);
   };
      
