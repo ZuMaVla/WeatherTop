@@ -64,13 +64,14 @@ export const accountsController = {
     return await userStore.getUserByEmail(userEmail);
   },
   
-  async profile(request) {
+  async profile(request, response) {
     const currentUser = await userStore.getUserById(request.params.userId);
     const viewData = {
       title: "My Profile",
-      user: currentUser.
-      
+      user: currentUser.firstName + " " + currentUser.lastName,
+      userName: currentUser.firstName,
     };
+    response.render("profile-view", viewData);
   },
   
 };
