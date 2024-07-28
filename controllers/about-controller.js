@@ -5,7 +5,7 @@ export const aboutController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const viewData = {
       title: "About Station 1",
-      userName: loggedInUser.firstName,
+      user: loggedInUser,
     };
     console.log("about rendering");
     response.render("about-view", viewData);

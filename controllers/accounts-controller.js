@@ -68,8 +68,8 @@ export const accountsController = {
     const currentUser = await userStore.getUserById(request.params.userId);
     const viewData = {
       title: "My Profile",
-      user: currentUser.firstName + " " + currentUser.lastName,
-      userName: currentUser.firstName,
+      user: currentUser,
+      userName: currentUser.firstName + " " + currentUser.lastName,
     };
     response.render("profile-view", viewData);
   },
