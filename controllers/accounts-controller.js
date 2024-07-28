@@ -74,9 +74,9 @@ export const accountsController = {
     response.render("profile-view", viewData);
   },
   
-    async updateProfile(request, response) {
+  async updateProfile(request, response) {
     await userStore.updateUser(request.params.userId, request.body);
-    console.log(`user ${request.params.userId} updated with the following details: ${user.email}`);
+    console.log(`user ${request.params.userId} updated with the following details: ${request.body.firstName}, ${request.body.lastName}, ${request.body.email}`);
     response.redirect("/");
   },
   
