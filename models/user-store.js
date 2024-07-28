@@ -41,7 +41,7 @@ export const userStore = {
   
   async updateUser(userId, userNewData) {
     await db.read();
-    const temp = this.getUserById(userId);
+    const temp = await getUserById(userId);
     temp.firstName = userNewData.firstName;
     temp.lastName = userNewData.lastName;
     temp.email = userNewData.email;
