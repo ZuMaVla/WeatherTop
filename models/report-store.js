@@ -39,9 +39,12 @@ export const reportStore = {
   
   async deleteReportsByStationId(stnId) {
     await db.read();
-    const toDeleteReports = db.data.reports.filter((report) => report.stationId === stnId);
-    
-  }
+    let temp = db.data.reports.length;
+    db.data.reports = db.data.reports.filter((report) => report.stationId !== stnId);
+    await db.write();
+    temp -= db.data.reports.length;
+    return temp;
+  },
 
   async deleteAllReports() {
     db.data.reports = [];
