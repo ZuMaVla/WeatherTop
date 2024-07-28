@@ -22,7 +22,7 @@ export const accountsController = {
 
   signup(request, response) {
     const viewData = {
-      title: "Login to the Service",
+      title: "Register for the Service",
     };
     response.render("signup-view", viewData);
   },
@@ -72,6 +72,14 @@ export const accountsController = {
       userName: currentUser.firstName + " " + currentUser.lastName,
     };
     response.render("profile-view", viewData);
+  },
+  
+    async updateProfile(request, response) {
+    const currentUser = await userStore.getUserById(request.params.userId);
+    currentUser.firstName = request.body.firstName;
+    await userStore.addUser(user);
+    console.log(`registering ${user.email}`);
+    response.redirect("/");
   },
   
 };

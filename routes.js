@@ -22,3 +22,4 @@ router.get("/logout", accountsController.logout);
 router.post("/register", accountsController.register);
 router.post("/authenticate", accountsController.authenticate);
 router.get("/userprofile/:userId", accountsController.profile);
+router.post("/update/:userId", accountsController.updateProfile);
