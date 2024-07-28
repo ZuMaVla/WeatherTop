@@ -1,41 +1,54 @@
 {{> menu active="myProfile"}}
 
 <section class="section">
-  <div class="container box columns is-centered">
-    <div class="column is-narrow">
-      <form action="/update/{{user._id}}" method="POST">
-        <label class="label">Name</label>
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <input class="input" type="text" value="{{user.firstName}}" name="firstName" id="myFirstName" disabled>
-            </div>
-            <div class="field">
-              <input class="input" type="text" value="{{user.lastName}}" name="lastName" id="myLastName" disabled>
+  <div class="columns is-centered">
+    <div class="column">
+      <p>
+        &nbsp
+      </p>
+    </div>  
+    <div class="box column">
+      <div class="column">
+        <form action="/update/{{user._id}}" method="POST">
+          <label class="label">Name</label>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <input class="input" type="text" value="{{user.firstName}}" name="firstName" id="myFirstName" disabled>
+              </div>
+              <div class="field">
+                <input class="input" type="text" value="{{user.lastName}}" name="lastName" id="myLastName" disabled>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="field">
-          <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email" name="email" value="{{user.email}}" id="myEmail" disabled>
-        </div>
-        <div class="field">
-          <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password" name="password" value="{{user.password}}" id="myPassword" disabled>
-        </div>
-        <div class="field is-grouped">
-          <button class="button" id="edit">Edit</button>
-          <button class="button" id="submit" disabled>Submit</button>
-          <a href="/dashboard" class="button">Cancel</a>
-        </div>
-      </form>
+          <div class="field">
+            <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email" name="email" value="{{user.email}}" id="myEmail" disabled>
+          </div>
+          <div class="field">
+            <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password" name="password" value="{{user.password}}" id="myPassword" disabled>
+          </div>
+          <div class="field is-grouped">
+            <button class="button" id="edit">Edit</button>
+            <button class="button" id="submit" disabled>Submit</button>
+            <a href="/dashboard" class="button">Cancel</a>
+          </div>
+        </form>
+      </div>
+      <div class="column">
+        <p>
+          &nbsp
+        </p>
+        {{> icons/user}}
+        <h1 class="title">My Profile</h1>
+
+      </div>
     </div>
     <div class="column is-narrow">
       <p>
         &nbsp
       </p>
-      {{> icons/user}}
-      <h1 class="title">My Profile</h1>
-      
-    </div>
+    </div>  
+
   </div>
 
 </section>
