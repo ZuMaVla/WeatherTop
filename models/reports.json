@@ -2,7 +2,7 @@
   "file": "./models/reports.json",
   "reports": [
     {
-      "code": 601,
+      "code": 301,
       "temperature": 20,
       "windSpeed": 23,
       "windDirection": 360,
@@ -67,7 +67,7 @@
       "windSpeed": 0,
       "windDirection": 360,
       "pressure": 0,
-      "reportDate": "2024/07/28 11:50",
+      "reportDate": "2024/07/28 13:50",
       "_id": "ef5ef24e-0036-46f8-8d11-b1e540c22d60",
       "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     },
