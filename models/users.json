@@ -14,6 +14,13 @@
       "email": "test@test.com",
       "password": "1234",
       "_id": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b"
+    },
+    {
+      "firstName": "Weather",
+      "lastName": "Top",
+      "email": "weathertop@check.com",
+      "password": "1234",
+      "_id": "a3836af1-17a3-4151-b673-39dc5d556159"
     }
   ]
 }
