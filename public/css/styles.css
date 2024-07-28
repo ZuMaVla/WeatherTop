@@ -3,7 +3,7 @@
   position: relative;
   text-align: left;
   background-color: black;
-  width: 18.75%;
+  width: 18.0%;
 /*  aspect-ratio: 1 / 1;*/
 }
 
@@ -24,7 +24,5 @@
 }
 
 .icon-column p {
-  margin: 0; /* Remove default margin */
-  padding: 10px 0; /* Add some padding for spacing */
-  justify-content: right;
+  padding: 10px 0 0 0;
 }
