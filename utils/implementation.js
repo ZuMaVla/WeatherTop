@@ -9,6 +9,7 @@ export async function prepareSummary(stationId) {
   let currentWeatherCode = await WCCs.getWeatherByCode(100);
   if (stationReports.length > 0) {
     currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
+    for (let i=)
     console.log(currentWeatherCode);
   };
      

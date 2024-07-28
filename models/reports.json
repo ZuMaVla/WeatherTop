@@ -90,6 +90,16 @@
       "reportDate": "2024/07/28 11:50",
       "_id": "d5be8c78-c997-4574-b197-718e62c05ebe",
       "stationId": "ad01368f-01d1-47fc-bb0f-bad5ff2392f1"
+    },
+    {
+      "code": 212,
+      "temperature": 23,
+      "windSpeed": 45,
+      "windDirection": 202.5,
+      "pressure": 980,
+      "reportDate": "2024/07/28 11:56",
+      "_id": "f969f8af-368c-4caa-a020-828adb86ef01",
+      "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     }
   ]
 }
