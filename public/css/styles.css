@@ -3,7 +3,7 @@
   position: relative;
   text-align: left;
   background-color: black;
-  width: 1%;
+  width: 18.75%;
 /*  aspect-ratio: 1 / 1;*/
 }
 
@@ -21,13 +21,10 @@
 
 .icon-column {
   display: inline-block;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start; /* Align to the start of the container */
 }
 
 .icon-column p {
   margin: 0; /* Remove default margin */
-  padding: 5px 0; /* Add some padding for spacing */
+  padding: 10px 0; /* Add some padding for spacing */
+  justify-content: right;
 }
