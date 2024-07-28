@@ -41,13 +41,20 @@ export const userStore = {
   
   async updateUser(userId, userNewData) {
     await db.read();
-    const temp = await getUserById(userId);
-    temp.firstName = userNewData.firstName;
-    temp.lastName = userNewData.lastName;
-    temp.email = userNewData.email;
-    temp.password = userNewData.password;
-    await db.write();
-    return temp;
+    const user = await db.getUserById(userId);
+    if (user) {
+      user.firstName = userNewData.firstName;
+      user.lastName = userNewData.lastName;
+      user.email = userNewData.email;
+      user.password = userNewData.password;
+
+      await db.write(); // Write the changes back to the database
+
+      return user; // Return the updated user
+    } else {
+       throw new Error('User not found');
+    }
+    return user;
   },
   
 };
