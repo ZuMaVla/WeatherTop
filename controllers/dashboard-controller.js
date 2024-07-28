@@ -47,9 +47,9 @@ export const dashboardController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     await stationStore.deleteStationById(request.params.stationId);
 
-    console.log(`station deleted ${request.params.stationId}`);
+    console.log(`Station deleted: ${request.params.stationId}`);
     const deletedReports = await reportStore.deleteReportsByStationId(request.params.stationId);
-    console.log("reports deleted ${deletedReports}");
+    console.log(`Reports deleted: ${deletedReports}`);
     response.redirect("/dashboard");
   },
   
