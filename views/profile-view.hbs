@@ -24,7 +24,7 @@
         <div class="field is-grouped">
           <button class="button" id="edit">Edit</button>
           <button class="button" id="submit" disabled>Submit</button>
-          <button class="button" id="cancel">Cancel</button>
+          <a href="/dashboard" class="button">Cancel</a>
         </div>
       </form>
     </div>
@@ -48,5 +48,8 @@
     document.getElementById("myPassword").disabled = false;
     document.getElementById("submit").disabled = false;
   });
-
+  document.getElementById("cancel").addEventListener("click", function(event) {
+    event.preventDefault();
+  });  
+  
 </script>
