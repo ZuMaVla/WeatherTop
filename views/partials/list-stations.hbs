@@ -1,11 +1,18 @@
 {{#each stations}}
   <div class="box box-link-hover-shadow">
     {{> summary-reports}}
-    <a href="/station/{{_id}}" class="button is-primary">
-      {{>icons/open-station}}
-    </a>
-    <a href="/deleteStation/{{_id}}" class="button is-danger">
-      {{> icons/delete}}
-    </a>
+   <div class="icon-column box">
+      <p>
+        <a href="/station/{{_id}}" class="button is-primary">
+          {{>icons/open-station}}
+        </a>  
+      </p>
+      <p>
+        <a href="/deleteStation/{{_id}}" class="button is-danger">
+          {{> icons/delete}}
+        </a>  
+      </p>
+     
+    </div>
   </div>
 {{/each}}

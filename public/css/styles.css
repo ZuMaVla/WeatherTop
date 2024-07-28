@@ -18,3 +18,15 @@
 .title {
   margin-bottom: 0.5rem;
 }
+
+.icon-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start; /* Align to the start of the container */
+}
+
+.icon-column p {
+  margin: 0; /* Remove default margin */
+  padding: 5px 0; /* Add some padding for spacing */
+}
