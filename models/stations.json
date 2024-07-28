@@ -23,6 +23,20 @@
       "_id": "58ee041b-eefb-4b99-a8a7-8bfc37a8039b"
     },
     {
+      "name": "Drogheda",
+      "latitude": "51.850334",
+      "longitude": "-6.2055",
+      "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
+      "_id": "f1741754-493f-49a9-b3d3-3169c71bf3b5"
+    },
+    {
+      "name": "Dublin",
+      "latitude": "51.903614",
+      "longitude": "-8.468399",
+      "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
+      "_id": "42d1a0bd-1bed-485a-a511-94f3a22a3024"
+    },
+    {
       "name": "Dungarvan",
       "latitude": "52.0896568",
       "longitude": " -7.6224724",
@@ -51,11 +65,11 @@
       "_id": "49b4f020-7f37-4473-afe1-d192db32d66a"
     },
     {
-      "name": "Minsk",
-      "latitude": "51.903614",
+      "name": "Navan",
+      "latitude": "52.668018",
       "longitude": "-9.062691",
       "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
-      "_id": "fd0fe269-596e-4f10-b923-cef42b6892ca"
+      "_id": "0467fd17-1d6e-43f9-b929-c8cc2f293333"
     },
     {
       "name": "Tramore",

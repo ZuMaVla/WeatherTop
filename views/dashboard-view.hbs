@@ -1,16 +1,18 @@
 {{> menu active="dashboard"}}
 
-<section class="box is-centered has-text-centered mb-1" style="width: 50%">
-  <h3 class="is-3 title">
-    Main Dashboard
-  </h3>
-  <div class="section">
+  <div class="has-text-centered mb-1" style="width: 50% margin: 0 auto">
     <p>
       This is the main dashboard view.
-      Enter new station name and press Enter or click button below to add it to your list of stations.
     </p>
+    <p>
+      Enter new station name and press Enter or click button "Add Station" to add it to your list of stations.
+    </p>
+    <hr>
+    <h4 class="title is-3 mb-1">
+      Your Current Stations:
+    </h4>
   </div>
-</section>
+
 <section class="section">
   {{> list-stations}}
   {{> add-station}}
