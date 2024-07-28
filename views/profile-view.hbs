@@ -24,6 +24,7 @@
         <div class="field is-grouped">
           <button class="button" id="edit">Edit</button>
           <button class="button" id="submit" disabled>Submit</button>
+          <button class="button" id="cancel">Cancel</button>
         </div>
       </form>
     </div>
@@ -39,7 +40,8 @@
 </section>
 
 <script>
-  document.getElementById("edit").addEventListener("click", function() {
+  document.getElementById("edit").addEventListener("click", function(event) {
+    event.preventDefault();
     document.getElementById("myFirstName").disabled = false;
     document.getElementById("myLastName").disabled = false;
     document.getElementById("myEmail").disabled = false;
