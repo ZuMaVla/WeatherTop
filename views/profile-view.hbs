@@ -1,28 +1,34 @@
 {{> menu active="myProfile"}}
 
-{{> icons/user}}
-<section class="section">
-  <h1 class="title">Sign up</h1>
-  <form action="/register" method="POST">
-    <label class="label">Name</label>
-    <div class="field is-horizontal">
-      <div class="field-body">
-        <div class="field">
-          <input class="input" type="text" placeholder="Enter first name" name="firstName">
+<section class="columns box is-3 has-text-centered">
+  <h1 class="title">My Profile</h1>
+
+    <div class="column">
+      <form action="/register" method="POST">
+        <label class="label">Name</label>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <input class="input" type="text" placeholder="Enter first name" name="firstName">
+            </div>
+            <div class="field">
+              <input class="input" type="text" placeholder="Enter last name" name="lastName">
+            </div>
+          </div>
         </div>
         <div class="field">
-          <input class="input" type="text" placeholder="Enter last name" name="lastName">
+          <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email" name="email">
         </div>
-      </div>
+        <div class="field">
+          <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password" name="password">
+        </div>
+        <div class="field is-grouped">
+          <button class="button is-link">Submit</button>
+        </div>
+      </form>
     </div>
-    <div class="field">
-      <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email" name="email">
+    <div class="column">
+      {{> icons/user}}
     </div>
-    <div class="field">
-      <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password" name="password">
-    </div>
-    <div class="field is-grouped">
-      <button class="button is-link">Submit</button>
-    </div>
-  </form>
+
 </section>
