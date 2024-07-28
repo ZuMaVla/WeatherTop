@@ -16,7 +16,7 @@ export const stationController = {
     
     const viewData = {
       stations: stationsToView,
-      userName: loggedInUser.firstName,
+      user: loggedInUser,
       title: currentStation.name, 
     };
     

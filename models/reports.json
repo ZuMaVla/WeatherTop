@@ -100,16 +100,6 @@
       "reportDate": "2024/07/28 11:50",
       "_id": "d5be8c78-c997-4574-b197-718e62c05ebe",
       "stationId": "ad01368f-01d1-47fc-bb0f-bad5ff2392f1"
-    },
-    {
-      "code": 300,
-      "temperature": 20,
-      "windSpeed": 23,
-      "windDirection": 360,
-      "pressure": 1000,
-      "reportDate": "2024/07/28 19:08",
-      "_id": "1496a8a0-779b-46ee-9125-db4ae8300b2f",
-      "stationId": "cb626bdf-0766-4ba0-b284-10f591a81bf9"
     }
   ]
 }

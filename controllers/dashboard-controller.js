@@ -23,7 +23,7 @@ export const dashboardController = {
     const viewData = {
       title: "Station Dashboard",
       stations: userStations,
-      userName: loggedInUser.firstName,
+      //userName: loggedInUser.firstName,
       user: loggedInUser,
     };
     console.log("dashboard rendering");
