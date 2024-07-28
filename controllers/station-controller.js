@@ -35,7 +35,7 @@ export const stationController = {
       windSpeed: Number(request.body.windSpeed),
       windDirection: Number(request.body.windDirection),
       pressure: Number(request.body.pressure),
-      reportDate: now.format(YYYY/MM/,
+      reportDate: now.format("YYYY/MM/DD HH:mm"),
     };
     console.log(`adding report ${newReport} at ${now.format('HH:mm:ss')} on ${now.format('DD/MM/YYYY')}.`);
     await reportStore.addReport(stationToAddReportTo._id, newReport);
