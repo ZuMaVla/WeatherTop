@@ -63,4 +63,14 @@ export const accountsController = {
     const userEmail = request.cookies.weathertop_user_token;
     return await userStore.getUserByEmail(userEmail);
   },
+  
+  async profile(request) {
+    const currentUser = await userStore.getUserById(request.params.userId);
+    const viewData = {
+      title: "My Profile",
+      user: currentUser.
+      
+    };
+  },
+  
 };
