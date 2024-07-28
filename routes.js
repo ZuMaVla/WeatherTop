@@ -23,3 +23,4 @@ router.post("/register", accountsController.register);
 router.post("/authenticate", accountsController.authenticate);
 router.get("/userprofile/:userId", accountsController.profile);
 router.post("/update/:userId", accountsController.updateProfile);
+router.get("/deletestation/:stationId", dashboardController.deleteStation);
