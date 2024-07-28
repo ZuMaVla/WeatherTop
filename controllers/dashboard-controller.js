@@ -45,14 +45,11 @@ export const dashboardController = {
   
   async addStation(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
-    const toDeleteStation = await{
-      name: request.body.name,
-      latitude: request.body.latitude,
-      longitude: request.body.longitude,
-      userid: loggedInUser._id,
-    };
-    console.log(`adding station ${newStation.name}`);
-    await stationStore.addStation(newStation);
+    await stationStore.deleteStationById(request.params.stationId);
+
+    console.log(`station deleted ${request.params.stationId}`);
+    const deletedReports = await reportStore.deleteReportsByStationId(request.params.stationId);
+    console.log("reports deleted ${deletedReports}");
     response.redirect("/dashboard");
   },
   
