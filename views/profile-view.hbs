@@ -3,23 +3,23 @@
 <section class="columns box is-3 has-text-centered">
 
     <div class="column">
-      <form action="/register" method="POST">
+      <form>
         <label class="label">Name</label>
         <div class="field is-horizontal">
           <div class="field-body">
             <div class="field">
-              <input class="input" type="text" value="{{user.firstName}}" name="firstName" disabled>
+              <input class="input" type="text" value="{{user.firstName}}" name="firstName" id="myFirstName" disabled>
             </div>
             <div class="field">
-              <input class="input" type="text" value="{{user.lastName}}" name="lastName" disabled>
+              <input class="input" type="text" value="{{user.lastName}}" name="lastName" id="myLastName" disabled>
             </div>
           </div>
         </div>
         <div class="field">
-          <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email" name="email" value="{{user.email}}" disabled>
+          <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email" name="email" value="{{user.email}}" id="myEmail" disabled>
         </div>
         <div class="field">
-          <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password" name="password" value="{{user.password}}" disabled>
+          <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password" name="password" value="{{user.password}}" id="myPassword" disabled>
         </div>
         <div class="field is-grouped">
           <button class="button" id="edit">Edit</button>
@@ -37,3 +37,14 @@
     </div>
 
 </section>
+
+<script>
+  document.getElementById("edit").addEventListener("click", function() {
+    document.getElementById("myFirstName").disabled = false;
+    document.getElementById("myLastName").disabled = false;
+    document.getElementById("myEmail").disabled = false;
+    document.getElementById("myPassword").disabled = false;
+    document.getElementById("submit").disabled = false;
+  });
+
+</script>
