@@ -1,10 +1,20 @@
 {{> welcome-menu active="login"}}
 
 <section class="section">
-  <h1 class="title">Log in</h1>
-  <p class="{{messageType}}">
-    {{message}}
-  </p>
+  <div class="columns">
+    <div class="column">
+      <p>
+        &nbsp
+      </p>
+    </div>  
+    <div class="box columns">
+      <div class="column">
+        <label class="title is-4">Log in<label>
+        <p class="{{messageType}}">
+          {{message}}
+        </p>
+        <hr>  
+
   <form action="/authenticate" method="POST">
     <div class="field">
       <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email" name="email">
@@ -16,4 +26,12 @@
       <button class="button is-link">Submit</button>
     </div>
   </form>
+      </div>
+    </div>
+    <div class="column">
+      <p>
+        &nbsp
+      </p>
+    </div>
+  </div>    
 </section>
