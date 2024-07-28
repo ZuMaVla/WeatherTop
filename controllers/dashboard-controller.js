@@ -24,6 +24,7 @@ export const dashboardController = {
       title: "Station Dashboard",
       stations: userStations,
       userName: loggedInUser.firstName,
+      user: loggedInUser,
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
