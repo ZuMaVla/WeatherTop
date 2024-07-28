@@ -27,14 +27,17 @@ export const stationController = {
   
   async addReport(request, response) {
     const stationToAddReportTo = await stationStore.getStationById(request.params.stationId);
+    const now = dayjs();
+
     const newReport = {
       code: Number(request.body.code),
       temperature: Number(request.body.temperature),
       windSpeed: Number(request.body.windSpeed),
       windDirection: Number(request.body.windDirection),
       pressure: Number(request.body.pressure),
+      reportDate: now,
     };
-    console.log(`adding report ${newReport}`);
+    console.log(`adding report ${newReport} at ${now.format('HH:mm:ss')} on ${now.format('DD/MM/YYYY')}.`);
     await reportStore.addReport(stationToAddReportTo._id, newReport);
     response.redirect("/station/" + stationToAddReportTo._id);
   },

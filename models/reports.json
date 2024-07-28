@@ -63,6 +63,26 @@
       "pressure": 0,
       "_id": "ef5ef24e-0036-46f8-8d11-b1e540c22d60",
       "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
+    },
+    {
+      "code": 200,
+      "temperature": 23,
+      "windSpeed": 7,
+      "windDirection": 225,
+      "pressure": 1004,
+      "reportDate": "2024-07-28T11:29:33.148Z",
+      "_id": "64b795b8-aae4-4fce-b012-5e5cbb75a9ab",
+      "stationId": "ad01368f-01d1-47fc-bb0f-bad5ff2392f1"
+    },
+    {
+      "code": 300,
+      "temperature": 17,
+      "windSpeed": 11,
+      "windDirection": 202.5,
+      "pressure": 1007,
+      "reportDate": "2024-07-28T11:32:26.061Z",
+      "_id": "727ddda6-17a8-45c3-aa92-856f74704ef3",
+      "stationId": "ad01368f-01d1-47fc-bb0f-bad5ff2392f1"
     }
   ]
 }
