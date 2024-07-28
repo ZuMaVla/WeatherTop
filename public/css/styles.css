@@ -4,6 +4,7 @@
   text-align: left;
   background-color: black;
   width: 18.0%;
+  margin-bottom: 0;
 /*  aspect-ratio: 1 / 1;*/
 }
 
@@ -24,5 +25,5 @@
 }
 
 .icon-column p {
-  padding: 10px 0 0 0;
+  padding: 0 0 0 0;
 }
