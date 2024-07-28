@@ -8,8 +8,15 @@ export async function prepareSummary(stationId) {
   const stationReports = await reportStore.getReportsByStationId(stationId);
   let currentWeatherCode = await WCCs.getWeatherByCode(100);
   if (stationReports.length > 0) {
-    currentWeatherCode = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1].code);
-    for (let i=)
+    let temp = await WCCs.getWeatherByCode(stationReports[stationReports.length - 1]);
+    currentWeatherCode = temp.code;
+    if (stationReports.length > 1) {
+      for (let i = stationReports.length - 2; i >= 0; i--) {
+        if (stationReports[i].reportDate.isAfter(temp.reportDate)) {
+          temp = stationReports[i];
+          currentWeatherCode = temp.code;
+        }
+      }
     console.log(currentWeatherCode);
   };
      
