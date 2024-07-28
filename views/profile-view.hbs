@@ -27,10 +27,10 @@
           <div class="field">
             <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password" name="password" value="{{user.password}}" id="myPassword" disabled>
           </div>
-          <div class="field is-grouped">
-            <button class="button" id="edit">Edit</button>
+          <div class="buttons">
+            <button class="button is-info" id="edit">Edit</button>
             <button class="button is-primary" id="submit" disabled>Submit</button>
-            <a href="/dashboard" class="button">Cancel</a>
+            <a href="/dashboard" class="button is-danger is-outlined">Cancel</a>
           </div>
         </form>
       </div>
@@ -39,7 +39,7 @@
           &nbsp
         </p>
         {{> icons/user}}
-        <h1 class="title">My Profile</h1>
+        <h1 class="title has-text-centered">My Profile</h1>
 
       </div>
     </div>
