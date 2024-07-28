@@ -75,13 +75,8 @@ export const accountsController = {
   },
   
     async updateProfile(request, response) {
-    const currentUser = await userStore.getUserById(request.params.userId);
-    currentUser.firstName = request.body.firstName;
-    currentUser.lastName = request.body.lastName;
-    currentUser.email = request.body.email;
-    currentUser.password = request.body.password;
-    await userStore.updateUser(currentUser);
-    console.log(`registering ${user.email}`);
+    await userStore.updateUser(request.params.userId, request.body);
+    console.log(`user ${request.params.userId} updated with the following details: ${user.email}`);
     response.redirect("/");
   },
   
