@@ -2,6 +2,7 @@
   <table class="table is-fullwidth">
     <thead>
       <tr>
+        <th class="has-text-centered">Date/Time</th>
         <th class="has-text-centered">Code</th>
         <th class="has-text-centered">Temperature</th>
         <th class="has-text-centered">Wind Speed</th>
@@ -14,6 +15,9 @@
       {{#each stations}}
         {{#each reports}}
         <tr>
+          <td>
+            {{reportDate}}
+          </td>          
           <td>
             {{code}}
           </td>
