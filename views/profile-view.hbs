@@ -1,7 +1,6 @@
 {{> menu active="myProfile"}}
 
 <section class="columns box is-3 has-text-centered">
-  <h1 class="title">My Profile</h1>
 
     <div class="column">
       <form action="/register" method="POST">
@@ -9,10 +8,10 @@
         <div class="field is-horizontal">
           <div class="field-body">
             <div class="field">
-              <input class="input" type="text" placeholder="Enter first name" name="firstName">
+              <input class="input" type="text" placeholder="{{user.firstName}}" name="firstName">
             </div>
             <div class="field">
-              <input class="input" type="text" placeholder="Enter last name" name="lastName">
+              <input class="input" type="text" placeholder="{{user.lastName}}" name="lastName">
             </div>
           </div>
         </div>
@@ -27,8 +26,13 @@
         </div>
       </form>
     </div>
-    <div class="column">
+    <div class="column is-narrow">
+      <p>
+        &nbsp
+      </p>
       {{> icons/user}}
+      <h1 class="title">My Profile</h1>
+      
     </div>
 
 </section>
