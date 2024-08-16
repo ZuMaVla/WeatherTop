@@ -2,6 +2,13 @@
   "file": "./models/stations.json",
   "stations": [
     {
+      "name": "1",
+      "latitude": "121",
+      "longitude": "11",
+      "userid": "de50cc79-d9c3-4858-99fd-a8966cf17d48",
+      "_id": "2a9216cb-5bb2-4395-aa29-1085ff9c563e"
+    },
+    {
       "name": "Antrim",
       "latitude": " 54.7173",
       "longitude": "-6.2055",
@@ -84,6 +91,13 @@
       "longitude": "-7.11194",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "ad01368f-01d1-47fc-bb0f-bad5ff2392f1"
+    },
+    {
+      "name": "dublin",
+      "latitude": "53.498",
+      "longitude": "6.2603",
+      "userid": "de50cc79-d9c3-4858-99fd-a8966cf17d48",
+      "_id": "c539669d-729f-42ed-a222-fb04a4f3ba06"
     }
   ]
 }

@@ -21,6 +21,13 @@
       "email": "weathertop@check.com",
       "password": "1234",
       "_id": "a3836af1-17a3-4151-b673-39dc5d556159"
+    },
+    {
+      "firstName": "john",
+      "lastName": "smith",
+      "email": "john@gmail.com",
+      "password": "123456",
+      "_id": "de50cc79-d9c3-4858-99fd-a8966cf17d48"
     }
   ]
 }
