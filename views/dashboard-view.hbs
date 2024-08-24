@@ -2,19 +2,21 @@
 
 <div class="spacer"></div>
 
-<div class="has-text-centered" style="width: 50%; margin: 0.5em auto;">
+<div class="has-text-centered" style="margin: 0.5em auto;">
   <p class="has-text-white">
     <b>Tip:</b> This is your Dashboard. To add a new station, enter its details below and hit the button "Add Station".
   </p>
-    {{> add-station}}
+</div>
+<section class="section pt-3"> 
+  {{> add-station}}
 
   <hr style="margin: 0.5em auto ;">
-  <h4 class="title is-3 has-text-white">
+  <h4 class="title is-3 has-text-white has-text-centered">
     Your Current Stations:
   </h4>
-</div>
 
-<section class="section pt-3">
+
+
   {{> list-stations}}
 </section>
 
