@@ -1,19 +1,21 @@
-<form action="/dashboard/addstation" method="POST">
-  <div class="columns">
-    <div class="field column" style="display: inline-block;">
-      <label class="label">Station Name</label>
-      <input class="input" type="text" placeholder="Enter station name" name="name">
+<section class="box" style="background-color: rgba(255, 255, 255, 0.5);">
+  <form action="/dashboard/addstation" method="POST">
+    <div class="columns">
+      <div class="field column" style="display: inline-block;">
+        <label class="label">Station Name</label>
+        <input class="input" type="text" placeholder="Enter station name" name="name">
+      </div>
+      <div class="field column" style="display: inline-block;">
+        <label class="label">Latitude</label>
+        <input class="input" type="text" placeholder="Enter station latitude" name="latitude">
+      </div>
+      <div class="field column" style="display: inline-block;">
+        <label class="label">Longitude</label>
+        <input class="input" type="text" placeholder="Enter station longitude" name="longitude">
+      </div>
+      <div class="field column is-narrow is-flex is-align-items-end">
+        <button class="button is-link mb-3" style="display: inline-block;">Add Station</button>
+      </div>
     </div>
-    <div class="field column" style="display: inline-block;">
-      <label class="label">Latitude</label>
-      <input class="input" type="text" placeholder="Enter station latitude" name="latitude">
-    </div>
-    <div class="field column" style="display: inline-block;">
-      <label class="label">Longitude</label>
-      <input class="input" type="text" placeholder="Enter station longitude" name="longitude">
-    </div>
-    <div class="field column is-narrow is-flex is-align-items-end">
-      <button class="button is-link mb-3" style="display: inline-block;">Add Station</button>
-    </div>
-  </div>
-</form>
+  </form>
+</section>
