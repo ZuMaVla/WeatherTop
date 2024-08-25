@@ -68,7 +68,7 @@ export const accountsController = {
     if (request.cookies.weathertop_user_token && request.cookies.weathertop_user_token.trim() !== "") {
       const requestedUser = await userStore.getUserById(request.params.userId);
       const currentUser = await userStore.getUserByEmail(request.cookies.weathertop_user_token);
-      if (requestedUser === currentUser) {
+      if (requestedUser._id === currentUser._id) {
         const viewData = {
           title: "My Profile",
           user: currentUser,
