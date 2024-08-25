@@ -8,6 +8,7 @@ import { prepareSummary } from "../utils/implementation.js";
 
 export const dashboardController = {
   async index(request, response) {
+    if (cookies)
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const userStations = await stationStore.getStationByUserId(loggedInUser._id);
     //const stationsAlphabeticallySorted = userStations.sort("name");
