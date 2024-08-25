@@ -58,14 +58,14 @@
   </form>
 {{/each}}
 <p id="wDirection" style="hidden;">
-  {{url}}
+  {{windDirection}}
 </p>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     // Example dynamic value
-    const dynamicValue = "E"; // This could come from a server or user input
-
+    const dynamicValue = document.getElementById("wDirection").innerHTML; // This could come from a server or user input
+    console.log
     // Get the select element
     const selectElement = document.getElementById("windDirectionSelect");
 

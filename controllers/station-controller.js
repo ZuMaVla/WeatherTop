@@ -47,66 +47,65 @@ export const stationController = {
       wDir = 360;
     }
 
-  let win;
+  let winDirLabel = "N";
 
   switch (true) {
-    case (wDir >= 348.76 || wDir < 11.25):
-      win = "N";
+    case (wDir > 11.25 && wDir <= 33.75):
+      winDirLabel = "N/NE";
       break;
-    case (wDir >= 11.26 && wDir < 33.75):
-      win = "N/NE";
+    case (wDir > 33.75 && wDir <= 56.25):
+      winDirLabel = "NE";
       break;
-    case (wDir >= 33.76 && wDir < 56.25):
-      win = "NE";
+    case (wDir > 56.25 && wDir <= 78.75):
+      winDirLabel = "E/NE";
       break;
-    case (wDir >= 56.26 && wDir < 78.75):
-      win = "E/NE";
+    case (wDir > 78.75 && wDir <= 101.25):
+      winDirLabel = "E";
       break;
-    case (wDir >= 78.76 && wDir < 101.25):
-      win = "E";
+    case (wDir > 101.25 && wDir <= 123.75):
+      winDirLabel = "E/SE";
       break;
-    case (wDir >= 101.26 && wDir < 123.75):
-      win = "E/SE";
+    case (wDir > 123.75 && wDir <= 146.25):
+      winDirLabel = "SE";
       break;
-    case (wDir >= 123.76 && wDir < 146.25):
-      win = "SE";
+    case (wDir > 146.25 && wDir <= 168.75):
+      winDirLabel = "S/SE";
       break;
-    case (wDir >= 146.26 && wDir < 168.75):
-      win = "S/SE";
+    case (wDir > 168.75 && wDir <= 191.25):
+      winDirLabel = "S";
       break;
-    case (wDir >= 168.76 && wDir < 191.25):
-      win = "S";
+    case (wDir > 191.25 && wDir <= 213.75):
+      winDirLabel = "S/SW";
       break;
-    case (wDir >= 191.26 && wDir < 213.75):
-      win = "S/SW";
+    case (wDir > 213.75 && wDir <= 236.25):
+      winDirLabel = "SW";
       break;
-    case (wDir >= 213.76 && wDir < 236.25):
-      win = "SW";
+    case (wDir > 236.25 && wDir <= 258.75):
+      winDirLabel = "W/SW";
       break;
-    case (wDir >= 236.26 && wDir < 258.75):
-      win = "W/SW";
+    case (wDir > 258.75 && wDir <= 281.25):
+      winDirLabel = "W";
       break;
-    case (wDir >= 258.76 && wDir < 281.25):
-      win = "W";
+    case (wDir > 281.25 && wDir <= 303.75):
+      winDirLabel = "W/NW";
       break;
-    case (wDir >= 281.26 && wDir < 303.75):
-      win = "W/NW";
+    case (wDir > 303.75 && wDir <= 326.25):
+      winDirLabel = "NW";
       break;
-    case (wDir >= 303.76 && wDir < 326.25):
-      win = "NW";
-      break;
-    case (wDir >= 326.26 && wDir < 348.75):
-      win = "N/NW";
+    case (wDir > 326.25 && wDir <= 348.75):
+      winDirLabel = "N/NW";
       break;
     default:
-      win = "Unknown";
-  }
+      winDirLabel = "N";
+      break;  
+  };
     
     currentStation.retrievedData = report;
     
     const stationsToView = [currentStation];
 
     const viewData = {
+      windDirection: winDirLabel,
       stations: stationsToView,
       user: loggedInUser,
       title: currentStation.name, 
