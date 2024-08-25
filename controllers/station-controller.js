@@ -9,7 +9,6 @@ export const stationController = {
     
   async index(request, response) {
     const currentStation = await prepareSummary(request.params.stationId); 
-    console.log('Current Station:', JSON.stringify(currentStation, null, 2));
     const loggedInUser = await accountsController.getLoggedInUser(request);
     
     const stationsToView = [currentStation];

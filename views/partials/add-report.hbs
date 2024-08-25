@@ -50,7 +50,7 @@
             <input class="input" type="text" placeholder="1040" name="pressure">
           </div>
         </div>
-        <button id="retrieveDataButton" class="button is-info">Retrieve Data from OpenWeather</button>&nbsp;&nbsp;
+        <button onclick="retrieveData(event)" id="retrieveDataButton" class="button is-info" >Retrieve Data from OpenWeather</button>&nbsp;&nbsp;
         <button class="button is-primary">Submit Report</button>
       </div>
     </div>
@@ -59,9 +59,10 @@
 {{/each}}
 
 <script>
-<script>
+
   function retrieveData(event) {
-    event.preventDefault();  // This prevents the form from submitting
-    console.log("Button clicked and form submission prevented!");
+    event.preventDefault();                                            // The button is not supposed to submit form yet
+    console.log('Button clicked and form submission prevented!');
   }
-</script></script>
+  
+</script>
