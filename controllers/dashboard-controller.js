@@ -9,7 +9,7 @@ import { prepareSummary } from "../utils/implementation.js";
 export const dashboardController = {
   async index(request, response) {
     try {
-        if (request.cookies && request.cookies.weathertop_user_token && request.cookies.weathertop_user_token.trim() !== "") {
+        if (cookies && cookies.weathertop_user_token && cookies.weathertop_user_token.trim() !== "") {
             // The cookie is defined and not empty
           const loggedInUser = await accountsController.getLoggedInUser(request);
           const userStations = await stationStore.getStationByUserId(loggedInUser._id);
@@ -29,24 +29,17 @@ export const dashboardController = {
             user: loggedInUser,
           };
           console.log("dashboard rendering");
-          response.render("dashboard-view", viewData);  
-                 res.send('Cookie is valid');
-        } else {
-            // The cookie is either undefined or empty
-            res.send('Cookie is not defined or empty');
+          response.render("dashboard-view", viewData);
         }
-    } catch (error) {
-        // Handle the exception
-      console.log("No user is logged in");
-      response.redirect("/");  
-        console.error('An error occurred:', error.message);
-        res.status(500).send('An error occurred while processing the request.');
+      else {
+        console.log("No user is logged in");
+        response.redirect("/");  
+        }
     }
-
-    
-    if (cookies && cookies.weathertop_user_token && cookies.weathertop_user_token.trim() !== "") {
-   }
-    else {
+    catch (error) {
+        // Handle the exception
+      console.log("No user was logged in");
+      response.redirect("/");  
     }
   },
   
