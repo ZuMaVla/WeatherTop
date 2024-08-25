@@ -140,26 +140,6 @@
       "reportDate": "2024/08/25 18:10",
       "_id": "294c89ec-dd41-4acc-9458-55d5623fa57f",
       "stationId": "fa568d05-f68a-4576-9fa3-78026d816baf"
-    },
-    {
-      "code": 0,
-      "temperature": 0,
-      "windSpeed": 0,
-      "windDirection": "N",
-      "pressure": 0,
-      "reportDate": "2024/08/25 20:14",
-      "_id": "7e7b5ae1-6dd0-44a5-8ffb-e03a0c936fbd",
-      "stationId": "f14d9a08-e413-4936-9cea-4a2dac05e8ad"
-    },
-    {
-      "code": 0,
-      "temperature": 0,
-      "windSpeed": 0,
-      "windDirection": "N",
-      "pressure": 0,
-      "reportDate": "2024/08/25 20:14",
-      "_id": "44ec1f0c-92da-473b-8aa0-32f8c318d0bc",
-      "stationId": "f14d9a08-e413-4936-9cea-4a2dac05e8ad"
     }
   ]
 }

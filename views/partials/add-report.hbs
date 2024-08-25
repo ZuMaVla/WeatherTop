@@ -50,7 +50,7 @@
             <input class="input" type="text" placeholder="1040" name="pressure">
           </div>
         </div>
-        <a href="/station/{{_id}}?dataRetrieved=true"><button onclick="retrieveData(event)" class="button is-info" >Retrieve Data from OpenWeather</button></a>&nbsp;&nbsp;
+        <a href="/station/{{_id}}?dataRetrieved=true" class="button is-info">Retrieve Data from OpenWeather</a>&nbsp;&nbsp;
         <button class="button is-primary">Submit Report</button>
       </div>
     </div>
@@ -61,9 +61,3 @@
   {{url}}
 </p>
 
-<script>
-  function retrieveData(event) {
-    event.preventDefault();                                             // To avoid form submission
-  };
-  
-</script>

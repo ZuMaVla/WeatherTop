@@ -14,6 +14,9 @@ export const stationController = {
     const stationsToView = [currentStation];
     const lat = currentStation.latitude;
     const lon = currentStation.longitude;
+    
+    if (request.query.dataRetrieved)
+      
 
     const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0aa8a56676edc13091118eace86a7726`
     console.log(weatherRequestUrl);
