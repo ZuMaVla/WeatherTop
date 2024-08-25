@@ -66,16 +66,20 @@ export const accountsController = {
   
   async profile(request, response) {
     if (request.cookies.weathertop_user_token && request.cookies.weathertop_user_token.trim() !== "") {
-      const requestetUser = await userStore.getUserById(request.params.userId);
-      if (!currentUser) {
-        currentUser = await userStore.getUserByEmail(request.cookies.weathertop_user_token);
+      const requestedUser = await userStore.getUserById(request.params.userId);
+      const currentUser = await userStore.getUserByEmail(request.cookies.weathertop_user_token);
+      if (requestedUser === currentUser) {
+        const viewData = {
+          title: "My Profile",
+          user: currentUser,
+          userName: currentUser.firstName + " " + currentUser.lastName,
+        };
+        response.render("profile-view", viewData);
       }
-      const viewData = {
-        title: "My Profile",
-        user: currentUser,
-        userName: currentUser.firstName + " " + currentUser.lastName,
-      };
-      response.render("profile-view", viewData);
+      else {
+        console.log("Unauthorised access request!");
+        response.redirect("/dashboard"); 
+      }
     }
     else {
       // The cookie is not defined or empty
