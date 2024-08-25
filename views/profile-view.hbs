@@ -56,19 +56,20 @@
 </section>
 
 <script>
-  
-  document.getElementById("edit").addEventListener("click", function(event) {
-    event.preventDefault();
-    document.getElementById("myFirstName").disabled = false;
-    document.getElementById("myLastName").disabled = false;
-    document.getElementById("myEmail").disabled = false;
-    document.getElementById("myPassword").disabled = false;
-    document.getElementById("submit").disabled = false;
+  document.addEventListener("DOMContentLoaded", function() {
     console.log("Changes enabled");
-  });
-  
-  document.getElementById("cancel").addEventListener("click", function(event) {
-    event.preventDefault();
-  });  
-  
+    document.getElementById("edit").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("myFirstName").disabled = false;
+      document.getElementById("myLastName").disabled = false;
+      document.getElementById("myEmail").disabled = false;
+      document.getElementById("myPassword").disabled = false;
+      document.getElementById("submit").disabled = false;
+    });
+
+    document.getElementById("cancel").addEventListener("click", function(event) {
+      event.preventDefault();
+    }); 
+  }); 
+ 
 </script>
