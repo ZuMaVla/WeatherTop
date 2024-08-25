@@ -19,7 +19,7 @@ export const stationController = {
     
     if (request.query.dataRetrieved) {
       console.log("rendering new report");
-       const result = await axios.get(weatherRequestUrl);
+      const result = await axios.get(weatherRequestUrl);
       if (result.status == 200) {
         const currentWeather = result.data;
         report.code = currentWeather.weather[0].id;
@@ -39,6 +39,7 @@ export const stationController = {
       
     }
     else {
+      console.log("Manual entering data...");
       report.code = 100;
       report.temperature = 0;
       report.windSpeed = 0;
