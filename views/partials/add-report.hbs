@@ -63,13 +63,10 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // Example dynamic value
-    const dynamicValue = document.getElementById("wDirection").innerText; // This could come from a server or user input
+    
+    const dynamicValue = document.getElementById("wDirection").innerText;                   // retrieving wind direction from a hidden paragraph
     console.log(dynamicValue);
-    // Get the select element
-    const selectElement = document.getElementById("windDirectionSelect");
-
-    // Set the selected value
-    selectElement.value = dynamicValue;
+    const selectElement = document.getElementById("windDirectionSelect");                   // acquiring dropdown element by its ID
+    selectElement.value = dynamicValue;                                                     // Setting value according to the wind direction (selects the right dropdown option)
   });
 </script>
