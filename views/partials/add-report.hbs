@@ -59,18 +59,9 @@
 {{/each}}
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {              // Adding listener only after DOM fully loaded
-
-    const retrieveDataButton = document.getElementById("retrieveDataButton");
-
-    retrieveDataButton.addEventListener("click", function(event) {           // Adding a "onClick" event listener to the "Retrieve Data" button
-      event.preventDefault();                                             // This button is not supposed to submit the form
-      const lat = stations[0].latitude;
-      const lon = stations[0].longitude;
-
-      const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0aa8a56676edc13091118eace86a7726`
-      console.log('Retrieving data from OpenWeather...');
-      
-    });
-  });
-</script>
+<script>
+  function retrieveData(event) {
+    event.preventDefault();  // This prevents the form from submitting
+    console.log("Button clicked and form submission prevented!");
+  }
+</script></script>
