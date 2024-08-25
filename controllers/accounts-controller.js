@@ -65,13 +65,20 @@ export const accountsController = {
   },
   
   async profile(request, response) {
-    const currentUser = await userStore.getUserById(request.params.userId);
-    const viewData = {
-      title: "My Profile",
-      user: currentUser,
-      userName: currentUser.firstName + " " + currentUser.lastName,
-    };
-    response.render("profile-view", viewData);
+    if (request.cookies.weathertop_user_token && request.cookies.weathertop_user_token.trim() !== "") {
+      const currentUser = await userStore.getUserById(request.params.userId);
+      const viewData = {
+        title: "My Profile",
+        user: currentUser,
+        userName: currentUser.firstName + " " + currentUser.lastName,
+      };
+      response.render("profile-view", viewData);
+    }
+    else {
+      // The cookie is not defined or empty
+      console.log("No user is logged in");
+      response.redirect("/");  
+    }
   },
   
   async updateProfile(request, response) {
