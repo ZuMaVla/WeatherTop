@@ -33,7 +33,7 @@ export const stationController = {
       code: Number(request.body.code),
       temperature: Number(request.body.temperature),
       windSpeed: Number(request.body.windSpeed),
-      windDirection: Number(request.body.windDirection),
+      windDirection: request.body.windDirection,
       pressure: Number(request.body.pressure),
       reportDate: now.format("YYYY/MM/DD HH:mm"),
     };
