@@ -76,13 +76,12 @@ export const accountsController = {
         };
         response.render("profile-view", viewData);
       }
-      else {
+      else {                                                                                           // If user requested not own profile
         console.log("Unauthorised access request!");
         response.redirect("/dashboard"); 
       }
     }
-    else {
-      // The cookie is not defined or empty
+    else {                                                                                             // If a profile is attempted to be accessed without a user being logged in
       console.log("No user is logged in");
       response.redirect("/");  
     }
