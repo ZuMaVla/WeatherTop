@@ -62,20 +62,15 @@
 </p>
 
 <script>
-  function retrieveData(event) {
+  import axios from "axios";
+  async function retrieveData(event) {
     event.preventDefault(); // Prevent form submission
     console.log('Button clicked and form submission prevented!');
-    const result = await axios.get(url);
-    console.log(url)
+    const urlData = getElementById("url").innerHTML;
+    const result = await axios.get(urlData);
     if (result.status == 200) {
-      const currentWeather = result.data;
-      report.code = currentWeather.weather[0].id;
-      report.temperature = currentWeather.main.temp;
-      report.windSpeed = currentWeather.wind.speed;
-      report.pressure = currentWeather.main.pressure;
-      report.windDirection = currentWeather.wind.deg;
+      console.log(urlData);
     }
-
   };
   
 </script>
