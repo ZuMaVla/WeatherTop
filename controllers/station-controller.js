@@ -15,6 +15,7 @@ export const stationController = {
     const lon = currentStation.longitude;
     const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0aa8a56676edc13091118eace86a7726`
     let report = {};
+    let wDir = 360;
     
     if (request.query.dataRetrieved) {
       console.log("rendering new report");
@@ -25,14 +26,14 @@ export const stationController = {
         report.temperature = currentWeather.main.temp;
         report.windSpeed = currentWeather.wind.speed;
         report.pressure = currentWeather.main.pressure;
-        report.windDirection = currentWeather.wind.deg;
+        wDir = currentWeather.wind.deg;
       }
       else {
         report.code = "100";
         report.temperature = 0;
         report.windSpeed = 0;
         report.pressure = 0;
-        report.windDirection = "N";
+        report.windDirection = 360;
       }
       console.log(report);
       
@@ -43,7 +44,7 @@ export const stationController = {
       report.temperature = 0.0;
       report.windSpeed = 0.0;
       report.pressure = 0.0;
-      report.windDirection = "N";
+      report.windDirection = 360;
     }
 
     currentStation.retrievedData = report;

@@ -24,7 +24,7 @@
         <div class="field">
           <label class="label">Wind Direction</label>
           <div class="control select">        
-            <select name="windDirection">
+            <select id="windDirectionSelect" name="windDirection">
               <option value="N">348.76-11.25</option>
               <option value="N/NE">11.26-33.75</option>
               <option value="NE">33.76-56.25</option>
@@ -57,7 +57,19 @@
 
   </form>
 {{/each}}
-<p id="url" style="hidden;">
+<p id="wDirection" style="hidden;">
   {{url}}
 </p>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Example dynamic value
+    const dynamicValue = "E"; // This could come from a server or user input
+
+    // Get the select element
+    const selectElement = document.getElementById("windDirectionSelect");
+
+    // Set the selected value
+    selectElement.value = dynamicValue;
+  });
+</script>
