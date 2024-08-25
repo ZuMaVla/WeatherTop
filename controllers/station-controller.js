@@ -29,7 +29,7 @@ export const stationController = {
         report.windDirection = currentWeather.wind.deg;
       }
       else {
-        report.code = 100;
+        report.code = "100";
         report.temperature = 0;
         report.windSpeed = 0;
         report.pressure = 0;
@@ -40,7 +40,7 @@ export const stationController = {
     }
     else {
       console.log("Manual entering data...");
-      report.code = 100;
+      report.code = "100";
       report.temperature = 0;
       report.windSpeed = 0;
       report.pressure = 0;
@@ -54,6 +54,7 @@ export const stationController = {
       title: currentStation.name, 
     };
     
+    console.log(viewData.retrievedData);
     
     response.render("station-view", viewData);
   },
