@@ -16,7 +16,6 @@ export const dashboardController = {
       let temp;
       for (let i = 0; i < userStations.length; i++) {
         temp = await prepareSummary(userStations[i]._id);
-        console.log('Current Station:', JSON.stringify(temp, null, 2));
 
         userStations[i].attributes = temp.attributes;
       };

@@ -13,14 +13,19 @@ export const stationController = {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     
     const stationsToView = [currentStation];
+    const lat = currentStation.latitude;
+    const lon = currentStation.longitude;
+
+    const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0aa8a56676edc13091118eace86a7726`
+    console.log(weatherRequestUrl);
     
     const viewData = {
       stations: stationsToView,
+      url: weatherRequestUrl,
       user: loggedInUser,
       title: currentStation.name, 
     };
     
-//    console.log(`station-view rendering: ${currentStation.name}, ${currentStation.attributes.weatherCode.description}`);
     
     response.render("station-view", viewData);
   },
