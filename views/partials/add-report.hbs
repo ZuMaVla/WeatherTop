@@ -12,13 +12,13 @@
         <div class="field">
           <label class="label">Temperature, °C</label>
           <div class="control">
-            <input class="input" type="number" step="0.1" placeholder="0.0" name="temperature">
+            <input class="input" type="number" step="0.1" placeholder="0.0" name="temperature" value="{{retrievedData.temperature}}">
           </div>
         </div>
         <div class="field">
           <label class="label">Wind Speed, km/h</label>
           <div class="control">        
-            <input class="input" type="text" placeholder="00" name="windSpeed">
+            <input class="input" type="text" placeholder="00" name="windSpeed" value="{{retrievedData.windSpeed}}">
           </div>
         </div>
         <div class="field">
@@ -45,9 +45,9 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">Pressure, mbar</label>
+          <label class="label">Pressure, hPa</label>
           <div class="control">        
-            <input class="input" type="text" placeholder="1040" name="pressure">
+            <input class="input" type="text" placeholder="1040" name="pressure" value="{{retrievedData.pressure}}">
           </div>
         </div>
         <a href="/station/{{_id}}?dataRetrieved=true" class="button is-info">Retrieve Data from OpenWeather</a>&nbsp;&nbsp;
