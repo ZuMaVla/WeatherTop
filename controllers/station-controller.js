@@ -18,7 +18,7 @@ export const stationController = {
     let wDir = 360;
     
     if (request.query.dataRetrieved) {
-      console.log("rendering new report");
+      console.log("rendering new report using", weatherRequestUrl);
       const result = await axios.get(weatherRequestUrl);
       if (result.status == 200) {
         const currentWeather = result.data;

@@ -10,99 +10,99 @@
     },
     {
       "name": "Antrim",
-      "latitude": " 54.7173",
-      "longitude": "-6.2055",
+      "latitude": " 54.717",
+      "longitude": "-6.206",
       "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
       "_id": "f14d9a08-e413-4936-9cea-4a2dac05e8ad"
     },
     {
       "name": "Belfast",
-      "latitude": "54.607868",
-      "longitude": "-5.926437",
+      "latitude": "54.608",
+      "longitude": "-5.926",
       "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
       "_id": "a7f7f611-5273-417c-88b9-6dfa2c52fea7"
     },
     {
       "name": "Cobh",
-      "latitude": "51.850334",
-      "longitude": "-8.294286",
+      "latitude": "51.850",
+      "longitude": "-8.294",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "50781714-ecdc-426c-9697-182f8d7386d1"
     },
     {
       "name": "Cork",
-      "latitude": "51.903614",
-      "longitude": "-8.468399",
+      "latitude": "51.904",
+      "longitude": "-8.468",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "58ee041b-eefb-4b99-a8a7-8bfc37a8039b"
     },
     {
       "name": "Drogheda",
-      "latitude": "51.850334",
-      "longitude": "-6.2055",
+      "latitude": "51.850",
+      "longitude": "-6.206",
       "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
       "_id": "f1741754-493f-49a9-b3d3-3169c71bf3b5"
     },
     {
       "name": "Dublin",
-      "latitude": "51.903614",
-      "longitude": "-8.468399",
+      "latitude": "51.904",
+      "longitude": "-8.468",
       "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
       "_id": "42d1a0bd-1bed-485a-a511-94f3a22a3024"
     },
     {
       "name": "Dungarvan",
-      "latitude": "52.0896568",
-      "longitude": " -7.6224724",
+      "latitude": "52.090",
+      "longitude": " -7.622",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "cc5c06fc-7d79-4dd0-a970-2e9f8a514968"
     },
     {
       "name": "Ennis",
-      "latitude": "52.84434980",
-      "longitude": "-8.98299450",
+      "latitude": "52.844",
+      "longitude": "-8.983",
       "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
       "_id": "fa568d05-f68a-4576-9fa3-78026d816baf"
     },
     {
       "name": "Galway",
-      "latitude": "53.270962",
-      "longitude": "-9.062691",
+      "latitude": "53.271",
+      "longitude": "-9.063",
       "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
       "_id": "12b4e285-fbed-4214-bbb3-c218521dd5cd"
     },
     {
       "name": "Limerick",
-      "latitude": "52.668018",
-      "longitude": "-8.630498",
+      "latitude": "52.668",
+      "longitude": "-8.630",
       "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
       "_id": "49b4f020-7f37-4473-afe1-d192db32d66a"
     },
     {
       "name": "Navan",
-      "latitude": "52.668018",
-      "longitude": "-9.062691",
+      "latitude": "52.668",
+      "longitude": "-9.063",
       "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
       "_id": "0467fd17-1d6e-43f9-b929-c8cc2f293333"
     },
     {
       "name": "Tramore",
-      "latitude": "52.1588889",
-      "longitude": "-7.1463889",
+      "latitude": "52.159",
+      "longitude": "-7.146",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "f14a35f1-5c8c-4a6e-a082-a7a0b24e300c"
     },
     {
       "name": "Waterford",
-      "latitude": "52.25833",
-      "longitude": "-7.11194",
+      "latitude": "52.258",
+      "longitude": "-7.112",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "ad01368f-01d1-47fc-bb0f-bad5ff2392f1"
     },
     {
       "name": "dublin",
       "latitude": "53.498",
-      "longitude": "6.2603",
+      "longitude": "6.260",
       "userid": "de50cc79-d9c3-4858-99fd-a8966cf17d48",
       "_id": "c539669d-729f-42ed-a222-fb04a4f3ba06"
     }
