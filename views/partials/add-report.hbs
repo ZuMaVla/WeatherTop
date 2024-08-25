@@ -50,10 +50,24 @@
             <input class="input" type="text" placeholder="1040" name="pressure">
           </div>
         </div>
-        <button class="button is-info">Retrieve Data from OpenWeather</button>&nbsp;&nbsp;
+        <button id="retrieveDataButton" class="button is-info">Retrieve Data from OpenWeather</button>&nbsp;&nbsp;
         <button class="button is-primary">Submit Report</button>
       </div>
     </div>
 
   </form>
 {{/each}}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {              // Adding listener only after DOM fully loaded
+
+    const retrieveDataBtn = document.getElementById("retrieveDataButton");
+
+    retrieveDataBtn.addEventListener("click", function(event) {           // Adding a "onClick" event listener to the "Retrieve Data" button
+      event.preventDefault();                                             // This button is not supposed to submit the form
+
+      console.log("Retrieving data from OpenWeather...");
+      
+    });
+  });
+</script>
