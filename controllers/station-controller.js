@@ -13,7 +13,7 @@ export const stationController = {
     
     const lat = currentStation.latitude;
     const lon = currentStation.longitude;
-    const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0aa8a56676edc13091118eace86a7726`
+    const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=0aa8a56676edc13091118eace86a7726`
     let report = {};
     let wDir = 360;
     
