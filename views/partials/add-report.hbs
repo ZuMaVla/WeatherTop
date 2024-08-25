@@ -65,7 +65,9 @@
 
     retrieveDataBtn.addEventListener("click", function(event) {           // Adding a "onClick" event listener to the "Retrieve Data" button
       event.preventDefault();                                             // This button is not supposed to submit the form
+      const stationToAddReportTo = await stationStore.getStationById(request.params.stationId);
 
+      const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=52.844&lon=-8.983&appid=0aa8a56676edc13091118eace86a7726`
       console.log("Retrieving data from OpenWeather...");
       
     });
