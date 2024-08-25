@@ -11,7 +11,6 @@ export const stationController = {
     const currentStation = await prepareSummary(request.params.stationId); 
     const loggedInUser = await accountsController.getLoggedInUser(request);
     
-    const stationsToView = [currentStation];
     const lat = currentStation.latitude;
     const lon = currentStation.longitude;
     const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0aa8a56676edc13091118eace86a7726`
@@ -46,10 +45,13 @@ export const stationController = {
       report.pressure = 0;
       report.windDirection = 360;
     }
-          
+
+    currentStation.retrievedData = report;
+    
+    const stationsToView = [currentStation];
+
     const viewData = {
       stations: stationsToView,
-      retrievedData: report,
       user: loggedInUser,
       title: currentStation.name, 
     };
