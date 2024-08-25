@@ -66,9 +66,9 @@ export const accountsController = {
   
   async profile(request, response) {
     if (request.cookies.weathertop_user_token && request.cookies.weathertop_user_token.trim() !== "") {
-      const requestedUser = await userStore.getUserById(request.params.userId);
-      const currentUser = await userStore.getUserByEmail(request.cookies.weathertop_user_token);
-      if (requestedUser._id === currentUser._id) {
+      const requestedUser = await userStore.getUserById(request.params.userId);                        // User requested in address line
+      const currentUser = await userStore.getUserByEmail(request.cookies.weathertop_user_token);       // User actually currently logged in
+      if (requestedUser._id === currentUser._id) {                                                     // Grand access to profile only if the same user 
         const viewData = {
           title: "My Profile",
           user: currentUser,

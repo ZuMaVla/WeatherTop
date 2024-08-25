@@ -130,6 +130,16 @@
       "reportDate": "2024/08/24 19:55",
       "_id": "48b1efb8-1847-4bb8-801b-bd4d1e97ff6b",
       "stationId": "f14d9a08-e413-4936-9cea-4a2dac05e8ad"
+    },
+    {
+      "code": 500,
+      "temperature": 20,
+      "windSpeed": 12,
+      "windDirection": 202.5,
+      "pressure": 980,
+      "reportDate": "2024/08/25 16:26",
+      "_id": "039f9329-7e48-4d3d-84b4-1b96c7757269",
+      "stationId": "5612bbf7-58b8-4411-b5df-56c2c93fc9aa"
     }
   ]
 }
