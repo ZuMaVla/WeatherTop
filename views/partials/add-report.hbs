@@ -50,7 +50,7 @@
             <input class="input" type="text" placeholder="1040" name="pressure">
           </div>
         </div>
-        <button onclick="retrieveData(event)" id="retrieveDataButton" class="button is-info" >Retrieve Data from OpenWeather</button>&nbsp;&nbsp;
+        <a href="/station/{{_id}}?dataRetrieved=true"><button onclick="retrieveData(event)" class="button is-info" >Retrieve Data from OpenWeather</button></a>&nbsp;&nbsp;
         <button class="button is-primary">Submit Report</button>
       </div>
     </div>
@@ -62,15 +62,8 @@
 </p>
 
 <script>
-  import axios from "axios";
-  async function retrieveData(event) {
-    event.preventDefault(); // Prevent form submission
-    console.log('Button clicked and form submission prevented!');
-    const urlData = getElementById("url").innerHTML;
-    const result = await axios.get(urlData);
-    if (result.status == 200) {
-      console.log(urlData);
-    }
+  function retrieveData(event) {
+    event.preventDefault();                                             // To avoid form submission
   };
   
 </script>
