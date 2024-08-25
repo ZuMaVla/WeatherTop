@@ -57,13 +57,16 @@
 
   </form>
 {{/each}}
+<p id="url" style="hidden;">
+  {{url}}
+</p>
 
 <script>
   function retrieveData(event) {
     event.preventDefault(); // Prevent form submission
     console.log('Button clicked and form submission prevented!');
-    const result = await axios.get({{url}});
-    console.log({{url}})
+    const result = await axios.get(url);
+    console.log(url)
     if (result.status == 200) {
       const currentWeather = result.data;
       report.code = currentWeather.weather[0].id;

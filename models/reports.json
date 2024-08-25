@@ -147,8 +147,8 @@
       "windSpeed": 0,
       "windDirection": "N",
       "pressure": 0,
-      "reportDate": "2024/08/25 20:06",
-      "_id": "6045a6ab-0eae-4c7b-b101-77dab6875184",
+      "reportDate": "2024/08/25 20:14",
+      "_id": "7e7b5ae1-6dd0-44a5-8ffb-e03a0c936fbd",
       "stationId": "f14d9a08-e413-4936-9cea-4a2dac05e8ad"
     },
     {
@@ -157,38 +157,8 @@
       "windSpeed": 0,
       "windDirection": "N",
       "pressure": 0,
-      "reportDate": "2024/08/25 20:06",
-      "_id": "68f0bc59-5387-4862-8b3b-121f1ba45d0e",
-      "stationId": "f14d9a08-e413-4936-9cea-4a2dac05e8ad"
-    },
-    {
-      "code": 0,
-      "temperature": 0,
-      "windSpeed": 0,
-      "windDirection": "N",
-      "pressure": 0,
-      "reportDate": "2024/08/25 20:06",
-      "_id": "41d31896-b319-4d0c-8470-3333493dcabe",
-      "stationId": "f14d9a08-e413-4936-9cea-4a2dac05e8ad"
-    },
-    {
-      "code": 0,
-      "temperature": 0,
-      "windSpeed": 0,
-      "windDirection": "N",
-      "pressure": 0,
-      "reportDate": "2024/08/25 20:10",
-      "_id": "fc2df9af-2f97-4724-af75-7a6f4742385d",
-      "stationId": "f14d9a08-e413-4936-9cea-4a2dac05e8ad"
-    },
-    {
-      "code": 0,
-      "temperature": 0,
-      "windSpeed": 0,
-      "windDirection": "N",
-      "pressure": 0,
-      "reportDate": "2024/08/25 20:10",
-      "_id": "3a5e5bf9-ff14-4bc4-be4e-c9c29ec8023e",
+      "reportDate": "2024/08/25 20:14",
+      "_id": "44ec1f0c-92da-473b-8aa0-32f8c318d0bc",
       "stationId": "f14d9a08-e413-4936-9cea-4a2dac05e8ad"
     }
   ]
