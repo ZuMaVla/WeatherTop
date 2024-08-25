@@ -59,10 +59,20 @@
 {{/each}}
 
 <script>
-
   function retrieveData(event) {
-    event.preventDefault();                                            // The button is not supposed to submit form yet
+    event.preventDefault(); // Prevent form submission
     console.log('Button clicked and form submission prevented!');
-  }
+    const result = await axios.get({{url}});
+    console.log({{url}})
+    if (result.status == 200) {
+      const currentWeather = result.data;
+      report.code = currentWeather.weather[0].id;
+      report.temperature = currentWeather.main.temp;
+      report.windSpeed = currentWeather.wind.speed;
+      report.pressure = currentWeather.main.pressure;
+      report.windDirection = currentWeather.wind.deg;
+    }
+
+  };
   
 </script>
