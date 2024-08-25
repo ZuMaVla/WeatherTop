@@ -1,9 +1,9 @@
-//import { WCCs } from "../models/WCC-db.js";
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { prepareSummary } from "../utils/implementation.js";
 import dayjs from 'dayjs';
+import axios from "axios";
 
 export const stationController = {
     
@@ -14,16 +14,41 @@ export const stationController = {
     const stationsToView = [currentStation];
     const lat = currentStation.latitude;
     const lon = currentStation.longitude;
-    
-    if (request.query.dataRetrieved)
-      
-
     const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0aa8a56676edc13091118eace86a7726`
-    console.log(weatherRequestUrl);
+    let report = {};
     
+    if (request.query.dataRetrieved) {
+      console.log("rendering new report");
+       const result = await axios.get(weatherRequestUrl);
+      if (result.status == 200) {
+        const currentWeather = result.data;
+        report.code = currentWeather.weather[0].id;
+        report.temperature = currentWeather.main.temp;
+        report.windSpeed = currentWeather.wind.speed;
+        report.pressure = currentWeather.main.pressure;
+        report.windDirection = currentWeather.wind.deg;
+      }
+      else {
+        report.code = 100;
+        report.temperature = 0;
+        report.windSpeed = 0;
+        report.pressure = 0;
+        report.windDirection = 360;
+      }
+      console.log(report);
+      
+    }
+    else {
+      report.code = 100;
+      report.temperature = 0;
+      report.windSpeed = 0;
+      report.pressure = 0;
+      report.windDirection = 360;
+    }
+          
     const viewData = {
       stations: stationsToView,
-      url: weatherRequestUrl,
+      retrievedData: report,
       user: loggedInUser,
       title: currentStation.name, 
     };
