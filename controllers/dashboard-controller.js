@@ -8,31 +8,45 @@ import { prepareSummary } from "../utils/implementation.js";
 
 export const dashboardController = {
   async index(request, response) {
-if (cookies && cookies.weathertop_user_token && cookies.weathertop_user_token.trim() !== "") {
-      const loggedInUser = await accountsController.getLoggedInUser(request);
-      const userStations = await stationStore.getStationByUserId(loggedInUser._id);
-      //const stationsAlphabeticallySorted = userStations.sort("name");
+    try {
+        if (request.cookies && request.cookies.weathertop_user_token && request.cookies.weathertop_user_token.trim() !== "") {
+            // The cookie is defined and not empty
+          const loggedInUser = await accountsController.getLoggedInUser(request);
+          const userStations = await stationStore.getStationByUserId(loggedInUser._id);
 
-      let temp;
-      for (let i = 0; i < userStations.length; i++) {
-        temp = await prepareSummary(userStations[i]._id);
-        console.log('Current Station:', JSON.stringify(temp, null, 2));
+          let temp;
+          for (let i = 0; i < userStations.length; i++) {
+            temp = await prepareSummary(userStations[i]._id);
+            console.log('Current Station:', JSON.stringify(temp, null, 2));
 
-        userStations[i].attributes = temp.attributes;
-      };
+            userStations[i].attributes = temp.attributes;
+          };
 
-      const viewData = {
-        title: "Station Dashboard",
-        stations: userStations,
-        //userName: loggedInUser.firstName,
-        user: loggedInUser,
-      };
-      console.log("dashboard rendering");
-      response.render("dashboard-view", viewData);  
-    }
-    else {
+          const viewData = {
+            title: "Station Dashboard",
+            stations: userStations,
+            //userName: loggedInUser.firstName,
+            user: loggedInUser,
+          };
+          console.log("dashboard rendering");
+          response.render("dashboard-view", viewData);  
+                 res.send('Cookie is valid');
+        } else {
+            // The cookie is either undefined or empty
+            res.send('Cookie is not defined or empty');
+        }
+    } catch (error) {
+        // Handle the exception
       console.log("No user is logged in");
       response.redirect("/");  
+        console.error('An error occurred:', error.message);
+        res.status(500).send('An error occurred while processing the request.');
+    }
+
+    
+    if (cookies && cookies.weathertop_user_token && cookies.weathertop_user_token.trim() !== "") {
+   }
+    else {
     }
   },
   
