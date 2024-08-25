@@ -32,7 +32,7 @@ export const stationController = {
         report.temperature = 0;
         report.windSpeed = 0;
         report.pressure = 0;
-        report.windDirection = 360;
+        report.windDirection = "N";
       }
       console.log(report);
       
@@ -43,7 +43,7 @@ export const stationController = {
       report.temperature = 0.0;
       report.windSpeed = 0.0;
       report.pressure = 0.0;
-      report.windDirection = 360;
+      report.windDirection = "N";
     }
 
     currentStation.retrievedData = report;
