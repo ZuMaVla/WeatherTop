@@ -1,0 +1,8 @@
+{{#each stations}}
+  <div class="box mt-2">
+    <a href="/station/{{_id}}?chart=temperature" class="button is-info">Temperature</a>
+    <a href="/station/{{_id}}?chart=wind" class="button is-info">Wind</a>
+    <a href="/station/{{_id}}?chart=pressure" class="button is-info">Pressure</a>
+    <a href="/station/{{_id}}?chart=none" class="button is-info">Hide Chart</a>
+  </div>
+{{/each}}

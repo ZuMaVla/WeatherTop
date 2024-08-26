@@ -3,3 +3,5 @@
 	name = ZuMaVla
 [push]
 	default = matching
+[core]
+	autocrlf = false

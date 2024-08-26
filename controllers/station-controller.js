@@ -29,10 +29,10 @@ export const stationController = {
         wDir = currentWeather.wind.deg;
       }
       else {
-        report.code = "100";
-        report.temperature = 0;
-        report.windSpeed = 0;
-        report.pressure = 0;
+        report.code="";
+        report.temperature;
+        report.windSpeed;
+        report.pressure;
         wDir = 360;
       }
       console.log(report);
@@ -40,10 +40,10 @@ export const stationController = {
     }
     else {
       console.log("Manual entering data...");
-      report.code = "100";
-      report.temperature = 0.0;
-      report.windSpeed = 0.0;
-      report.pressure = 0.0;
+      report.code="";
+      report.temperature;
+      report.windSpeed;
+      report.pressure;
       wDir = 360;
     }
 

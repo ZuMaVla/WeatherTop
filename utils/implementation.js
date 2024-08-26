@@ -7,7 +7,7 @@ import dayjs from 'dayjs';
 export async function prepareSummary(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
-  let currentWeatherCode = 100;
+  let currentWeatherCode = 0;
   if (stationReports.length > 0) {
     let temp = stationReports[stationReports.length - 1];
     currentWeatherCode = temp.code;

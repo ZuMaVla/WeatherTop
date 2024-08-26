@@ -1,12 +1,12 @@
 {{#each stations}}
-  <label class="title is-4">Enter Weather Details:</label>
-  <form class="box" action="/station/{{_id}}/addreport" method="POST">
+  <label class="title is-5"><b>Tip:</b> Enter weather details or retrieve them from OpenWeather and submit them by pressing the corresponding button.</label>
+  <form class="box mt-2" action="/station/{{_id}}/addreport" method="POST">
     <div class="field is-horizontal">
       <div class="field-body is-align-items-flex-end">
         <div class="field">
           <label class="label">Code</label>
           <div class="control">
-            <input class="input" type="text" placeholder="00" name="code" value="{{retrievedData.code}}">
+            <input class="input" type="text" placeholder="100" name="code" value="{{retrievedData.code}}">
           </div>
         </div>
         <div class="field">
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="field">
-          <label class="label">Wind Speed, km/h</label>
+          <label class="label">Wind Speed, m/s</label>
           <div class="control">        
             <input class="input" type="text" placeholder="00" name="windSpeed" value="{{retrievedData.windSpeed}}">
           </div>
