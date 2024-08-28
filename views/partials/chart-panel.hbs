@@ -11,12 +11,10 @@
 </div>
 
 <script>
-  // Assume "now" is 18:00 on the 18th of August 2024
-  const dataX = [1, 3, 5, 6, 7];
-  const dataY = [1, 2, 3, 4, 5];
+  const dataX = {{time}};
+  const dataY = {{data}};
 
-  // Dates representing 18:00 on the specified days
-  const ctx = document.getElementById('myChart').getContext('2d');
+  const chartBody = document.getElementById('myChart').getContext('2d');   // Retrieves canvas intended for chart and interprets it as a 2D "workspace"
 
   const data = {
     labels: dataX, // X-values as hours from now
