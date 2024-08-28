@@ -112,8 +112,8 @@ export const stationController = {
 //*************************************************** Functionality related to data plotting **************************************************
     let isChart = 'display: none;';
     let chartData = {
-      xValues: '[]', 
-      yValues: '[]'
+      xValues: [], 
+      yValues: []
     };
     let xValues = chartData.xValues;
     let yValues = chartData.yValues;

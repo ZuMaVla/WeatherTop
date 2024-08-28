@@ -64,10 +64,10 @@ export async function prepareChartData(stationId) {
     pressure.push(stationReports[i].pressure);
   }
   const output = {
-    xValues: "[" + time.toString() + "]", 
-    temperatureValues: "[" + temperature.toString() + "]",
-    windValues: "[" + wind.toString() + "]",
-    pressureValues: "[" + pressure.toString() + "]",
+    xValues: time, 
+    temperatureValues: temperature,
+    windValues: wind,
+    pressureValues: pressure,
   };
   console.log("Chart data prepared:", output);
   
