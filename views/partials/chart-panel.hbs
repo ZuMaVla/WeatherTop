@@ -17,7 +17,7 @@
 <!--******************************************* Script for chart plotting using functionality of Chart.js**************************************************-->
 
 <script>
-  const dataX = [{{#each time}}{{this}}{{#unless @last}},{{/unless}}{{/each}}]; // Handle array of numbers for X-values
+  const dataX = [{{#each time}}{{this}},{{/each}}]; // Handle array of numbers for X-values
   const dataY = [{{#each data}}{{this}}{{#unless @last}},{{/unless}}{{/each}}]; // Handle array of numbers for Y-values
 
   const chartBody = document.getElementById('myChart').getContext('2d');   // Retrieves canvas prepared for chart and interprets it as a 2D "workspace"
