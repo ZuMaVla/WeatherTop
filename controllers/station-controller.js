@@ -112,29 +112,22 @@ export const stationController = {
     let isChart = 'display: none;';
     let xValues = '[]';
     let yValues = '[]';
-    let dataLabel = '';
+    let dataLegend = '';
     let dataUnits = '';
     
     if (!request.query.chart || request.query.chart === 'none') {
-      console.log("no chart requested");
-      }
-      else if () {
-        isChart = '';
-        report.temperature;
-        report.windSpeed;
-        report.pressure;
-        wDir = 360;
-      }
-      console.log(report);
-      
+      console.log("No chart requested");
+    }
+    else if (request.query.chart === 'temperature') {
+      console.log("Temperature chart requested");
+      isChart = '';
+      xValues = '[1, 3, 5, 6, 7]';
+      yValues = '[1, 2, 3, 2, 1]';
+      dataLegend = 'Temperature';
+      dataUnits = '°C';
     }
     else {
-      console.log("Manual entering data...");
-      report.code="";
-      report.temperature;
-      report.windSpeed;
-      report.pressure;
-      wDir = 360;
+      console.log("Other chart requested");
     }
 
     
@@ -144,6 +137,11 @@ export const stationController = {
     const viewData = {
       windDirection: winDirLabel,
       stations: stationsToView,
+      visibility: isChart,
+      time: xValues,
+      data: yValues,
+      toDisplayData: dataLegend,
+      toDisplayUnits: dataUnits,
       user: loggedInUser,
       title: currentStation.name, 
     };
