@@ -46,12 +46,14 @@ export async function prepareSummary(stationId) {
 export async function prepareChartData(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
+  const now = dayjs();
   let time = [];
-      for (let i = 0; i < stationReports.length; i++) {
-        time dayjs(stationReports[i].reportDate).isAfter(dayjs(temp.reportDate))) {
-          temp = stationReports[i];
-          currentWeatherCode = temp.code;
-        }
+  let temp;
+  for (let i = 0; i < stationReports.length; i++) {
+    temp = dayjs(stationReports[i].reportDate)
+    time.append(dayjs.duration(now.diff(temp)).asHours());
+  }
+
       }
     }
     console.log(currentWeatherCode);
