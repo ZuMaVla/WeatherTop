@@ -1070,6 +1070,26 @@
       "reportDate": "2024/08/26 23:44",
       "_id": "c2a11499-c7ab-4188-be5e-ae8b570eea99",
       "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
+    },
+    {
+      "code": 201,
+      "temperature": 18,
+      "windSpeed": 3,
+      "windDirection": "W",
+      "pressure": 1020,
+      "reportDate": "2024/08/28 11:38",
+      "_id": "e622220e-6ce2-4891-9c05-c6c756dd97fe",
+      "stationId": "dca94740-ce40-45f5-8072-d4b15d87e2b0"
+    },
+    {
+      "code": 802,
+      "temperature": 27.35,
+      "windSpeed": 4.27,
+      "windDirection": "SE",
+      "pressure": 1016,
+      "reportDate": "2024/08/28 11:40",
+      "_id": "89fcc0ba-2488-4fd2-bdc2-530c7b5083b3",
+      "stationId": "dca94740-ce40-45f5-8072-d4b15d87e2b0"
     }
   ]
 }

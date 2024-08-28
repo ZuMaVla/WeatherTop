@@ -28,6 +28,13 @@
       "email": "john@gmail.com",
       "password": "123456",
       "_id": "de50cc79-d9c3-4858-99fd-a8966cf17d48"
+    },
+    {
+      "firstName": "Vitaly",
+      "lastName": "Zubialevich",
+      "email": "vitalyzubialevich@gmail.com",
+      "password": "1234",
+      "_id": "25f9365a-c165-450a-b0d0-5aefdbbaae9f"
     }
   ]
 }
