@@ -1,10 +1,10 @@
 <section class="box" style="background-color: rgba(255, 255, 255, 0.66)">
 {{#each stations}}                    
   <div>
-    <a href="/station/{{_id}}?chart=temperature" class="button is-info">Temperature</a>
+    <a href="/station/{{_id}}?chart=temperature" class="button is-danger">Temperature</a>
     <a href="/station/{{_id}}?chart=wind" class="button is-info">Wind</a>
-    <a href="/station/{{_id}}?chart=pressure" class="button is-info">Pressure</a>
-    <a href="/station/{{_id}}?chart=none" class="button is-info">Hide Chart</a>
+    <a href="/station/{{_id}}?chart=pressure" class="button is-warning">Pressure</a>
+    <a href="/station/{{_id}}?chart=none" class="button">Hide Chart</a>
   </div>
 {{/each}}
 
@@ -28,7 +28,7 @@
       label: '{{toDisplayData}}',
       data: dataY,                                                         // Y-values (temperature, pressure or wind speed) corresponding to the X-values
       backgroundColor: 'rgba(75, 192, 192, 0.2)',
-      borderColor: 'rgba(75, 192, 192, 1)',
+      borderColor: 'rgba({{75, 192, 0}}, 1)',
       borderWidth: 1,
       fill: false
     }]

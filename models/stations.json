@@ -23,6 +23,13 @@
       "_id": "a7f7f611-5273-417c-88b9-6dfa2c52fea7"
     },
     {
+      "name": "Clonakilty",
+      "latitude": "51.6229346",
+      "longitude": "-8.8870112",
+      "userid": "25f9365a-c165-450a-b0d0-5aefdbbaae9f",
+      "_id": "a71cca2a-e2af-4c95-bb7c-58763e21b1aa"
+    },
+    {
       "name": "Cobh",
       "latitude": "51.850",
       "longitude": "-8.294",
@@ -119,6 +126,13 @@
       "longitude": "-7.288883",
       "userid": "25f9365a-c165-450a-b0d0-5aefdbbaae9f",
       "_id": "a1a12db1-1b4c-427d-bb16-bd554be70745"
+    },
+    {
+      "name": "Skibbereen",
+      "latitude": "51.55",
+      "longitude": "-9.2666753",
+      "userid": "25f9365a-c165-450a-b0d0-5aefdbbaae9f",
+      "_id": "ae6d27d4-014a-4024-986c-8e11793f332d"
     },
     {
       "name": "Tramore",
