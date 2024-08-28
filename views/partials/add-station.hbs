@@ -22,12 +22,12 @@
 
   <script>
     import fetch from 'node-fetch'; // npm install node-fetch
-    import { APIKeyService } from '../../../services/apikey.service';
+//    import { APIKeyService } from '../../../services/apikey.service';
 
     document.addEventListener("DOMContentLoaded", async function() {
       try {
-        const apiKey = APIKeyService.getApiKey(); // Assuming APIKeyService is set up to fetch the key
-        const response = await fetch(`https://api.geoapify.com/v1/geocode/search?text=Baltimore%2C%20Ireland&format=json&apiKey=${apiKey}`);
+        const apiKey = 'c5e1df079491472a9af943fbe1f1de97'; // my API key for geoapify.com
+        const response = await fetch(`https://api.geoapify.com/v1/geocode/search?text=Baltimore&country=Ireland&format=json&apiKey=${apiKey}`);
         const data = await response.json();
 
         console.log(data);

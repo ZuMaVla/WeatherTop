@@ -8,6 +8,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "axios": "^1.7.5",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "dayjs": "^1.11.12",
@@ -16,8 +17,8 @@
     "express-handlebars": "^6.0.7",
     "fs-extra": "^11.1.0",
     "lowdb": "^5.1.0",
-    "uuid": "^9.0.0",
-    "axios": "^1.7.5"
+    "node-fetch": "^3.3.2",
+    "uuid": "^9.0.0"
   },
   "repository": {
     "url": "https://github.com/wit-hdip-comp-sci-2021/todo-list-1"
