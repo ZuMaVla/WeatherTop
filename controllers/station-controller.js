@@ -114,6 +114,10 @@ export const stationController = {
     let yValues = '[]';
     let dataLegend = '';
     let dataUnits = '';
+    let chartData = {
+      
+    };
+    
     
     if (!request.query.chart || request.query.chart === 'none') {
       console.log("No chart requested");
@@ -121,10 +125,27 @@ export const stationController = {
     else if (request.query.chart === 'temperature') {
       console.log("Temperature chart requested");
       isChart = '';
-      xValues = '[1, 3, 5, 6, 7]';
+      
+      xValues = prepareChartData(request.params.stationId).xValues;
       yValues = '[1, 2, 3, 2, 1]';
       dataLegend = 'Temperature';
       dataUnits = '°C';
+    }
+    else if (request.query.chart === 'wind') {
+      console.log("Wind speed chart requested");
+      isChart = '';
+      xValues = '[1, 3, 5, 6, 7]';
+      yValues = '[1, 2, 3, 2, 1]';
+      dataLegend = 'Wind speed';
+      dataUnits = 'm/s';
+    }
+    else if (request.query.chart === 'pressure') {
+      console.log("Pressure chart requested");
+      isChart = '';
+      xValues = '[1, 3, 5, 6, 7]';
+      yValues = '[1, 2, 3, 2, 1]';
+      dataLegend = 'Pressure';
+      dataUnits = 'hPa';
     }
     else {
       console.log("Other chart requested");
