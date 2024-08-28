@@ -64,6 +64,12 @@ export async function prepareChartData(stationId) {
     pressure.push(stationReports[i].pressure);
   }
   console.log("Chart data prepared");
+  
+  return {xValues: "[" + time.toString() + "]", 
+         temperatureValues: "[" + temperature.toString + "]",
+         windValues: "[" + wind.toString + "]",
+         pressureValues: "[" + pressure.toString + "]",
+         }
 };
      
   stationToView.reports = stationReports;

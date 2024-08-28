@@ -128,23 +128,25 @@ export const stationController = {
       isChart = '';
       chartData = prepareChartData(request.params.stationId);
       xValues = chartData.xValues;
-      yValues = chartData.yValues;
+      yValues = chartData.temperatureValues;
       dataLegend = 'Temperature';
       dataUnits = '°C';
     }
     else if (request.query.chart === 'wind') {
       console.log("Wind speed chart requested");
       isChart = '';
-      xValues = '[1, 3, 5, 6, 7]';
-      yValues = '[1, 2, 3, 2, 1]';
+      chartData = prepareChartData(request.params.stationId);
+      xValues = chartData.xValues;
+      yValues = chartData.windValues;
       dataLegend = 'Wind speed';
       dataUnits = 'm/s';
     }
     else if (request.query.chart === 'pressure') {
       console.log("Pressure chart requested");
       isChart = '';
-      xValues = '[1, 3, 5, 6, 7]';
-      yValues = '[1, 2, 3, 2, 1]';
+      chartData = prepareChartData(request.params.stationId);
+      xValues = chartData.xValues;
+      yValues = chartData.temperatureValues;
       dataLegend = 'Pressure';
       dataUnits = 'hPa';
     }
