@@ -73,27 +73,6 @@ export async function prepareChartData(stationId) {
   
   return output;
 };
-     
-  stationToView.reports = stationReports;
-  const minT = stationStore.getParam(stationToView, "temperature", "min");
-  const maxT = stationStore.getParam(stationToView, "temperature", "max");
-  const minW = stationStore.getParam(stationToView, "windSpeed", "min");
-  const maxW = stationStore.getParam(stationToView, "windSpeed", "max");
-  const minP = stationStore.getParam(stationToView, "pressure", "min");
-  const maxP = stationStore.getParam(stationToView, "pressure", "max");
-  currentWeatherCode = await WCCs.getWeatherByCode(currentWeatherCode);
-  stationToView.attributes = {
-    minTemp: minT,
-    maxTemp: maxT,
-    minWind: minW,
-    maxWind: maxW,
-    minPress: minP,
-    maxPress: maxP,
-    weatherCode: currentWeatherCode,
-  };
-
-  return stationToView;
-};
 
 
 
