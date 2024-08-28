@@ -39,9 +39,16 @@
     {
       "name": "Cork",
       "latitude": "51.90",
-      "longitude": "8.48",
+      "longitude": "-8.48",
       "userid": "25f9365a-c165-450a-b0d0-5aefdbbaae9f",
       "_id": "dca94740-ce40-45f5-8072-d4b15d87e2b0"
+    },
+    {
+      "name": "Cork",
+      "latitude": "51.89",
+      "longitude": "-8.47",
+      "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
+      "_id": "339a51f6-1b32-4f0a-ae6f-bd82b29ec80c"
     },
     {
       "name": "Drogheda",
