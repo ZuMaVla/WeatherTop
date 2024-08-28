@@ -18,7 +18,7 @@ export const stationController = {
     let wDir = 360;
     
 
-//************************************************************ Functionality related to data retrieval from OpenWeather    
+//************************************************ Functionality related to data retrieval from OpenWeather *******************************************    
     
     if (request.query.dataRetrieved) {
       console.log("rendering new report using", weatherRequestUrl);
@@ -108,6 +108,41 @@ export const stationController = {
     const stationsToView = [currentStation];
 
     
+//*************************************************** Functionality related to data plotting **************************************************
+    let isChart = 
+    
+    if (!request.query.chart || request.query.chart === 'none') {
+      console.log("no chart requested");
+       = await axios.get(weatherRequestUrl);
+      if (result.status == 200) {
+        const currentWeather = result.data;
+        report.code = currentWeather.weather[0].id;
+        report.temperature = currentWeather.main.temp;
+        report.windSpeed = currentWeather.wind.speed;
+        report.pressure = currentWeather.main.pressure;
+        wDir = currentWeather.wind.deg;
+      }
+      else {
+        report.code="";
+        report.temperature;
+        report.windSpeed;
+        report.pressure;
+        wDir = 360;
+      }
+      console.log(report);
+      
+    }
+    else {
+      console.log("Manual entering data...");
+      report.code="";
+      report.temperature;
+      report.windSpeed;
+      report.pressure;
+      wDir = 360;
+    }
+
+    
+//*************************************************** Composing data for page rendering *******************************************************    
     
     
     const viewData = {
