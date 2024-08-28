@@ -127,7 +127,7 @@ export const stationController = {
     else if (request.query.chart === 'temperature') {
       console.log("Temperature chart requested");
       isChart = '';
-      chartData = prepareChartData(request.params.stationId);
+      chartData = await prepareChartData(request.params.stationId);
       xValues = chartData.xValues;
       yValues = chartData.temperatureValues;
       dataLegend = 'Temperature';
@@ -136,7 +136,7 @@ export const stationController = {
     else if (request.query.chart === 'wind') {
       console.log("Wind speed chart requested");
       isChart = '';
-      chartData = prepareChartData(request.params.stationId);
+      chartData = await prepareChartData(request.params.stationId);
       xValues = chartData.xValues;
       yValues = chartData.windValues;
       dataLegend = 'Wind speed';
@@ -145,7 +145,7 @@ export const stationController = {
     else if (request.query.chart === 'pressure') {
       console.log("Pressure chart requested");
       isChart = '';
-      chartData = prepareChartData(request.params.stationId);
+      chartData = await prepareChartData(request.params.stationId);
       xValues = chartData.xValues;
       yValues = chartData.pressureValues;
       dataLegend = 'Pressure';
@@ -168,13 +168,18 @@ export const stationController = {
       toDisplayData: dataLegend,
       toDisplayUnits: dataUnits,
       user: loggedInUser,
-      title: currentStation.name, 
+      title: currentStation.name
     };
     
     console.log(viewData.time, viewData.data);
     
     response.render("station-view", viewData);
   },
+  
+  
+  
+  
+  
   
   async addReport(request, response) {
     const stationToAddReportTo = await stationStore.getStationById(request.params.stationId);
