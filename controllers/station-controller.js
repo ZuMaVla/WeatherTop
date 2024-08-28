@@ -119,7 +119,7 @@ export const stationController = {
     let yValues = chartData.yValues;
     let dataLegend = '';
     let dataUnits = '';
-    
+    let rgb = '255, 255, 255';
     
     if (!request.query.chart || request.query.chart === 'none') {
       console.log("No chart requested");
@@ -132,6 +132,7 @@ export const stationController = {
       yValues = chartData.temperatureValues;
       dataLegend = 'Temperature';
       dataUnits = '°C';
+      rgb = '180, 60, 84';
     }
     else if (request.query.chart === 'wind') {
       console.log("Wind speed chart requested");
@@ -141,6 +142,7 @@ export const stationController = {
       yValues = chartData.windValues;
       dataLegend = 'Wind speed';
       dataUnits = 'm/s';
+      rgb = '7, 101, 255';
     }
     else if (request.query.chart === 'pressure') {
       console.log("Pressure chart requested");
@@ -150,6 +152,7 @@ export const stationController = {
       yValues = chartData.pressureValues;
       dataLegend = 'Pressure';
       dataUnits = 'hPa';
+      rgb = '209, 227, 56';
     }
     else {
       console.log("Other chart requested");
@@ -167,6 +170,7 @@ export const stationController = {
       data: yValues,
       toDisplayData: dataLegend,
       toDisplayUnits: dataUnits,
+      rgb: rgb,
       user: loggedInUser,
       title: currentStation.name
     };
