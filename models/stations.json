@@ -51,6 +51,13 @@
       "_id": "339a51f6-1b32-4f0a-ae6f-bd82b29ec80c"
     },
     {
+      "name": "Donegal",
+      "latitude": "54.92075415",
+      "longitude": "-7.952385214651309",
+      "userid": "25f9365a-c165-450a-b0d0-5aefdbbaae9f",
+      "_id": "77e80062-3011-468a-894f-f322723a6773"
+    },
+    {
       "name": "Drogheda",
       "latitude": "51.850",
       "longitude": "-6.206",
@@ -63,6 +70,13 @@
       "longitude": "-8.468",
       "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
       "_id": "42d1a0bd-1bed-485a-a511-94f3a22a3024"
+    },
+    {
+      "name": "Dublin",
+      "latitude": "53.3493795",
+      "longitude": "-6.2605593",
+      "userid": "25f9365a-c165-450a-b0d0-5aefdbbaae9f",
+      "_id": "76baed8c-eddf-4a08-a86d-fa0dc09f6494"
     },
     {
       "name": "Dungarvan",
@@ -98,6 +112,13 @@
       "longitude": "-9.063",
       "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
       "_id": "0467fd17-1d6e-43f9-b929-c8cc2f293333"
+    },
+    {
+      "name": "Portlaois",
+      "latitude": "53.027784",
+      "longitude": "-7.288883",
+      "userid": "25f9365a-c165-450a-b0d0-5aefdbbaae9f",
+      "_id": "a1a12db1-1b4c-427d-bb16-bd554be70745"
     },
     {
       "name": "Tramore",

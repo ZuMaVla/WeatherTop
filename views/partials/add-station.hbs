@@ -25,20 +25,23 @@
 
       const stationCity = document.getElementById('stationCity');
       
-      stationCity.addEventListener('input', function(event) {
+      stationCity.addEventListener('input', async function(event) {
         const cityEntered = event.target.value;
         const url = `https://api.geoapify.com/v1/geocode/search?text=${cityEntered}&country=Ireland&format=json&apiKey=c5e1df079491472a9af943fbe1f1de97`;  
         const result = await axios.get(url);
+        
+        const retrievedLat = result.data.results[0].lat;
+        const retrievedLon = result.data.results[0].lon;
+
         const stationLat = document.getElementById('stationLat');
         const stationLon = document.getElementById('stationLon');
-
+        
+        stationLat.value = retrievedLat;
+        stationLon.value = retrievedLon;
+        console.log(result.data);
+        console.log(stationLat, stationLon);
+        
       });
-      
-      
-      console.log(result.data);
-      const retrievedLat = result.data.results[0].lat;
-      const retrievedLon = result.data.results[0].lon;
-      console.log(stationLat, stationLon);
       
     });
   </script>
