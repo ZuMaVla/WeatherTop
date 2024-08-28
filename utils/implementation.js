@@ -2,7 +2,7 @@ import { WCCs } from "../models/WCC-db.js";
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import dayjs from 'dayjs';
-
+import duration from 'dayjs/plugin/duration';
 
 export async function prepareSummary(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
@@ -46,8 +46,9 @@ export async function prepareSummary(stationId) {
 export async function prepareChartData(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
-      for (let i = 0; i >= 0; i--) {
-        if (dayjs(stationReports[i].reportDate).isAfter(dayjs(temp.reportDate))) {
+  let time = [];
+      for (let i = 0; i < stationReports.length; i++) {
+        time dayjs(stationReports[i].reportDate).isAfter(dayjs(temp.reportDate))) {
           temp = stationReports[i];
           currentWeatherCode = temp.code;
         }
