@@ -21,11 +21,12 @@
 </section>
 
   <script>
-
     document.addEventListener("DOMContentLoaded", async function() {
       const result = await axios.get(`https://api.geoapify.com/v1/geocode/search?text=Baltimore&country=Ireland&format=json&apiKey=c5e1df079491472a9af943fbe1f1de97`);
       console.log(result.data);
-      console.log(result.data);
-      console.log(result.data);
+      const stationLat = results.data.results[0].lat;
+      const stationLon = results.data.results[0].lon;
+      console.log(stationLat, stationLon);
+      
     });
   </script>
