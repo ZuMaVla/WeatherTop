@@ -2,7 +2,7 @@ import { WCCs } from "../models/WCC-db.js";
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import dayjs from 'dayjs';
-import duration from 'dayjs/plugin/duration';
+import duration from 'dayjs/plugin/duration.js';
 
 dayjs.extend(duration);
 
@@ -63,13 +63,13 @@ export async function prepareChartData(stationId) {
     wind.push(stationReports[i].windSpeed);
     pressure.push(stationReports[i].pressure);
   }
-  console.log("Chart data prepared");
   const output = {
     xValues: "[" + time.toString() + "]", 
     temperatureValues: "[" + temperature.toString() + "]",
     windValues: "[" + wind.toString() + "]",
     pressureValues: "[" + pressure.toString() + "]",
   };
+  console.log("Chart data prepared:", output);
   
   return output;
 };

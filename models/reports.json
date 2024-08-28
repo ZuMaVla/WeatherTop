@@ -1110,6 +1110,16 @@
       "reportDate": "2024/08/28 14:56",
       "_id": "f200caba-ca47-4c13-9dff-27bf34721537",
       "stationId": "58ee041b-eefb-4b99-a8a7-8bfc37a8039b"
+    },
+    {
+      "code": 801,
+      "temperature": 16.96,
+      "windSpeed": 5.66,
+      "windDirection": "W/SW",
+      "pressure": 1012,
+      "reportDate": "2024/08/28 18:23",
+      "_id": "424b38c6-fd6c-42b9-bcd4-8cbc8e7d801e",
+      "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     }
   ]
 }
