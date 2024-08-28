@@ -11,8 +11,8 @@
 </div>
 
 <script>
-  const dataX = {{time}};
-  const dataY = {{data}};
+  const dataX = JSON.parse('{{time}}'); // Ensure time is a valid JSON array
+  const dataY = JSON.parse('{{data}}'); // Ensure data is a valid JSON array
 
   const chartBody = document.getElementById('myChart').getContext('2d');   // Retrieves canvas prepared for chart and interprets it as a 2D "workspace"
 
