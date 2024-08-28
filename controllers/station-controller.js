@@ -2,6 +2,7 @@ import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { prepareSummary } from "../utils/implementation.js";
+import { prepareChartData } from "../utils/implementation.js";
 import dayjs from 'dayjs';
 import axios from "axios";
 
@@ -146,7 +147,7 @@ export const stationController = {
       isChart = '';
       chartData = prepareChartData(request.params.stationId);
       xValues = chartData.xValues;
-      yValues = chartData.temperatureValues;
+      yValues = chartData.pressureValues;
       dataLegend = 'Pressure';
       dataUnits = 'hPa';
     }

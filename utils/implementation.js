@@ -58,18 +58,20 @@ export async function prepareChartData(stationId) {
   
   for (let i = 0; i < stationReports.length; i++) {
     tmp = dayjs(stationReports[i].reportDate)
-    time.push(dayjs.duration(now.diff(temp)).asHours());
+    time.push(dayjs.duration(now.diff(tmp)).asHours());
     temperature.push(stationReports[i].temperature);
     wind.push(stationReports[i].windSpeed);
     pressure.push(stationReports[i].pressure);
   }
   console.log("Chart data prepared");
+  const output = {
+    xValues: "[" + time.toString() + "]", 
+    temperatureValues: "[" + temperature.toString() + "]",
+    windValues: "[" + wind.toString() + "]",
+    pressureValues: "[" + pressure.toString() + "]",
+  };
   
-  return {xValues: "[" + time.toString() + "]", 
-         temperatureValues: "[" + temperature.toString + "]",
-         windValues: "[" + wind.toString + "]",
-         pressureValues: "[" + pressure.toString + "]",
-         }
+  return output;
 };
      
   stationToView.reports = stationReports;
