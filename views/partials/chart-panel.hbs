@@ -14,13 +14,13 @@
   const dataX = {{time}};
   const dataY = {{data}};
 
-  const chartBody = document.getElementById('myChart').getContext('2d');   // Retrieves canvas intended for chart and interprets it as a 2D "workspace"
+  const chartBody = document.getElementById('myChart').getContext('2d');   // Retrieves canvas prepared for chart and interprets it as a 2D "workspace"
 
   const data = {
-    labels: dataX, // X-values as hours from now
+    labels: dataX,                                                         // X-values: time in hours from now
     datasets: [{
-      label: 'Sample Data',
-      data: dataY, // Y-values corresponding to the X-values
+      label: '{{toDisplayData}}',
+      data: dataY,                                                         // Y-values (temperature, pressure or wind speed) corresponding to the X-values
       backgroundColor: 'rgba(75, 192, 192, 0.2)',
       borderColor: 'rgba(75, 192, 192, 1)',
       borderWidth: 1,
@@ -31,24 +31,24 @@
   const options = {
     scales: {
       x: {
-        type: 'linear', // Change x-axis type to linear for numeric X-values
+        type: 'linear',                                                     // To display using linear scale
         title: {
           display: true,
-          text: 'Hours from Now'
+          text: 'Time from now (hours)'                                     // Negative values mean past  
         }
       },
       y: {
-        beginAtZero: true,
+        beginAtZero: false,
         title: {
           display: true,
-          text: 'Y-Values'
+          text: '{{toDisplayData}} ({{toDisplayUnits}})'
         }
       }
     }
   };
 
-  const myChart = new Chart(ctx, {
-    type: 'line',
+  const myChart = new Chart(chartBody, {
+    type: 'line',                                                          // 
     data: data,
     options: options
   });
