@@ -1,14 +1,20 @@
+<section class="box" style="color: rgba(75, 192, 192, 0.2)">
 {{#each stations}}                    
-  <div class="box mt-2">
+  <div>
     <a href="/station/{{_id}}?chart=temperature" class="button is-info">Temperature</a>
     <a href="/station/{{_id}}?chart=wind" class="button is-info">Wind</a>
     <a href="/station/{{_id}}?chart=pressure" class="button is-info">Pressure</a>
     <a href="/station/{{_id}}?chart=none" class="button is-info">Hide Chart</a>
   </div>
 {{/each}}
-<div style="width: 60%; margin: 0 auto; {{visibility}}">
+
+<div class="box mb-5" style="width: 60%; margin: 0 auto; {{visibility}}">
   <canvas id="myChart"></canvas>
 </div>
+</section>
+
+
+<!--******************************************* Script for chart plotting using functionality of Chart.js**************************************************-->
 
 <script>
   const dataX = [{{#each time}}{{this}}{{#unless @last}},{{/unless}}{{/each}}]; // Handle array of numbers for X-values
