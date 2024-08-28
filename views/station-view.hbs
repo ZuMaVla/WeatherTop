@@ -18,18 +18,3 @@
   </div>
 </section>
 
-<div class="box" id="chart"></div>
-<script>
-  data = {
-    labels: [2024-08-16, 2024-08-17, 2024-08-18, 2024-08-20, 2024-08-21, 2024-08-22, 2024-08-23, 2024-08-24],
-    datasets: [
-      { values: [18, 40, 30, 35, 8, 52, 17, -4] }
-    ]
-  };
-  new frappe.Chart("#chart", {
-    data: data,
-    type: "line",
-    height: 180,
-    colors: ["red"]
-  });
-</script>

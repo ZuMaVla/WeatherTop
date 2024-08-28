@@ -1,16 +1,18 @@
 <section class="box" style="background-color: rgba(255, 255, 255, 0.66)">
-{{#each stations}}                    
-  <div>
-    <a href="/station/{{_id}}?chart=temperature" class="button chartCtrl is-danger" >Temperature</a>
-    <a href="/station/{{_id}}?chart=wind" class="button chartCtrl is-info">Wind</a>
-    <a href="/station/{{_id}}?chart=pressure" class="button chartCtrl is-warning">Pressure</a>
-    <a href="/station/{{_id}}?chart=none" class="button chartCtrl">Hide Chart</a>
-  </div>
-{{/each}}
+  <p class="title is-5"><b>Tip:</b> Use buttons below to control archive data chart.</p>
 
-<div class="box mb-5" style="width: 60%; margin: 0 auto; {{visibility}}">
-  <canvas id="myChart"></canvas>
-</div>
+  {{#each stations}}                    
+    <div>
+      <a href="/station/{{_id}}?chart=temperature" class="button chartCtrl is-danger" >Temperature</a>
+      <a href="/station/{{_id}}?chart=wind" class="button chartCtrl is-info">Wind</a>
+      <a href="/station/{{_id}}?chart=pressure" class="button chartCtrl is-warning">Pressure</a>
+      <a href="/station/{{_id}}?chart=none" class="button chartCtrl">Hide Chart</a>
+    </div>
+  {{/each}}
+
+  <div class="box mb-5" style="width: 60%; margin: 0 auto; {{visibility}}">
+    <canvas id="myChart"></canvas>
+  </div>
 </section>
 
 
