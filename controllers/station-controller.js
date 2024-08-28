@@ -17,6 +17,9 @@ export const stationController = {
     let report = {};
     let wDir = 360;
     
+
+//************************************************************ Functionality related to data retrieval from OpenWeather    
+    
     if (request.query.dataRetrieved) {
       console.log("rendering new report using", weatherRequestUrl);
       const result = await axios.get(weatherRequestUrl);
@@ -104,6 +107,9 @@ export const stationController = {
     
     const stationsToView = [currentStation];
 
+    
+    
+    
     const viewData = {
       windDirection: winDirLabel,
       stations: stationsToView,
