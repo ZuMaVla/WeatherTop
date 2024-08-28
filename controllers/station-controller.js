@@ -109,21 +109,17 @@ export const stationController = {
 
     
 //*************************************************** Functionality related to data plotting **************************************************
-    let isChart = 
+    let isChart = 'display: none;';
+    let xValues = '[]';
+    let yValues = '[]';
+    let dataLabel = '';
+    let dataUnits = '';
     
     if (!request.query.chart || request.query.chart === 'none') {
       console.log("no chart requested");
-       = await axios.get(weatherRequestUrl);
-      if (result.status == 200) {
-        const currentWeather = result.data;
-        report.code = currentWeather.weather[0].id;
-        report.temperature = currentWeather.main.temp;
-        report.windSpeed = currentWeather.wind.speed;
-        report.pressure = currentWeather.main.pressure;
-        wDir = currentWeather.wind.deg;
       }
-      else {
-        report.code="";
+      else if () {
+        isChart = '';
         report.temperature;
         report.windSpeed;
         report.pressure;
