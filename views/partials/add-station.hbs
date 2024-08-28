@@ -21,18 +21,12 @@
 </section>
 
   <script>
-    import fetch from 'node-fetch'; // npm install node-fetch
-//    import { APIKeyService } from '../../../services/apikey.service';
+    import axios from "axios";
 
     document.addEventListener("DOMContentLoaded", async function() {
-      try {
-        const apiKey = 'c5e1df079491472a9af943fbe1f1de97'; // my API key for geoapify.com
-        const response = await fetch(`https://api.geoapify.com/v1/geocode/search?text=Baltimore&country=Ireland&format=json&apiKey=${apiKey}`);
-        const data = await response.json();
-
-        console.log(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
+      const result = await axios.get(`https://api.geoapify.com/v1/geocode/search?text=Baltimore&country=Ireland&format=json&apiKey=c5e1df079491472a9af943fbe1f1de97`);
+      if (result.status == 200) {
+        console.log(result);
       }
     });
   </script>
