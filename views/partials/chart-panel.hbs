@@ -1,10 +1,10 @@
 <section class="box" style="background-color: rgba(255, 255, 255, 0.66)">
 {{#each stations}}                    
   <div>
-    <a href="/station/{{_id}}?chart=temperature" class="button is-danger">Temperature</a>
-    <a href="/station/{{_id}}?chart=wind" class="button is-info">Wind</a>
-    <a href="/station/{{_id}}?chart=pressure" class="button is-warning">Pressure</a>
-    <a href="/station/{{_id}}?chart=none" class="button">Hide Chart</a>
+    <a href="/station/{{_id}}?chart=temperature" class="button chartCtrl is-danger" >Temperature</a>
+    <a href="/station/{{_id}}?chart=wind" class="button chartCtrl is-info">Wind</a>
+    <a href="/station/{{_id}}?chart=pressure" class="button chartCtrl is-warning">Pressure</a>
+    <a href="/station/{{_id}}?chart=none" class="button chartCtrl">Hide Chart</a>
   </div>
 {{/each}}
 
@@ -17,8 +17,8 @@
 <!--******************************************* Script for chart plotting using functionality of Chart.js**************************************************-->
 
 <script>
-  const dataX = [{{#each time}}{{this}},{{/each}}]; // Handle array of numbers for X-values
-  const dataY = [{{#each data}}{{this}}{{#unless @last}},{{/unless}}{{/each}}]; // Handle array of numbers for Y-values
+  const dataX = [{{#each time}}{{this}},{{/each}}]; // Composing array of numbers for X-values
+  const dataY = [{{#each data}}{{this}},{{/each}}]; // Composing array of numbers for Y-values
 
   const chartBody = document.getElementById('myChart').getContext('2d');   // Retrieves canvas prepared for chart and interprets it as a 2D "workspace"
 

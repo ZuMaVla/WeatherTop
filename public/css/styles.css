@@ -42,3 +42,8 @@
   z-index: 1000; 
   background-color: rgba(255, 255, 255, 0.66); 
 }
+  
+.chartCtrl {
+  width: 120px;
+  margin: 0 3px;
+}
