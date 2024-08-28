@@ -4,6 +4,9 @@ import { reportStore } from "../models/report-store.js";
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 
+dayjs.extend(duration);
+
+
 export async function prepareSummary(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
@@ -48,16 +51,20 @@ export async function prepareChartData(stationId) {
   const stationReports = await reportStore.getReportsByStationId(stationId);
   const now = dayjs();
   let time = [];
-  let temp;
+  let temperature = [];
+  let wind = [];
+  let pressure = [];
+  let tmp;
+  
   for (let i = 0; i < stationReports.length; i++) {
-    temp = dayjs(stationReports[i].reportDate)
-    time.append(dayjs.duration(now.diff(temp)).asHours());
+    tmp = dayjs(stationReports[i].reportDate)
+    time.push(dayjs.duration(now.diff(temp)).asHours());
+    temperature.push(stationReports[i].temperature);
+    wind.push(stationReports[i].windSpeed);
+    pressure.push(stationReports[i].pressure);
   }
-
-      }
-    }
-    console.log(currentWeatherCode);
-  };
+  console.log("Chart data prepared");
+};
      
   stationToView.reports = stationReports;
   const minT = stationStore.getParam(stationToView, "temperature", "min");
