@@ -171,7 +171,7 @@ export const stationController = {
       title: currentStation.name, 
     };
     
-    console.log(viewData.retrievedData);
+    console.log(viewData.time, viewData.data);
     
     response.render("station-view", viewData);
   },
