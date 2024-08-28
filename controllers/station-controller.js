@@ -110,13 +110,14 @@ export const stationController = {
     
 //*************************************************** Functionality related to data plotting **************************************************
     let isChart = 'display: none;';
-    let xValues = '[]';
-    let yValues = '[]';
+    let chartData = {
+      xValues: '[]', 
+      yValues: '[]'
+    };
+    let xValues = chartData.xValues;
+    let yValues = chartData.yValues;
     let dataLegend = '';
     let dataUnits = '';
-    let chartData = {
-      
-    };
     
     
     if (!request.query.chart || request.query.chart === 'none') {
@@ -125,9 +126,9 @@ export const stationController = {
     else if (request.query.chart === 'temperature') {
       console.log("Temperature chart requested");
       isChart = '';
-      
-      xValues = prepareChartData(request.params.stationId).xValues;
-      yValues = '[1, 2, 3, 2, 1]';
+      chartData = prepareChartData(request.params.stationId);
+      xValues = chartData.xValues;
+      yValues = chartData.yValues;
       dataLegend = 'Temperature';
       dataUnits = '°C';
     }
