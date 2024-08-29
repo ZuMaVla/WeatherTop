@@ -26,7 +26,7 @@ export const stationController = {
     
     
     let report = {};
-    let wDir = 360;                                                                // default wind direction
+    let wDir;                                                                      // declare wind direction variable
     
 
 //************************************************ Functionality related to data retrieval from OpenWeather *******************************************    
@@ -34,7 +34,7 @@ export const stationController = {
     if (request.query.dataRetrieved && request.query.dataRetrieved === 'true') {   // checking if user requested a data retrieval from https://openweathermap.org/
       console.log("rendering new report using", weatherRequestUrl);
       const result = await axios.get(weatherRequestUrl);                           // attempt to retrieve weather data from https://openweathermap.org/ 
-      if (result.status == 200) {                                                  // 
+      if (result.status == 200) {                                                  // if OK interpret and read required data
         const currentWeather = result.data;
         report.code = currentWeather.weather[0].id;
         report.temperature = currentWeather.main.temp;
@@ -42,7 +42,7 @@ export const stationController = {
         report.pressure = currentWeather.main.pressure;
         wDir = currentWeather.wind.deg;
       }
-      else {
+      else {                                                                       // if not OK use no data 
         report.code="";
         report.temperature;
         report.windSpeed;
@@ -52,7 +52,7 @@ export const stationController = {
       console.log(report);
       
     }
-    else {
+    else {                                                                         // if data retrieved is not requested, also use no data
       console.log("Manual entering data...");
       report.code="";
       report.temperature;
@@ -61,10 +61,10 @@ export const stationController = {
       wDir = 360;
     }
 
-    let winDirLabel = "N";
+    let winDirLabel;
 
-    switch (true) {                                                      // Convertion of wind direction in degrees to corresponding compass direction (e.g., N, NE, E)
-      case (wDir > 11.25 && wDir <= 33.75):
+    switch (true) {                                                                // Convertion of wind direction in degrees 
+      case (wDir > 11.25 && wDir <= 33.75):                                        // to corresponding compass direction (e.g., N, NE, E)
         winDirLabel = "N/NE";
         break;
       case (wDir > 33.75 && wDir <= 56.25):
@@ -120,8 +120,8 @@ export const stationController = {
 
     
 //*************************************************** Functionality related to data plotting **************************************************
-    let isChart = 'display: none;';
-    let chartData = {
+    let isChart = 'display: none;';                                        // to enable functionality of "Hide Chart" button
+    let chartData = {                                                      // empty data for chart by default  
       xValues: [], 
       yValues: []
     };
