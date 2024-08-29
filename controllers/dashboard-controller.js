@@ -17,22 +17,20 @@ export const dashboardController = {
       for (let i = 0; i < userStations.length; i++) {                               // loop to pass through each station and prepare summary data
         temp = await prepareSummary(userStations[i]._id);
 
-        userStations[i].attributes = temp.attributes;
+        userStations[i].attributes = temp.attributes;                               // data necessary for station's summary gets attached 
       };
 
       const viewData = {
         title: "Station Dashboard",
-        stations: userStations,
-        //userName: loggedInUser.firstName,
         user: loggedInUser,
+        stations: userStations,                                                     // stations with prepared summary data are passed to dashboard-view render
       };
       console.log("dashboard rendering");
       response.render("dashboard-view", viewData);
     }
-    else {
-      // The cookie is not defined or empty
+    else {                                                                          // The cookie is not defined or empty
       console.log("No user is logged in");
-      response.redirect("/");  
+      response.redirect("/");                                                       // handling cases when dashboard is attempted to be accessed without login 
     }
   },
   
@@ -50,13 +48,12 @@ export const dashboardController = {
   },
   
   async deleteStation(request, response) {
-    await stationStore.deleteStationById(request.params.stationId);
+    await stationStore.deleteStationById(request.params.stationId);                                  // deleting station itself
 
     console.log(`Station deleted: ${request.params.stationId}`);
-    const deletedReports = await reportStore.deleteReportsByStationId(request.params.stationId);
+    const deletedReports = await reportStore.deleteReportsByStationId(request.params.stationId);     // cascade deleting of its reports 
     console.log(`Reports deleted: ${deletedReports}`);
     response.redirect("/dashboard");
   },
-  
 
 };

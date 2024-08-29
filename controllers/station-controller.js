@@ -15,19 +15,23 @@ const tz = "Europe/Dublin";
 export const stationController = {
     
   async index(request, response) {
-    const currentStation = await prepareSummary(request.params.stationId); 
+    const currentStation = await prepareSummary(request.params.stationId);         // preparing summary data for the current station
     const loggedInUser = await accountsController.getLoggedInUser(request);
     
     const lat = currentStation.latitude;
     const lon = currentStation.longitude;
+    
+    // composing url for weather request to https://openweathermap.org/
     const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=0aa8a56676edc13091118eace86a7726`
+    
+    
     let report = {};
     let wDir = 360;
     
 
 //************************************************ Functionality related to data retrieval from OpenWeather *******************************************    
     
-    if (request.query.dataRetrieved) {
+    if (request.query.dataRetrieved) {                                             // 
       console.log("rendering new report using", weatherRequestUrl);
       const result = await axios.get(weatherRequestUrl);
       if (result.status == 200) {
