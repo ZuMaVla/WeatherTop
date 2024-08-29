@@ -3,8 +3,15 @@ import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration.js';
+import utc from 'dayjs/plugin/utc.js';
+import timezone from 'dayjs/plugin/timezone.js';
 
-dayjs.extend(duration);
+dayjs.extend(duration);                                        // plugin for dealing with time intervals
+
+dayjs.extend(utc);
+dayjs.extend(timezone);                                        // plugins for dayjs to take into account handling daylight saving time (i.e. summer time)
+const tz = "Europe/Dublin";                                
+
 
 
 export async function prepareSummary(stationId) {

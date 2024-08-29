@@ -9,8 +9,8 @@ import utc from 'dayjs/plugin/utc.js';
 import timezone from 'dayjs/plugin/timezone.js';
 
 dayjs.extend(utc);
-dayjs.extend(timezone);
-const tz = "Europe/Dublin";
+dayjs.extend(timezone);                                        // plugins for dayjs to take into account handling daylight saving time (i.e. summer time)
+const tz = "Europe/Dublin";                                
 
 export const stationController = {
     
@@ -187,13 +187,9 @@ export const stationController = {
   },
   
   
-  
-  
-  
-  
   async addReport(request, response) {
     const stationToAddReportTo = await stationStore.getStationById(request.params.stationId);
-    const now = dayjs.tz(tz);
+    const now = dayjs().tz(tz);                                      // modified use of dayjs to take into account time zone and daylught saving
 
     const newReport = {
       code: Number(request.body.code),
