@@ -56,7 +56,8 @@ export async function prepareSummary(stationId) {
 export async function prepareChartData(stationId) {
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
-  const now = dayjs();
+  const now = dayjs().tz(tz);
+  console.log("Allegedly current time", now);
   let time = [];
   let temperature = [];
   let wind = [];
@@ -64,7 +65,7 @@ export async function prepareChartData(stationId) {
   let tmp;
   
   for (let i = 0; i < stationReports.length; i++) {
-    tmp = dayjs(stationReports[i].reportDate)
+    tmp = dayjs(stationReports[i].reportDate).tz(tz);
     time.push(-dayjs.duration(now.diff(tmp)).asHours());    // negative values correspond to the past
     temperature.push(stationReports[i].temperature);
     wind.push(stationReports[i].windSpeed);
