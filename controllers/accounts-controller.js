@@ -16,7 +16,7 @@ export const accountsController = {
   },
 
   logout(request, response) {
-    response.cookie("weathertop_user_token", "");
+    response.cookie("weathertop_user_token", "");                           // clearing cookies     
     response.redirect("/");
   },
 
@@ -28,7 +28,7 @@ export const accountsController = {
   },
 
   async register(request, response) {
-    const user = await userStore.getUserByEmail(request.body.email);
+    const user = await userStore.getUserByEmail(request.body.email);       // attempt to find user with specified email in our database 
     const viewData = {
       message: "",
       messageType: "notification is-info",

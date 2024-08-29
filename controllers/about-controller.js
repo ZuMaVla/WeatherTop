@@ -4,7 +4,7 @@ export const aboutController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const viewData = {
-      title: "About",
+      title: "About",   
       user: loggedInUser,
     };
     console.log("about rendering");
