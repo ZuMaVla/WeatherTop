@@ -26,15 +26,15 @@ export const stationController = {
     
     
     let report = {};
-    let wDir = 360;
+    let wDir = 360;                                                                // default wind direction
     
 
 //************************************************ Functionality related to data retrieval from OpenWeather *******************************************    
     
-    if (request.query.dataRetrieved) {                                             // 
+    if (request.query.dataRetrieved && request.query.dataRetrieved === 'true') {   // checking if user requested a data retrieval from https://openweathermap.org/
       console.log("rendering new report using", weatherRequestUrl);
-      const result = await axios.get(weatherRequestUrl);
-      if (result.status == 200) {
+      const result = await axios.get(weatherRequestUrl);                           // attempt to retrieve weather data from https://openweathermap.org/ 
+      if (result.status == 200) {                                                  // 
         const currentWeather = result.data;
         report.code = currentWeather.weather[0].id;
         report.temperature = currentWeather.main.temp;

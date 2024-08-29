@@ -1,7 +1,6 @@
 import express from "express";
 import { dashboardController } from "./controllers/dashboard-controller.js";
 import { aboutController } from "./controllers/about-controller.js";
-import { mainController } from "./controllers/main-controller.js";
 import { stationController } from "./controllers/station-controller.js";
 import { accountsController } from './controllers/accounts-controller.js';
 
