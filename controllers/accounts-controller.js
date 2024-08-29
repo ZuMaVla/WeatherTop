@@ -34,7 +34,7 @@ export const accountsController = {
       messageType: "notification is-info",
     };
     
-    if (user) {
+    if (user) {                                                            // Stop user from signing up using already registered email
       viewData.message = "User already registered!";
       viewData.messageType = "notification is-danger";
       response.render("signup-view", viewData);
