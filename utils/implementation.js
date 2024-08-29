@@ -65,7 +65,7 @@ export async function prepareChartData(stationId) {
   let tmp;
   
   for (let i = 0; i < stationReports.length; i++) {
-    tmp = dayjs(stationReports[i].reportDate);
+    tmp = dayjs(stationReports[i].reportDate, "YYYY/MM/DD HH:mm").tz(tz);
     console.log("tmp", tmp);
     time.push(-dayjs.duration(now.diff(tmp)).asHours());    // negative values correspond to the past
     temperature.push(stationReports[i].temperature);
