@@ -28,12 +28,23 @@ export const accountsController = {
   },
 
   async register(request, response) {
-
+    const user = await userStore.getUserByEmail(request.body.email);
+    const viewData = {
+      message: "",
+      messageType: "notification is-info",
+    };
     
-    const user = request.body;
-    await userStore.addUser(user);
-    console.log(`registering ${user.email}`);
-    response.redirect("/");
+    if (user) {
+      viewData.message = "User already registered!";
+      viewData.messageType = "notification is-danger";
+      response.render("signup-view", viewData);
+    }
+    else {    
+      const user = request.body;
+      await userStore.addUser(user);
+      console.log(`registering ${user.email}`);
+      response.redirect("/");
+    }
   },
 
   async authenticate(request, response) {
