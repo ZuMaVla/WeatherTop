@@ -2,6 +2,13 @@
 
 # do not forget to make this file executable when using for the first time: chmod +x ~/s.sh
 
+# also, when using for the first time, make sure that content of .env
+# is loaded as environment variables using the command lines below:
+
+# set -a  # Automatically export all variables
+# source .env
+# set +a  # Disable automatic export
+
 # SSH setup section
 mkdir -p ~/.ssh
 
