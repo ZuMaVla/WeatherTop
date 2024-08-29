@@ -1280,6 +1280,16 @@
       "reportDate": "2024/08/29 22:35",
       "_id": "cc1b3be0-3742-450b-89c3-0e10664a90ab",
       "stationId": "5b856486-024d-4567-a838-e710a9f721fd"
+    },
+    {
+      "code": 803,
+      "temperature": 13.91,
+      "windSpeed": 3.6,
+      "windDirection": "W",
+      "pressure": 1021,
+      "reportDate": "2024/08/29 22:56",
+      "_id": "76aaf047-afe8-4c5a-9515-529db3353c52",
+      "stationId": "5b856486-024d-4567-a838-e710a9f721fd"
     }
   ]
 }

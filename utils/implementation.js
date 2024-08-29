@@ -65,9 +65,9 @@ export async function prepareChartData(stationId) {
   let tmp;
   
   for (let i = 0; i < stationReports.length; i++) {
-    tmp = dayjs(stationReports[i].reportDate, "YYYY/MM/DD HH:mm").tz(tz);
+    tmp = dayjs(stationReports[i].reportDate, "YYYY/MM/DD HH:mm").tz(tz, true);             // converting stored date/time to dayjs date assuming time is local
     console.log("tmp", tmp);
-    time.push(-1 - now.diff(tmp, 'minute')/60);                // negative values correspond to the past
+    time.push(tmp.diff(now, 'seconds')/3600);                // negative values correspond to the past (stored data/archive)
     temperature.push(stationReports[i].temperature);
     wind.push(stationReports[i].windSpeed);
     pressure.push(stationReports[i].pressure);
