@@ -50,7 +50,6 @@ export const dashboardController = {
   },
   
   async deleteStation(request, response) {
-    //const loggedInUser = await accountsController.getLoggedInUser(request);
     await stationStore.deleteStationById(request.params.stationId);
 
     console.log(`Station deleted: ${request.params.stationId}`);

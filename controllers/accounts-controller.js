@@ -41,45 +41,45 @@ export const accountsController = {
     }
     else {    
       const user = request.body;
-      await userStore.addUser(user);
+      await userStore.addUser(user);                                       // adding new user if their email is unique
       console.log(`registering ${user.email}`);
       response.redirect("/");
     }
   },
 
   async authenticate(request, response) {
-    const user = await userStore.getUserByEmail(request.body.email);
+    const user = await userStore.getUserByEmail(request.body.email);       // retrieving user data based on provided email 
     const viewData = {
       message: "",
       messageType: "notification is-info",
     };
-    if (user) {
-      if (user.password === request.body.password) {
+    if (user) {                                                            // handling situation when user does exist
+      if (user.password === request.body.password) {                       // allowing access if user provided correct password 
         response.cookie("weathertop_user_token", user.email);
         console.log(`logging in ${user.email}`);
         response.redirect("/dashboard");
       }
       else {
-        viewData.message = "Wrong password!";
+        viewData.message = "Wrong password!";                              // handling situation if user provided wrong password
         viewData.messageType = "notification is-danger";
         response.render("login-view", viewData);
       }
     }
-    else {
+    else {                                                                 // handling situation when user does NOT exist 
       viewData.message = "User not found!";
       viewData.messageType = "notification is-danger";
       response.render("login-view", viewData);
     }
   },
 
-  async getLoggedInUser(request) {
-    const userEmail = request.cookies.weathertop_user_token;
+  async getLoggedInUser(request) {                                         // method to determine currently logged in user on other pages of the website
+    const userEmail = request.cookies.weathertop_user_token;               // uses cookies to get user's email
     return await userStore.getUserByEmail(userEmail);
   },
   
   async profile(request, response) {
     if (request.cookies.weathertop_user_token && request.cookies.weathertop_user_token.trim() !== "") {
-      const requestedUser = await userStore.getUserById(request.params.userId);                        // User requested in address line
+      const requestedUser = await userStore.getUserById(request.params.userId);                        // User requested in the address line
       const currentUser = await userStore.getUserByEmail(request.cookies.weathertop_user_token);       // User actually currently logged in
       if (requestedUser._id === currentUser._id) {                                                     // Grand access to profile only if the same user 
         const viewData = {
