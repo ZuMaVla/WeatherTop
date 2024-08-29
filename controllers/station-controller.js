@@ -4,7 +4,13 @@ import { accountsController } from "./accounts-controller.js";
 import { prepareSummary } from "../utils/implementation.js";
 import { prepareChartData } from "../utils/implementation.js";
 import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 import axios from "axios";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+const tz = "Ireland/Dublin";
 
 export const stationController = {
     
