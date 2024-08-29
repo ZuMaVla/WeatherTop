@@ -1222,16 +1222,6 @@
       "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
     },
     {
-      "code": 17,
-      "temperature": 0,
-      "windSpeed": 0,
-      "windDirection": "N",
-      "pressure": 0,
-      "reportDate": "2024/08/29 19:59",
-      "_id": "fa04e5ed-d475-4a1c-9c15-af31ff71b665",
-      "stationId": "58ee041b-eefb-4b99-a8a7-8bfc37a8039b"
-    },
-    {
       "code": 803,
       "temperature": 14.57,
       "windSpeed": 4.12,
