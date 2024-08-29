@@ -2,7 +2,7 @@ import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { stationController } from "./station-controller.js";
-import { prepareSummary } from "../utils/implementation.js";
+import { prepareSummary } from "../utils/implementation.js";                        // importing own function 
 
 
 
@@ -14,7 +14,7 @@ export const dashboardController = {
       const userStations = await stationStore.getStationByUserId(loggedInUser._id);
 
       let temp;
-      for (let i = 0; i < userStations.length; i++) {
+      for (let i = 0; i < userStations.length; i++) {                               // loop to pass through each station and prepare summary data
         temp = await prepareSummary(userStations[i]._id);
 
         userStations[i].attributes = temp.attributes;

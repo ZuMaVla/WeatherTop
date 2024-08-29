@@ -103,6 +103,7 @@ export const accountsController = {
   async updateProfile(request, response) {
     await userStore.updateUser(request.params.userId, request.body);
     console.log(`user ${request.params.userId} updated with the following details: ${request.body.firstName}, ${request.body.lastName}, ${request.body.email}`);
+    response.cookie("weathertop_user_token", "");                           // clearing cookies     
     response.redirect("/");
   },
   
