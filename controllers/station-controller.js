@@ -3,14 +3,14 @@ import { reportStore } from "../models/report-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { prepareSummary } from "../utils/implementation.js";
 import { prepareChartData } from "../utils/implementation.js";
-import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
-import timezone from 'dayjs/plugin/timezone';
 import axios from "axios";
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc.js';
+import timezone from 'dayjs/plugin/timezone.js';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-const tz = "Ireland/Dublin";
+const tz = "Europe/Dublin";
 
 export const stationController = {
     
@@ -193,7 +193,7 @@ export const stationController = {
   
   async addReport(request, response) {
     const stationToAddReportTo = await stationStore.getStationById(request.params.stationId);
-    const now = dayjs();
+    const now = dayjs.tz(tz);
 
     const newReport = {
       code: Number(request.body.code),
