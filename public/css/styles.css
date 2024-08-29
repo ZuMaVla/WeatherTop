@@ -16,10 +16,6 @@
   max-width: 100%; /* Ensures the image is responsive */
 }
 
-.title {
-  margin-bottom: 0.0rem;
-}
-
 .icon-column {
   display: inline-block;
 }
