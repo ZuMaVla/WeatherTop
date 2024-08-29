@@ -28,6 +28,8 @@ export const accountsController = {
   },
 
   async register(request, response) {
+
+    
     const user = request.body;
     await userStore.addUser(user);
     console.log(`registering ${user.email}`);
