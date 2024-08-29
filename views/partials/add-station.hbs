@@ -1,6 +1,6 @@
-<section class="box pt-1 pb-1 mt-3 mb-3" style="background-color: rgba(255, 255, 255, 0.67);">
-  <form action="/dashboard/addstation" method="POST">
-    <div class="columns">
+  <form class="box mt-2" action="/dashboard/addstation" method="POST">
+   <p class="title is-5"><b>Tip:</b> This is your Dashboard. To add a new station, enter its details below and hit the button "Add Station".</p>
+   <div class="columns">
       <div class="field column" style="display: inline-block;">
         <label class="label">Station Name</label>
         <input id="stationCity" class="input" type="text" placeholder="Enter station name" name="name">
@@ -18,7 +18,6 @@
       </div>
     </div>
   </form>
-</section>
 
   <script>
     document.addEventListener("DOMContentLoaded", async function() {

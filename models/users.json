@@ -35,6 +35,13 @@
       "email": "vitaz@gmail.com",
       "password": "1234",
       "_id": "25f9365a-c165-450a-b0d0-5aefdbbaae9f"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "check@check.com",
+      "password": "1234",
+      "_id": "42138186-7bea-43bc-9907-8b346f1d6799"
     }
   ]
 }
