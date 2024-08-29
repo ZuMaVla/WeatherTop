@@ -120,6 +120,7 @@ export const stationController = {
 
     
 //*************************************************** Functionality related to data plotting **************************************************
+    
     let isChart = 'display: none;';                                        // to enable functionality of "Hide Chart" button
     let chartData = {                                                      // empty data for chart by default  
       xValues: [], 
@@ -131,10 +132,10 @@ export const stationController = {
     let dataUnits = '';
     let rgb = '255, 255, 255';
     
-    if (!request.query.chart || request.query.chart === 'none') {
+    if (!request.query.chart || request.query.chart === 'none') {          // Nothing to do if chart is not requested  
       console.log("No chart requested");
     }
-    else if (request.query.chart === 'temperature') {
+    else if (request.query.chart === 'temperature') {                      // Handling case when temperature chart is requested    
       console.log("Temperature chart requested");
       isChart = '';
       chartData = await prepareChartData(request.params.stationId);
@@ -142,9 +143,9 @@ export const stationController = {
       yValues = chartData.temperatureValues;
       dataLegend = 'Temperature';
       dataUnits = '°C';
-      rgb = '180, 60, 84';
+      rgb = '180, 60, 84';                                                 // rgb scheme to match temperature pictogram in the station summary 
     }
-    else if (request.query.chart === 'wind') {
+    else if (request.query.chart === 'wind') {                             // Handling case when wind chart is requested 
       console.log("Wind speed chart requested");
       isChart = '';
       chartData = await prepareChartData(request.params.stationId);
@@ -152,9 +153,9 @@ export const stationController = {
       yValues = chartData.windValues;
       dataLegend = 'Wind speed';
       dataUnits = 'm/s';
-      rgb = '7, 101, 255';
+      rgb = '7, 101, 255';                                                 // rgb scheme to match wind pictogram in the station summary
     }
-    else if (request.query.chart === 'pressure') {
+    else if (request.query.chart === 'pressure') {                         // Handling case when pressure chart is requested
       console.log("Pressure chart requested");
       isChart = '';
       chartData = await prepareChartData(request.params.stationId);
@@ -162,15 +163,13 @@ export const stationController = {
       yValues = chartData.pressureValues;
       dataLegend = 'Pressure';
       dataUnits = 'hPa';
-      rgb = '209, 227, 56';
+      rgb = '209, 227, 56';                                                // rgb scheme to match pressure pictogram in the station summary
     }
     else {
-      console.log("Other chart requested");
+      console.log("Other chart requested");                                // Nothing to do if any other chart is requested 
     }
-
     
 //*************************************************** Composing data for page rendering *******************************************************    
-    
     
     const viewData = {
       windDirection: winDirLabel,
@@ -188,12 +187,13 @@ export const stationController = {
     console.log(viewData.time, viewData.data);
     
     response.render("station-view", viewData);
+    
   },
   
   
   async addReport(request, response) {
     const stationToAddReportTo = await stationStore.getStationById(request.params.stationId);
-    const now = dayjs().tz(tz);                                      // modified use of dayjs to take into account time zone and daylught saving
+    const now = dayjs().tz(tz);                                            // modified use of dayjs to take into account time zone and daylught saving
 
     const newReport = {
       code: Number(request.body.code),
@@ -209,7 +209,7 @@ export const stationController = {
   },
   
   async deleteReport(request, response) {
-    const stationToDeleteId = request.params.stationId;
+    const stationToDeleteId = request.params.stationId;                    
     const reportToDeleteId = request.params.reportId;
     console.log(`Deleting report ${reportToDeleteId} from Station ${stationToDeleteId}`);
     await reportStore.deleteReport(request.params.reportId);
