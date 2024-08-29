@@ -5,7 +5,7 @@
 # also, when using for the first time, make sure that content of .env
 # is loaded as environment variables using the command lines below:
 
-# set -a  # Automatically export all variables
+# set -a  # Automatic export on
 # source .env
 # set +a  # Disable automatic export
 
