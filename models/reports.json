@@ -1305,11 +1305,21 @@
       "code": 801,
       "temperature": 12.51,
       "windSpeed": 4.63,
-      "windDirection": "N",
+      "windDirection": "N/NW",
       "pressure": 1022,
-      "reportDate": "2024/08/30 01:28",
-      "_id": "cdf9c517-6b71-4825-8d90-7fa109dbbd44",
+      "reportDate": "2024/08/30 01:30",
+      "_id": "ab7b7031-2f43-44d1-a59a-0f9082b9e74b",
       "stationId": "50781714-ecdc-426c-9697-182f8d7386d1"
+    },
+    {
+      "code": 800,
+      "temperature": 9.59,
+      "windSpeed": 2.22,
+      "windDirection": "W/NW",
+      "pressure": 1022,
+      "reportDate": "2024/08/30 01:33",
+      "_id": "22f1c001-7c78-4bbf-8234-b311f24cb10f",
+      "stationId": "017131fc-76a8-4199-9990-5cd33321fa7b"
     }
   ]
 }
