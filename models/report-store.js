@@ -40,8 +40,9 @@ export const reportStore = {
   async deleteReportsByStationId(stnId) {
     await db.read();
     let temp = db.data.reports.length;
-    db.data.reports = db.data.reports.filter((report) => report.stationId !== stnId);
-    await db.write();
+                                          // retrieve reports station IDs of which are not equal that of the station that is being deleted
+    db.data.reports = db.data.reports.filter((report) => report.stationId !== stnId); 
+    await db.write();                     // these are exactly reports that 
     temp -= db.data.reports.length;
     return temp;
   },
