@@ -1340,6 +1340,26 @@
       "reportDate": "2024/08/30 01:55",
       "_id": "1c394cc8-372d-4eff-8b95-3115f52d033a",
       "stationId": "d87159c1-33e4-49cc-914d-c8be1dd48366"
+    },
+    {
+      "code": 800,
+      "temperature": 11.88,
+      "windSpeed": 2.55,
+      "windDirection": "E",
+      "pressure": 1024,
+      "reportDate": "2024/08/30 23:13",
+      "_id": "e8ebc02e-0f4e-4352-8a72-6f5262182507",
+      "stationId": "ae6d27d4-014a-4024-986c-8e11793f332d"
+    },
+    {
+      "code": 800,
+      "temperature": 11.88,
+      "windSpeed": 2.55,
+      "windDirection": "E",
+      "pressure": 1024,
+      "reportDate": "2024/08/30 23:15",
+      "_id": "3ba6ab94-bc04-4031-bfb4-77795385381d",
+      "stationId": "ae6d27d4-014a-4024-986c-8e11793f332d"
     }
   ]
 }
