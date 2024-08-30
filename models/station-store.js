@@ -15,7 +15,7 @@ export const stationStore = {
     station._id = v4();
     temp.push(station);
     
-    temp.sort(function (a, b) { //https://www.freecodecamp.org/news/how-to-sort-alphabetically-in-javascript/
+    temp.sort(function (a, b) { // sourced from https://www.freecodecamp.org/news/how-to-sort-alphabetically-in-javascript/
       if (a.name < b.name) {
         return -1;
       }
@@ -54,7 +54,7 @@ export const stationStore = {
     await db.write();
   },
   
-  getParam(station, param, comparison) {
+  getParam(station, param, comparison) {        // function to extract data for station summary
     let temp;
     switch(comparison) {
       case "min":

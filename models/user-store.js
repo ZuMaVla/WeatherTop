@@ -46,7 +46,7 @@ export const userStore = {
     user.lastName = userNewData.lastName;
     user.email = userNewData.email;
     user.password = userNewData.password;
-    await db.write(); // Write the changes back to the database
+    await db.write();                          // Write the changes back to the database
   },
   
 };

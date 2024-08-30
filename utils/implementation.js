@@ -14,14 +14,14 @@ const tz = "Europe/Dublin";
 
 
 
-export async function prepareSummary(stationId) {
+export async function prepareSummary(stationId) {              // function to prepare full data for station summary
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
   let currentWeatherCode = 0;
   if (stationReports.length > 0) {
     let temp = stationReports[stationReports.length - 1];
     currentWeatherCode = temp.code;
-    if (stationReports.length > 1) {
+    if (stationReports.length > 1) {                          // if more than one report sorting reports by date to get last weather code for summary
       for (let i = stationReports.length - 2; i >= 0; i--) {
         if (dayjs(stationReports[i].reportDate).isAfter(dayjs(temp.reportDate))) {
           temp = stationReports[i];
@@ -53,7 +53,7 @@ export async function prepareSummary(stationId) {
   return stationToView;
 };
 
-export async function prepareChartData(stationId) {
+export async function prepareChartData(stationId) {                                         // function to prepare chart data
   const stationToView = await stationStore.getStationById(stationId);
   const stationReports = await reportStore.getReportsByStationId(stationId);
   const now = dayjs().tz(tz);

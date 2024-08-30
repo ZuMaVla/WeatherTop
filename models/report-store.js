@@ -42,8 +42,8 @@ export const reportStore = {
     let temp = db.data.reports.length;
                                           // retrieve reports station IDs of which are not equal that of the station that is being deleted
     db.data.reports = db.data.reports.filter((report) => report.stationId !== stnId); 
-    await db.write();                     // these are exactly reports that 
-    temp -= db.data.reports.length;
+    await db.write();                     // these are exactly reports that should be left after deleting unwanted station's reports
+    temp -= db.data.reports.length;       // the difference shows how many reports got deleted (for logs) 
     return temp;
   },
 
@@ -51,6 +51,5 @@ export const reportStore = {
     db.data.reports = [];
     await db.write();
   },
-  
 
 };
