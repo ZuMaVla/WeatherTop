@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# This is a wrapper for git commands involving GitHub
 # do not forget to make this file executable when using for the first time: chmod +x ~/s.sh
 
 # also, when using for the first time, make sure that content of .env

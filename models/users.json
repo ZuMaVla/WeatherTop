@@ -37,11 +37,11 @@
       "_id": "25f9365a-c165-450a-b0d0-5aefdbbaae9f"
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "check@check.com",
-      "password": "1234",
-      "_id": "42138186-7bea-43bc-9907-8b346f1d6799"
+      "firstName": "Mara",
+      "lastName": "Levich",
+      "email": "malevich@gmail.com",
+      "password": "2345",
+      "_id": "efd8ae19-af9b-4325-a2bb-040df6cfe86f"
     }
   ]
 }
