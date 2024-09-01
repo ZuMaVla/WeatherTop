@@ -162,6 +162,14 @@
       "_id": "12b4e285-fbed-4214-bbb3-c218521dd5cd"
     },
     {
+      "name": "Galway",
+      "latitude": "53.2744122",
+      "longitude": "-9.0490601",
+      "map": "https://maps.geoapify.com/v1/staticmap?center=lonlat:-9.0490601,53.2744122&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97",
+      "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
+      "_id": "3163d50f-5044-4c07-90b3-539d40fe0fdc"
+    },
+    {
       "name": "Limerick",
       "latitude": "52.668",
       "longitude": "-8.630",
