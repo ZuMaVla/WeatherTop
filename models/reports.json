@@ -1380,16 +1380,6 @@
       "reportDate": "2024/09/01 13:54",
       "_id": "6329db4d-4015-420b-9576-c941d38f8388",
       "stationId": "339a51f6-1b32-4f0a-ae6f-bd82b29ec80c"
-    },
-    {
-      "code": 804,
-      "temperature": 17.88,
-      "windSpeed": 3.79,
-      "windDirection": "SE",
-      "pressure": 1012,
-      "reportDate": "2024/09/01 13:55",
-      "_id": "8d7b89dd-2384-4c48-9731-d3b770a02992",
-      "stationId": "fa9c1de9-7e9f-4ade-97b2-226aa01f3d11"
     }
   ]
 }
