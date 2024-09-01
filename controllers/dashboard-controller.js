@@ -40,7 +40,7 @@ export const dashboardController = {
       name: request.body.name,
       latitude: request.body.latitude,
       longitude: request.body.longitude,
-      map: "https://maps.geoapify.com/v1/staticmap?center=lonlat:${request.body.longitude},${request.body.latitude}&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97",
+      map: `https://maps.geoapify.com/v1/staticmap?center=lonlat:${request.body.longitude},${request.body.latitude}&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97`,
       userid: loggedInUser._id,
     };
     console.log(`adding station ${newStation.name}`);
