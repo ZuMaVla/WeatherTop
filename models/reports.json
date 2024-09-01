@@ -1370,6 +1370,16 @@
       "reportDate": "2024/09/01 13:54",
       "_id": "6329db4d-4015-420b-9576-c941d38f8388",
       "stationId": "339a51f6-1b32-4f0a-ae6f-bd82b29ec80c"
+    },
+    {
+      "code": 300,
+      "temperature": 16.81,
+      "windSpeed": 3.6,
+      "windDirection": "S/SE",
+      "pressure": 1010,
+      "reportDate": "2024/09/01 19:12",
+      "_id": "24c078f4-b9f5-420c-8001-ab845519b81e",
+      "stationId": "339a51f6-1b32-4f0a-ae6f-bd82b29ec80c"
     }
   ]
 }

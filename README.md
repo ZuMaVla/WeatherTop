@@ -4,7 +4,7 @@
 
 ## Features
 
-- **User Authentication**: Secure login system with password verification avoidin.
+- **User Authentication**: Secure login system with password verification; reuse of emails (two or more users sharing the same email) is not allowed.
 - **Station Management**: Users can create and manage multiple stations, each with unique locations and meteorological reports.
 - **Automatic Geolocation**: Latitude and longitude are auto-populated (using [Geoapify Location Platform](https://geoapify.com)) when creating a new station, with the option to review and edit.
 - **Local Map**: Local map (using [Geoapify Location Platform](https://geoapify.com)) is visualised on hovering over the first block of station summary.
