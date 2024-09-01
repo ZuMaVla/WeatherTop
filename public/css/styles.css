@@ -5,7 +5,6 @@
   background-color: black;
   width: 18.0%;
   margin-bottom: 0;
-/*  aspect-ratio: 1 / 1;*/
 }
 
 .weatherIcon {
@@ -13,22 +12,21 @@
   top: 35px;
   right: 35px;
   transform: translate(+50%, -50%);
-  max-width: 100%; /* Ensures the image is responsive */
+  max-width: 100%; 
 }
 
 .map {
   position: relative;
-  display: inline-block; /* Keeps the preview inline */
+  display: inline-block; 
 }
 
-/* Hide the image by default */
 .map img {
-  display: none;
+  display: none;                  /* Hide the image by default */
   position: absolute;
-  top: 100%; /* Position the preview below the container */
-  left: 0;
-  max-width: 600px; /* Set the maximum width */
-  max-height: 400px; /* Set the maximum height */
+  top: 0%;                        /* Position the preview below the container */
+  left: 100%;
+  max-width: 600px;               /* Set the maximum width */
+  max-height: 400px;              /* Set the maximum height */
   border: 1px solid black;
   padding: 5px;
   background-color: white;
