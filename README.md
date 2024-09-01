@@ -6,8 +6,8 @@
 
 - **User Authentication**: Secure login system with password verification.
 - **Station Management**: Users can create and manage multiple stations, each with unique locations and meteorological reports.
-- **Data Collection**: Users can manually input meteorological data, with the possibility of referencing recent data from an external service ([OpenWeatherMap](https://openweathermap.org/)). This external data is optional and before submission is supposed to be reviewed/corrected as needed, based on actual measurements from the meteorological equipment at the station in question.
-- **Automatic Geolocation**: Latitude and longitude are auto-populated when creating a new station, with the option to review and edit.
+- **Data Collection**: Users can manually input meteorological data, with the possibility of referencing recent data from an external service ([OpenWeather](https://openweathermap.org/)). This external data is optional and before submission is supposed to be reviewed/corrected as needed, based on actual measurements from the meteorological equipment at the station in question.
+- **Automatic Geolocation**: Latitude and longitude are auto-populated (using [Geoapify Location Platform](https://geoapify.com)) when creating a new station, with the option to review and edit.
 - **Data Visualisation**: Archived data can be visualised using simple charts.
 - **Dashboard**: Provides a summary of all stations, including min/max temperature, wind speed, and pressure, along with weather code pictograms.
 - **Cascade Delete**: When a station is deleted, all associated reports are removed.
