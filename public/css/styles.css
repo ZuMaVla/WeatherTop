@@ -23,19 +23,18 @@
 .map img {
   display: none;                  /* Hide the image by default */
   position: absolute;
-  top: 0%;                        /* Position the preview below the container */
-  left: 100%;
-  max-width: 600px;               /* Set the maximum width */
-  max-height: 400px;              /* Set the maximum height */
+  top: 0%;                        /* Position the same level as the container */
+  left: 100%;                     /* Position to the right of the container */
+  max-width: 600px;               /* Set the maximum width as image itself */
+  max-height: 400px;              /* Set the maximum height as image itself */
   border: 1px solid black;
   padding: 5px;
   background-color: white;
-  z-index: 1000; /* Ensure the preview is above other elements */
+  z-index: 999;                  /* Ensure the preview is above other elements except menu */
 }
 
-/* Show the image when hovering over the container */
-.map:hover img {
-  display: block;
+.map:hover img {                  
+  display: block;                /* Show the image when hovering over the container */
 }
 
 
