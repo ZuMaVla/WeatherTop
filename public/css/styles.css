@@ -16,6 +16,31 @@
   max-width: 100%; /* Ensures the image is responsive */
 }
 
+.map {
+  position: relative;
+  display: inline-block; /* Keeps the preview inline */
+}
+
+/* Hide the image by default */
+.map img {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position the preview below the container */
+  left: 0;
+  max-width: 600px; /* Set the maximum width */
+  max-height: 400px; /* Set the maximum height */
+  border: 1px solid black;
+  padding: 5px;
+  background-color: white;
+  z-index: 1000; /* Ensure the preview is above other elements */
+}
+
+/* Show the image when hovering over the container */
+.map:hover img {
+  display: block;
+}
+
+
 .icon-column {
   display: inline-block;
 }

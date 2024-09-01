@@ -53,7 +53,7 @@
       "name": "Cork",
       "latitude": "51.904",
       "longitude": "-8.468",
-      "map": "",
+      "map": "https://maps.geoapify.com/v1/staticmap?center=lonlat:-8.47,51.90&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "58ee041b-eefb-4b99-a8a7-8bfc37a8039b"
     },
@@ -61,7 +61,7 @@
       "name": "Cork",
       "latitude": "51.90",
       "longitude": "-8.48",
-      "map": "",
+      "map": "https://maps.geoapify.com/v1/staticmap?center=lonlat:-8.47,51.90&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97",
       "userid": "25f9365a-c165-450a-b0d0-5aefdbbaae9f",
       "_id": "dca94740-ce40-45f5-8072-d4b15d87e2b0"
     },
@@ -69,7 +69,7 @@
       "name": "Cork",
       "latitude": "51.89",
       "longitude": "-8.47",
-      "map": "",
+      "map": "https://maps.geoapify.com/v1/staticmap?center=lonlat:-8.47,51.90&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97",
       "userid": "21332ecd-8cb9-46e1-8ea5-85f6c514fc6b",
       "_id": "339a51f6-1b32-4f0a-ae6f-bd82b29ec80c"
     },
@@ -101,7 +101,7 @@
       "name": "Dublin",
       "latitude": "51.904",
       "longitude": "-8.468",
-      "map": "",
+      "map": "https://maps.geoapify.com/v1/staticmap?center=lonlat:-6.2605593,53.3493795&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97",
       "userid": "a3836af1-17a3-4151-b673-39dc5d556159",
       "_id": "42d1a0bd-1bed-485a-a511-94f3a22a3024"
     },
@@ -109,7 +109,7 @@
       "name": "Dublin",
       "latitude": "53.3493795",
       "longitude": "-6.2605593",
-      "map": "",
+      "map": "https://maps.geoapify.com/v1/staticmap?center=lonlat:-6.2605593,53.3493795&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97",
       "userid": "25f9365a-c165-450a-b0d0-5aefdbbaae9f",
       "_id": "76baed8c-eddf-4a08-a86d-fa0dc09f6494"
     },
@@ -117,7 +117,7 @@
       "name": "Dublin",
       "latitude": "53.3493795",
       "longitude": "-6.2605593",
-      "map": "",
+      "map": "https://maps.geoapify.com/v1/staticmap?center=lonlat:-6.2605593,53.3493795&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97",
       "userid": "c3dac9fe-a5bf-46bf-9a99-99b1fd33eb1b",
       "_id": "5b856486-024d-4567-a838-e710a9f721fd"
     },
@@ -125,7 +125,7 @@
       "name": "Dublin",
       "latitude": "53.3493795",
       "longitude": "-6.2605593",
-      "map": "",
+      "map": "https://maps.geoapify.com/v1/staticmap?center=lonlat:-6.2605593,53.3493795&width=600&height=400&zoom=11&style=osm-carto&apiKey=c5e1df079491472a9af943fbe1f1de97",
       "userid": "efd8ae19-af9b-4325-a2bb-040df6cfe86f",
       "_id": "d87159c1-33e4-49cc-914d-c8be1dd48366"
     },
